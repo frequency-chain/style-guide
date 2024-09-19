@@ -1,17 +1,13 @@
 {
   "name": "frequency-style-guide",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "type": "module",
-  "main": "dist/index.ts",
-  "files": ["dist"],
+  "main": "src/index.ts",
+  "types": "src/index.d.ts",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
     "storybook": "storybook dev -p 6006 -s public",
     "build-storybook": "storybook build",
-    "build-package": "rm -r dist; mkdir dist; rsync -av --exclude='*.stories.*' --exclude='*.mdx' --exclude='.storybook/' --prune-empty-dirs src/ dist/",
-    "publish-package": "publish dist",
+    "publish-package": "npm publish",
     "dry-run": "npm pack --dry-run"
   },
   "devDependencies": {

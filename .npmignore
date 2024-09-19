@@ -1,0 +1,16 @@
+# Exclude all files ending with .stories.svelte
+*.stories.svelte
+.storybook/*
+
+.idea/*
+
+.eslintrc.js
+.eslintignore
+
+.prettierignore
+.prettierrc
+
+# Also exclude other Storybook-related files if necessary
+*.mdx
+
+stylelint.config.js
