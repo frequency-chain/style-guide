@@ -9,23 +9,32 @@
 <!-- Primary -->
 <Story name="PrimaryButton">
   <div class="flex flex-col gap-2">
-    <Button size="xs" href="https://google.com">Primary XS</Button>
-    <Button size="sm" href="https://google.com">Primary SM</Button>
-    <Button size="normal" href="https://google.com">Primary Normal</Button>
-    <Button size="md" href="https://google.com">Primary MD</Button>
-    <Button size="lg" href="https://google.com">Primary LG</Button>
+    <Button size="xs">P-XS</Button>
+    <Button size="sm">Primary SM</Button>
+    <Button size="normal">Primary Normal</Button>
+    <Button size="md">Primary MD</Button>
+    <Button size="lg">Primary LG</Button>
   </div>
 </Story>
 
 <!-- Secondary -->
 <Story name="Secondary">
-  <Button type="secondary" href="https://google.com">Secondary</Button>
+  <div class="flex flex-col gap-2">
+    <Button type="secondary" size="xs">S-XS</Button>
+    <Button type="secondary" size="sm">Secondary SM</Button>
+    <Button type="secondary" size="normal">Secondary Normal</Button>
+    <Button type="secondary" size="md">Secondary MD</Button>
+    <Button type="secondary" size="lg">Secondary LG</Button>
+  </div>
 </Story>
-<!-- <Story name="Secondary with icon on left">
-    <Button left type="secondary" href="https://google.com"
-        ><Icon symbol="github" type="dark" />Github</Button>
+
+<!-- Disabled -->
+<Story name="Disabled">
+  <div class="flex flex-col gap-2">
+    <Button size="xs" disabled={true}>P-XS</Button>
+    <Button size="sm" disabled={true}>Primary SM</Button>
+    <Button size="normal" disabled={true}>Primary Normal</Button>
+    <Button size="md" disabled={true}>Primary MD</Button>
+    <Button size="lg" disabled={true}>Primary LG</Button>
+  </div>
 </Story>
-<Story name="Secondary with icon on right">
-    <Button right type="secondary" href="https://google.com"
-        >Github<Icon symbol="github" type="dark" /></Button>
-</Story> -->

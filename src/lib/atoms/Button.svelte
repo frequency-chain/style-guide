@@ -1,25 +1,47 @@
 <script>
+  import Typography from '../typography/Typography.svelte';
+
   /**
-   * @type {string} Link
+   * Callback function to handle click events.
+   * @type {() => void}
    */
-  export let href = '';
+  export let onClick = () => {};
+
   /**
-   * Specify the kind of icon
-   * @type {'primary' | 'secondary' }
+   * Specify the kind of button.
+   * @type {'primary' | 'secondary'}
+   * @default 'primary'
    */
   export let type = 'primary';
+
   /**
-   * Specify the size
-   * @type {'xs' | 'sm' | 'normal' | 'md' | 'large'  }
+   * Specify the size of the component.
+   * @type {'xs' | 'sm' | 'normal' | 'md' | 'lg'}
+   * @default 'normal'
    */
   export let size = 'normal';
 
-  $: typeCoding =
-    type === 'primary'
-      ? 'bg-secondary'
-      : 'bg-brightBlue border border-slate-600 text-slate-600 hover:bg-slate-200';
+  /**
+   * Specify if the component is disabled.
+   * @type {boolean}
+   * @default false
+   */
+  export let disabled = false;
 
-  $: btnWidth =
+  // Define button type classes
+  $: typeClass =
+    type === 'primary'
+      ? 'bg-secondary border-secondary hover:border-white hover:bg-transparent'
+      : 'bg-transparent border-white hover:border-primary hover:text-primary';
+
+  // Define disabled classes
+  $: disabledClass = disabled ? 'bg-gray3 border-gray3 cursor-default pointer-events-none' : '';
+
+  // Define final brn style classes
+  $: btnStylesClass = disabled ? disabledClass : typeClass;
+
+  // Define button size classes
+  $: btnSizeClass =
     {
       xs: 'w-[115px]',
       sm: 'w-[197px]',
@@ -29,12 +51,13 @@
     }[size] || 'w-[263px]';
 </script>
 
-<a
-  class={`inline-block rounded-full py-[13px] ${typeCoding} ${btnWidth}`}
-  {href}
-  target="_blank"
-  rel="noreferrer">
-  <div class="flex items-center justify-center gap-2 text-center">
+<button
+  {...$$restProps}
+  on:click|preventDefault={onClick}
+  class={`rounded-full border p-2.5 text-center text-white transition-all
+    ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
+  {disabled}>
+  <Typography bold={true} class="flex items-center justify-center gap-2">
     <slot />
-  </div>
-</a>
+  </Typography>
+</button>
