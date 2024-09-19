@@ -1,15 +1,17 @@
 {
-  "name": "svelte-storybook-tailwind",
-  "private": true,
-  "version": "0.0.0",
+  "name": "frequency-style-guide",
+  "version": "1.0.5",
   "type": "module",
+  "main": "dist/index.ts",
+  "files": ["dist"],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006 -s public",
     "build-storybook": "storybook build",
-    "build-package": "rsync -av --exclude='*.stories.*' src/ dist/ && cp tailwind.config.js dist/",
+    "build-package": "rm -r dist; mkdir dist; rsync -av --exclude='*.stories.*' --exclude='*.mdx' --exclude='.storybook/' --prune-empty-dirs src/ dist/",
+    "publish-package": "publish dist",
     "dry-run": "npm pack --dry-run"
   },
   "devDependencies": {
