@@ -1,5 +1,5 @@
 <script>
-  import {Meta, Story} from '@storybook/addon-svelte-csf';
+  import { Meta, Story } from '@storybook/addon-svelte-csf';
 
   import Button from './Button.svelte';
 </script>

@@ -1,4 +1,4 @@
-export const colors = {
+export const colors: { [key: string]: string } = {
   //Branding Colors
   primary: '#18465E',
   secondary: '#55B1AB',
@@ -19,5 +19,5 @@ export const colors = {
   error: '#EB5757',
   warning: '#F99A2A',
   success: '#27AE60',
-  info: '#2F80ED'
+  info: '#2F80ED',
 };

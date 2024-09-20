@@ -1,6 +1,6 @@
 <script>
-  import {Meta, Story} from '@storybook/addon-svelte-csf';
-  import colors from '../../styles/colors';
+  import { Meta, Story } from '@storybook/addon-svelte-csf';
+  import { colors } from '../../styles/colors';
 </script>
 
 <Meta title="Colors/ColorPalette" />

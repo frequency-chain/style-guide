@@ -47,7 +47,7 @@
       sm: 'w-[197px]',
       md: 'w-[339px]',
       lg: 'w-[388px]',
-      normal: 'w-[263px]'
+      normal: 'w-[263px]',
     }[size] || 'w-[263px]';
 </script>
 
@@ -56,7 +56,8 @@
   on:click|preventDefault={onClick}
   class={`rounded-full border p-2.5 text-center text-white transition-all
     ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
-  {disabled}>
+  {disabled}
+>
   <Typography bold={true} class="flex items-center justify-center gap-2">
     <slot />
   </Typography>

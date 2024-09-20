@@ -8,7 +8,11 @@
     "storybook": "storybook dev -p 6006 -s public",
     "build-storybook": "storybook build",
     "publish-package": "npm publish",
-    "dry-run": "npm pack --dry-run"
+    "dry-run": "npm pack --dry-run",
+    "lint": "npx eslint",
+    "lint:fix": "npx eslint --fix",
+    "format": "npm run prettier && npm run lint:fix",
+    "prettier": "npx prettier --write --plugin prettier-plugin-svelte --plugin prettier-plugin-tailwindcss src"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.0-beta.51",
@@ -40,5 +44,9 @@
     "svelte-loader": "^3.1.6",
     "tailwindcss": "^3.2.7",
     "vite": "^4.1.0"
+  },
+  "dependencies": {
+    "eslint-plugin-svelte": "^2.44.0",
+    "typescript-eslint": "^8.6.0"
   }
 }
