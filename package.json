@@ -7,7 +7,6 @@
   "scripts": {
     "storybook": "storybook dev -p 6006 -s public",
     "build-storybook": "storybook build",
-    "publish-package": "npm publish",
     "dry-run": "npm pack --dry-run",
     "lint": "npx eslint",
     "lint:fix": "npx eslint --fix",
