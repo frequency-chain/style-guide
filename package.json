@@ -8,10 +8,10 @@
     "storybook": "storybook dev -p 6006 -s public",
     "build-storybook": "storybook build",
     "dry-run": "npm pack --dry-run",
-    "lint": "npx eslint",
-    "lint:fix": "npx eslint --fix",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "format": "npm run prettier && npm run lint:fix",
-    "prettier": "npx prettier --write --plugin prettier-plugin-svelte --plugin prettier-plugin-tailwindcss src"
+    "prettier": "prettier --write --plugin prettier-plugin-svelte --plugin prettier-plugin-tailwindcss src"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.0-beta.51",
