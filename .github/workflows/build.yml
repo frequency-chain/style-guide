@@ -1,0 +1,44 @@
+name: Build and Test
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        node-version: [20.x, 22.x]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm' # Enabling npm caching
+          cache-dependency-path: |
+            package-lock.json
+
+      - name: Install dependencies
+        working-directory: .
+        run: npm ci
+
+      - name: Lint
+        working-directory: .
+        run: npm run lint
+
+      - name: Package dry run
+        working-directory: .
+        run: npm pack --dry-run
+
+      - name: Build Storybook
+        working-directory: .
+        run: npm run build-storybook

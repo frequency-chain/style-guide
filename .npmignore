@@ -16,3 +16,6 @@
 
 # Exclude Stylelint configuration
 stylelint.config.js
+
+# Exclude Github configuration
+.github/*
