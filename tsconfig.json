@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "typeRoots": ["node_modules/@types", "gen-nodejs"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.svelte", "tailwind.config.cjs", "src/index.js"]
+}
