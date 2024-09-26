@@ -1,32 +1,22 @@
-<script>
+<script lang="ts">
   import Typography from '../typography/Typography.svelte';
 
-  /**
-   * Callback function to handle click events.
-   * @type {() => void}
-   */
   export let onClick = () => {};
 
   /**
    * Specify the kind of button.
-   * @type {'primary' | 'secondary'}
-   * @default 'primary'
    */
-  export let type = 'primary';
+  export let type: 'primary' | 'secondary' = 'primary';
 
   /**
    * Specify the size of the component.
-   * @type {'xs' | 'sm' | 'normal' | 'md' | 'lg'}
-   * @default 'normal'
    */
-  export let size = 'normal';
+  export let size: 'xs' | 'sm' | 'normal' | 'md' | 'lg' = 'normal';
 
   /**
    * Specify if the component is disabled.
-   * @type {boolean}
-   * @default false
    */
-  export let disabled = false;
+  export let disabled: boolean = false;
 
   // Define button type classes
   $: typeClass =

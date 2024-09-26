@@ -5,7 +5,6 @@ on:
   push:
     branches:
       - main
-      - create-style-guide
   workflow_dispatch:
 
 permissions:

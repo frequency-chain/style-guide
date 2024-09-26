@@ -29,17 +29,17 @@ jobs:
             package-lock.json
 
       - name: Install dependencies
-        working-directory: .
-        run: npm i
+        run: npm ci
 
       - name: Lint
-        working-directory: .
         run: npm run lint
 
+      - name: Build
+        run: npm run build
+
       - name: Package dry run
-        working-directory: .
+        working-directory: ./dist
         run: npm pack --dry-run
 
       - name: Build Storybook
-        working-directory: .
         run: npm run build-storybook

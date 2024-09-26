@@ -1,11 +1,11 @@
 // @ts-check
-
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
+// @ts-ignore
 import tsParser from '@typescript-eslint/parser';
 import eslintPluginSvelte from 'eslint-plugin-svelte';
 import svelteParser from 'svelte-eslint-parser';
-import svelteConfig from './svelte.config.mjs';
+import svelteConfig from './svelte.config';
 import globals from 'globals';
 
 export default tseslint.config(

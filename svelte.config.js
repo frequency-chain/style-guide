@@ -16,14 +16,5 @@ export default {
       $typography: resolve('./src/lib/typography'),
       $colors: resolve('./src/lib/colors'),
     },
-
-    // Exclude Storybook files from the build
-    vite: {
-      build: {
-        rollupOptions: {
-          external: ['**/*.stories.svelte'], // Exclude Storybook stories from the build
-        },
-      },
-    },
-  }
+  },
 };

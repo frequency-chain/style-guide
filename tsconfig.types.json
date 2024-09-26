@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "target": "ESNext",
-    "outDir": "dist",
-    "declaration": true,
-    "emitDeclarationOnly": true
-  },
-  "exclude": ["node_modules/**"]
-}

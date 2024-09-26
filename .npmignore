@@ -1,3 +1,4 @@
 # Exclude Storybook files
-*.stories.svelte
-*.mdx
+**/*.stories.svelte
+**/*.stories.svelte.d.ts
+**/*.mdx
