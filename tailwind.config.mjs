@@ -1,4 +1,5 @@
-import { colors } from './src/styles/colors';
+import {colors} from './src/styles/colors';
+import shadcnTailwindConfig from './shadcn-tailwind.config'
 
 import defaultTheme from 'tailwindcss/defaultTheme';
 
@@ -6,11 +7,12 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 export default {
   content: ['./src/**/*.{svelte,js,ts}'],
   theme: {
+    container: shadcnTailwindConfig.theme.container,
     extend: {
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans],
       },
-      colors: colors,
+      colors: {...shadcnTailwindConfig.theme.extend.colors, ...colors},
       fontSize: {
         default: '16px',
         h1: '56px',

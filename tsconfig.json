@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+    "paths": {
+      "$src": ["./src"],
+      "$src/*": ["./src/*"],
+      "$lib": ["./src/lib"],
+      "$lib/*": ["./src/lib/*"],
+      "$shadcnComponents": ["./src/shadcnComponents"],
+      "$shadcnComponents/*": ["./src/shadcnComponents/*"]
+    },
     "allowSyntheticDefaultImports": true,
     "module": "ESNext",
     "target": "ESNext",
