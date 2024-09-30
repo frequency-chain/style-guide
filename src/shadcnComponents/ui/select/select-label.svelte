@@ -1,16 +1,18 @@
 <script lang="ts">
-	import { Select as SelectPrimitive } from "bits-ui";
-	import { cn } from "../../../utils";
+  import { Select as SelectPrimitive } from 'bits-ui';
+  import { cn } from '../../../utils';
 
-	type $$Props = SelectPrimitive.LabelProps;
+  export let isRequired: boolean;
 
-	let className: $$Props["class"] = undefined;
-	export { className as class };
+  type $$Props = SelectPrimitive.LabelProps & { isRequired: boolean };
+
+  let className: $$Props['class'] = undefined;
+  export { className as class };
 </script>
 
-<SelectPrimitive.Label
-	class={cn("py-1.5 pl-8 pr-2 text-sm font-semibold", className)}
-	{...$$restProps}
->
-	<slot />
+<SelectPrimitive.Label class={cn('w-full max-w-[388px] py-[5px] text-sm font-bold', className)} {...$$restProps}>
+  <slot />
+  {#if isRequired}
+    <span class="text-error">*</span>
+  {/if}
 </SelectPrimitive.Label>
