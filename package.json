@@ -1,13 +1,27 @@
 {
-  "name": "frequency-style-guide",
+  "name": "@frequency-chain/style-guide",
   "version": "0.0.0",
+  "license": "Apache-2.0",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./tailwind": "./dist/tailwind.config.mjs"
+  },
   "scripts": {
     "storybook": "storybook dev -p 6006 -s public",
     "build-storybook": "storybook build",
-    "dry-run": "npm pack --dry-run",
+    "build:package-json": "node scripts/package.cjs",
+    "build:svelte": "svelte-package",
+    "build:static": "cp src/styles/index.css tailwind.config.mjs .npmignore README.md LICENSE dist/",
+    "build": "rm -rf ./dist && npm run build:svelte && npm run build:static && npm run build:package-json",
+    "dry-run": "cd dist && npm pack --dry-run",
+    "publish": "cd dist && npm publish",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "format": "npm run prettier && npm run lint:fix",
@@ -22,7 +36,9 @@
     "@storybook/svelte": "^7.0.0-beta.51",
     "@storybook/svelte-vite": "^7.0.0-beta.51",
     "@storybook/testing-library": "^0.0.14-next.1",
+    "@sveltejs/package": "^2.3.5",
     "@sveltejs/vite-plugin-svelte": "^2.0.2",
+    "@typescript-eslint/parser": "^8.7.0",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
@@ -34,15 +50,16 @@
     "prettier": "^2.8.4",
     "prettier-plugin-svelte": "^2.9.0",
     "prettier-plugin-tailwindcss": "^0.2.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "storybook": "^7.0.0-beta.51",
     "stylelint": "^15.2.0",
     "stylelint-config-standard": "^30.0.1",
     "svelte": "^3.55.1",
     "svelte-loader": "^3.1.6",
     "tailwindcss": "^3.2.7",
-    "typescript-eslint": "^8.6.0",
+    "typescript-eslint": "^8.7.0",
     "vite": "^4.1.0"
+  },
+  "dependencies": {
+    "svelte": "^3.55.1"
   }
 }

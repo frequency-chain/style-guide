@@ -1,18 +1,4 @@
-# Exclude Storybook-related files
-*.stories.svelte
-.storybook/*
-*.mdx
-
-# Exclude IDE/editor configuration files
-.idea/*
-
-# Exclude ESLint configuration
-.eslintrc.js
-.eslintignore
-
-# Exclude Prettier configuration
-.prettierignore
-.prettierrc
-
-# Exclude Stylelint configuration
-stylelint.config.js
+# Exclude Storybook files
+**/*.stories.svelte
+**/*.stories.svelte.d.ts
+**/*.mdx

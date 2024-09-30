@@ -1,14 +1,14 @@
-import {colors} from './src/styles/colors';
+import { colors } from './src/styles/colors';
 
-const defaultTheme = require('tailwindcss/defaultTheme');
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: ['./src/**/*.{svelte,js,ts}'],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', ...defaultTheme.fontFamily.sans]
+        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
       },
       colors: colors,
       fontSize: {
@@ -23,7 +23,7 @@ module.exports = {
         md: '18px',
         normal: '16px',
         sm: '12px',
-        xs: '10px'
+        xs: '10px',
       },
       lineHeight: {
         default: '22px',
@@ -37,9 +37,9 @@ module.exports = {
         md: '25px',
         normal: '22px',
         sm: '16px',
-        xs: '14px'
-      }
-    }
+        xs: '14px',
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 };

@@ -12,6 +12,8 @@ dist
 storybook-static
 dist-ssr
 *.local
+.svelte-kit
+src/styles/colors.d.ts
 
 # Editor directories and files
 .vscode/*
