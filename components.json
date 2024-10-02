@@ -3,11 +3,11 @@
 	"style": "default",
 	"tailwind": {
 		"config": "tailwind.config.js",
-		"css": "src/index.pcss",
+		"css": "src/index.css",
 		"baseColor": "slate"
 	},
 	"aliases": {
-		"components": "src/shadcnComponents",
+		"components": "src/lib/shadcnComponents",
 		"utils": "src/utils"
 	},
 	"typescript": true

@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Check from '../../../assets/Check.svelte';
+  import Check from '../../../../assets/Check.svelte';
   import { Select as SelectPrimitive } from 'bits-ui';
-  import { cn } from '../../../utils';
+  import { cn } from '../../../../utils';
 
   type $$Props = SelectPrimitive.ItemProps;
   type $$Events = SelectPrimitive.ItemEvents;

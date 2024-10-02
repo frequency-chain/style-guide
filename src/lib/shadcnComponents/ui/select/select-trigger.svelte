@@ -1,8 +1,8 @@
 <script lang="ts">
   import { Select as SelectPrimitive } from 'bits-ui';
-  import Chevron from '../../../assets/Chevron.svelte';
-  import Error from '../../../assets/Error.svelte';
-  import { cn } from '../../../utils';
+  import Chevron from '../../../../assets/Chevron.svelte';
+  import Error from '../../../../assets/Error.svelte';
+  import { cn } from '../../../../utils';
 
   export let error: string | undefined;
 

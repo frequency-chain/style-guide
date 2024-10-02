@@ -5,8 +5,8 @@
       "$src/*": ["./src/*"],
       "$lib": ["./src/lib"],
       "$lib/*": ["./src/lib/*"],
-      "$shadcnComponents": ["./src/shadcnComponents"],
-      "$shadcnComponents/*": ["./src/shadcnComponents/*"]
+      "$shadcnComponents": ["./src/lib/shadcnComponents"],
+      "$shadcnComponents/*": ["./src/lib/shadcnComponents/*"]
     },
     "allowSyntheticDefaultImports": true,
     "module": "ESNext",
