@@ -11,8 +11,6 @@
 
   let className: $$Props['class'] = undefined;
   export { className as class };
-
-  console.log('errror', error);
 </script>
 
 <div class="flex items-center gap-3">

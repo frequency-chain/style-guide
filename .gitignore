@@ -14,6 +14,7 @@ dist-ssr
 *.local
 .svelte-kit
 tailwindColors.d.ts
+.svelte-kit/
 
 # Editor directories and files
 .vscode/*
