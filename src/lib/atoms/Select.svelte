@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Root, Trigger, Value, Content, Item, Label } from '$lib/shadcnComponents/ui/select';
+  import { Root, Trigger, Value, Content, Item, Label } from '../shadcnComponents/ui/select';
 
   export let label: string;
   export let description: string | undefined;
