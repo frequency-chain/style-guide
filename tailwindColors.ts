@@ -1,4 +1,4 @@
-export const colors: { [key: string]: string } = {
+export const tailwindColors: { [key: string]: string } = {
   //Branding Colors
   primary: '#18465E',
   secondary: '#55B1AB',
@@ -15,7 +15,7 @@ export const colors: { [key: string]: string } = {
   dustyRose: '#A06B87',
   orange: '#F77C47',
   yellow: '#FFD647',
-  // State colors
+  // State tailwindColors
   error: '#EB5757',
   warning: '#F99A2A',
   success: '#27AE60',

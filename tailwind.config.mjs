@@ -1,16 +1,20 @@
-import { colors } from './src/styles/colors';
-
-import defaultTheme from 'tailwindcss/defaultTheme';
+import { tailwindColors } from './tailwindColors.ts';
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{svelte,js,ts}'],
+  mode: 'jit',
+  content: [
+    './src/**/*.svelte',
+    './public/index.html',
+    './src/**/*.{js,ts,svelte}',
+    './src/**/*.stories.@(js|jsx|ts|tsx|svelte)',
+  ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+        sans: ['Poppins'],
       },
-      colors: colors,
+      colors: tailwindColors,
       fontSize: {
         default: '16px',
         h1: '56px',

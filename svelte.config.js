@@ -14,7 +14,7 @@ export default {
       $styles: resolve('./src/styles'),
       $atoms: resolve('./src/lib/atoms'),
       $typography: resolve('./src/lib/typography'),
-      $colors: resolve('./src/lib/colors'),
+      $colors: resolve('./src/lib/tailwindColors'),
     },
   },
 };
