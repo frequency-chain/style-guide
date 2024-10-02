@@ -18,7 +18,7 @@
     "build-storybook": "storybook build",
     "build:package-json": "node scripts/package.cjs",
     "build:svelte": "svelte-package",
-    "build:static": "cp src/styles/index.css tailwind.config.mjs .npmignore README.md LICENSE dist/",
+    "build:static": "cp src/styles/index.css tailwindColors.ts tailwind.config.mjs .npmignore README.md LICENSE dist/",
     "build": "rm -rf ./dist && npm run build:svelte && npm run build:static && npm run build:package-json",
     "dry-run": "cd dist && npm pack --dry-run",
     "publish": "cd dist && npm publish",
@@ -59,6 +59,9 @@
   },
   "dependencies": {
     "@storybook/addons": "^7.6.17",
-    "svelte": "^4.2.19"
+    "bits-ui": "^0.21.15",
+    "clsx": "^2.1.1",
+    "svelte": "^4.2.19",
+    "tailwind-merge": "^2.5.2"
   }
 }
