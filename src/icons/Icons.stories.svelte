@@ -18,7 +18,7 @@
     {#each Object.entries(icons) as [name, Icon]}
       <div class="p-4">
         <h2 class="mb-2 text-lg font-semibold">{name}</h2>
-        <svelte:component this={Icon} class="mb-1 h-4 w-4" />
+        <svelte:component this={Icon} class="mb-1 h-8 w-8" />
       </div>
     {/each}
   </div>
