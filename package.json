@@ -61,7 +61,6 @@
     "@storybook/addons": "^7.6.17",
     "bits-ui": "^0.21.16",
     "clsx": "^2.1.1",
-    "lucide-svelte": "^0.451.0",
     "svelte": "^4.2.19",
     "tailwind-merge": "^2.5.2"
   }
