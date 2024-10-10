@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Check from '../../../../assets/Check.svelte';
+  import Check from '../../../../icons/Check.svelte';
   import { Select as SelectPrimitive } from 'bits-ui';
   import { cn } from '../../../../utils';
 
