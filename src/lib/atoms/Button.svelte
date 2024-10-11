@@ -44,11 +44,11 @@
 <button
   {...$$restProps}
   on:click|preventDefault={onClick}
-  class={`rounded-full border p-2.5 text-center text-white transition-all
-    ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
+  class={`rounded-full border p-2.5 text-center text-white transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
+  }
   {disabled}
 >
-  <Typography bold={true} class="flex items-center justify-center gap-2">
-    <slot />
+  <Typography bold={} cl} class="flex items-center justify-center gap-2">
+    <slot></slot>
   </Typography>
 </button>
