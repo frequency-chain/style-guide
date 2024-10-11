@@ -1,7 +1,7 @@
 export const tailwindColors: { [key: string]: string } = {
   //Branding Colors
-  primary: '#18465E',
-  secondary: '#55B1AB',
+  navy: '#18465E',
+  teal: '#55B1AB',
   // Neutral Colors
   black: '#000000',
   gray1: '#4F4F4F',
