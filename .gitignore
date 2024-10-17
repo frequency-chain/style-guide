@@ -13,7 +13,7 @@ storybook-static
 dist-ssr
 *.local
 .svelte-kit
-tailwindColors.d.ts
+src/lib/styles/tailwindColors.d.ts
 .svelte-kit/
 
 # Editor directories and files
