@@ -5,7 +5,7 @@
 
 <Meta title="Design System/Colors" />
 
-<Story name="ColorPalette">
+<Story name="Colors">
   <div class="grid grid-cols-1 gap-f16 p-f16 md:grid-cols-2 lg:grid-cols-4">
     {#each Object.entries(tailwindColors) as [colorName, color]}
       <div class="p-f16">
