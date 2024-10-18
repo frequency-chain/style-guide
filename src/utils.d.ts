@@ -1,5 +1,5 @@
-import { type ClassValue } from "clsx";
-import type { TransitionConfig } from "svelte/transition";
+import { type ClassValue } from 'clsx';
+import type { TransitionConfig } from 'svelte/transition';
 export declare function cn(...inputs: ClassValue[]): string;
 type FlyAndScaleParams = {
     y?: number;

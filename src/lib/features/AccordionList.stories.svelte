@@ -5,7 +5,7 @@
   import Accordion from './Accordion.svelte';
 </script>
 
-<Meta title="Design System/Features/AccordionList" component={AccordionList} />
+<Meta title="UI Components/Features/AccordionList" component={AccordionList} />
 
 <!-- Primary -->
 <Story name="AccordionList">

@@ -3,7 +3,7 @@
   import Typography from './Typography.svelte';
 </script>
 
-<Meta title="Typography/Type" component={Typography} />
+<Meta title="Design System/Typography" component={Typography} />
 
 <Story name="Header">
   <Typography tag={'h1'}>H1</Typography>

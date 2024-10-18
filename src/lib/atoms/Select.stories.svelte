@@ -14,7 +14,7 @@
   export let error = 'Error message.';
 </script>
 
-<Meta title="Design System/Atoms/Select" component={Select} />
+<Meta title="UI Components/Atoms/Select" component={Select} />
 
 <!-- Primary -->
 <Story name="SelectPrimary" args={{ label, description, placeholder, isRequired, options }}>
