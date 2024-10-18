@@ -11,6 +11,7 @@
   import FrequencyIcon from './logos/FrequencyIcon.svelte';
   import FrequencyAccessLogo from './logos/FrequencyAccessLogo.svelte';
   import HamburgerMenu from './icons/HamburgerMenu.svelte';
+  import OpenClose from './icons/OpenClose.svelte';
   import Planet from './icons/Planet.svelte';
   import UserFilled from './icons/UserFilled.svelte';
   import UserKey from './icons/UserKey.svelte';
@@ -27,6 +28,7 @@
     Error,
     Exit,
     HamburgerMenu,
+    OpenClose,
     Planet,
     UserFilled,
     UserKey,
@@ -49,7 +51,10 @@
     {#each Object.entries(icons) as [name, Icon]}
       <div class="flex flex-col items-start justify-start p-4">
         <h2 class="mb-2 text-lg font-semibold">{name}</h2>
-        <svelte:component this={Icon} class="mb-1 h-8 w-auto" />
+        {#if Icon === OpenClose}
+          <aside>* Click me!</aside>
+        {/if}
+        <svelte:component this={Icon} class="mb-1 h-8 w-auto" isDemo={true} />
       </div>
     {/each}
   </div>

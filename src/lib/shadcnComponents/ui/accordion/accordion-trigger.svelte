@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Accordion as AccordionPrimitive } from 'bits-ui';
   import Chevron from '../../../../assets/icons/Chevron.svelte';
-  import { cn } from '../../../../utils';
+  import { cn } from '../../../../utils/utils';
 
   type $$Props = AccordionPrimitive.TriggerProps;
   type $$Events = AccordionPrimitive.TriggerEvents;
