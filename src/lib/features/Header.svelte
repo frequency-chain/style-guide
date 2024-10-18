@@ -28,6 +28,6 @@
   <NavMenu {menuItems} />
 
   <!-- For Mobile -->
-  <OpenClose onClick={() => (isNavOpen = !isNavOpen)} isOpen={isNavOpen} classes={'md:hidden lg:hidden'} />
+  <OpenClose onClick={() => (isNavOpen = !isNavOpen)} isOpen={isNavOpen} classes="stroke-white md:hidden lg:hidden" />
   <NavMenuMobile isOpen={isNavOpen} {menuItems} />
 </div>
