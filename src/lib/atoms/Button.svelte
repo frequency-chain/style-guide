@@ -22,8 +22,8 @@
     // Define button type classes
     $: typeClass =
         type === 'primary'
-            ? 'bg-secondary border-secondary hover:border-white hover:bg-transparent'
-            : 'bg-transparent border-white hover:border-primary hover:text-primary';
+            ? 'bg-teal border-teal hover:border-white hover:bg-transparent'
+            : 'bg-transparent border-white hover:border-navy hover:text-primary';
 
     // Define disabled classes
     $: disabledClass = disabled ? 'bg-gray3 border-gray3 cursor-default pointer-events-none' : '';
@@ -45,11 +45,10 @@
 <button
         {...$$restProps}
         on:click|preventDefault={onClick}
-        class={`rounded-full border p-2.5 text-center text-white transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`
-        }
+        class={`rounded-full border p-f8 text-center text-white transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
         {disabled}
 >
-    <Typography bold={true} class="flex items-center justify-center gap-2">
+    <Typography bold={true} class="flex items-center justify-center gap-f8">
         <slot/>
     </Typography>
 </button>

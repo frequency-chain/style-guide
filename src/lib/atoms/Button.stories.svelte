@@ -6,9 +6,8 @@
 
 <Meta title="UI Components/Atoms/Button" component={Button}/>
 
-<!-- Primary -->
 <Story name="PrimaryButton">
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-f8">
         <Button size="xs">P-XS</Button>
         <Button size="sm">Primary SM</Button>
         <Button size="normal">Primary Normal</Button>
@@ -19,7 +18,7 @@
 
 <!-- Secondary -->
 <Story name="Secondary">
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-f8">
         <Button type="secondary" size="xs">S-XS</Button>
         <Button type="secondary" size="sm">Secondary SM</Button>
         <Button type="secondary" size="normal">Secondary Normal</Button>
@@ -30,7 +29,7 @@
 
 <!-- Disabled -->
 <Story name="Disabled">
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-f8">
         <Button size="xs" disabled={true}>P-XS</Button>
         <Button size="sm" disabled={true}>Primary SM</Button>
         <Button size="normal" disabled={true}>Primary Normal</Button>
