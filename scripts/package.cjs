@@ -20,9 +20,14 @@ rootPackage.exports = {
         svelte: './index.js',
         default: './index.js',
     },
-    './tailwind': './tailwind.config.js',
-    './tailwindColors': './tailwindColors.js',
+    './tailwind.config': './tailwind.config.js',
+    './tailwindColors': './styles/tailwindColors.js',
+    "./styles": "./styles/index.css"
 };
+
+rootPackage.style = {
+    "./styles": "./styles/index.css"
+}
 
 // Don't keep dev dependencies
 delete rootPackage['devDependencies'];
