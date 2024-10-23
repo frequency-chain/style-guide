@@ -1,6 +1,6 @@
 <script>
   import { Meta, Story } from '@storybook/addon-svelte-csf';
-  import NavMenuMobile from './NavMenu-Mobile.svelte';
+  import NavMenuMobile from './NavMenuMobile.svelte';
 
   const menuItems = [
     { label: 'Home', href: '/' },
