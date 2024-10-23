@@ -1,9 +1,18 @@
-export {default as Button} from './atoms/Button.svelte';
-export {default as Select} from './atoms/Select.svelte';
-export {default as Typography} from './typography/Typography.svelte';
-<<<<<<< HEAD
-export {default as tailwindColors} from './styles/tailwindColors';
-=======
-export {default as tailwindColors} from './styles/tailwindColors';
+// components
+export { default as Button } from './atoms/Button.svelte';
+export { default as Select } from './atoms/Select.svelte';
+export { default as Typography } from './typography/Typography.svelte';
+export { default as Accordion } from './features/Accordion.svelte';
+export { default as AccordionList } from './features/AccordionList.svelte';
+export { default as Header } from './features/Header.svelte';
+export { default as NavMenu } from './features/NavMenu.stories.svelte';
+export { default as NavMenuMobile } from './features/NavMenuMobile.svelte';
+
+// icons & logos
+export * as Assets from './assets/index';
+
+// colors
+export { default as tailwindColors } from '$lib/styles/tailwindColors';
+
+// css styles
 import './styles/index.css';
->>>>>>> c9652f6 (update readme and get index.ts workingga .)

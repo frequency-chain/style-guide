@@ -27,7 +27,7 @@
     "publish": "cd dist && npm publish",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "format": "npm run prettier src/ && npm run lint:fix src/",
+    "format": "npm run prettier && npm run lint:fix",
     "prettier": "prettier --write --plugin prettier-plugin-svelte --plugin prettier-plugin-tailwindcss src"
   },
   "devDependencies": {

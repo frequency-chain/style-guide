@@ -74,3 +74,4 @@ npm pack
 ### Dev Notes
 
 - Anything that should be exported for the package should be in `src/lib`.
+- Any components that you wish to export must be exported in `index.ts`.
