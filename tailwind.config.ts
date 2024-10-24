@@ -61,7 +61,11 @@ export default {
         f192: '192px',
         f224: '224px',
         f256: '256px',
-    }
+      },
+      boxShadow: {
+        md: '0px 4px 7px #00000040',
+        lg: '0px 4px 10px 0px #00000040',
+      },
     },
   },
   plugins: [],
