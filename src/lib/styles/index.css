@@ -45,6 +45,19 @@
     @apply opacity-100;
     transform: translate3d(0, 0, 0);
   }
+
+  /*  Form common styles*/
+  .form-item-label {
+    @apply sm w-full max-w-[388px] py-[5px] font-bold;
+  }
+
+  .form-item-description {
+    @apply sm text-gray2;
+  }
+
+  .form-error {
+    @apply sm font-bold text-error;
+  }
 }
 
 @layer base {
