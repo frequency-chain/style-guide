@@ -10,7 +10,7 @@
   export { className as class };
 </script>
 
-<SelectPrimitive.Label class={cn('w-full max-w-[388px] py-[5px] text-sm font-bold', className)} {...$$restProps}>
+<SelectPrimitive.Label class={cn('sm w-full max-w-[388px] pb-f4 font-bold', className)} {...$$restProps}>
   <slot />
   {#if isRequired}
     <span class="text-error">*</span>
