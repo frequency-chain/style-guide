@@ -19,7 +19,7 @@
     FrequencyIconFilled,
     FrequencyIcon,
     FrequencyAccessLogo,
-  } from '../assets/index';
+  } from './index';
 
   const icons = {
     Arrow,
