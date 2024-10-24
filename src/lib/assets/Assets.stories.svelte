@@ -1,23 +1,25 @@
 <script lang="ts">
   import { Meta, Story } from '@storybook/addon-svelte-csf';
-  import Arrow from './icons/Arrow.svelte';
-  import Check from './icons/Check.svelte';
-  import CheckFilled from './icons/CheckFilled.svelte';
-  import Chevron from './icons/Chevron.svelte';
-  import Copy from './icons/Copy.svelte';
-  import Error from './icons/Error.svelte';
-  import Exit from './icons/Exit.svelte';
-  import FrequencyIconFilled from './logos/FrequencyIconFilled.svelte';
-  import FrequencyIcon from './logos/FrequencyIcon.svelte';
-  import FrequencyAccessLogo from './logos/FrequencyAccessLogo.svelte';
-  import HamburgerMenu from './icons/HamburgerMenu.svelte';
-  import OpenClose from './icons/OpenClose.svelte';
-  import Planet from './icons/Planet.svelte';
-  import UserFilled from './icons/UserFilled.svelte';
-  import UserKey from './icons/UserKey.svelte';
-  import UserLock from './icons/UserLock.svelte';
-  import UserOutlined from './icons/UserOutlined.svelte';
-  import Wallet from './icons/Wallet.svelte';
+  import {
+    Arrow,
+    Check,
+    CheckFilled,
+    Chevron,
+    Copy,
+    Error,
+    Exit,
+    HamburgerMenu,
+    OpenClose,
+    Planet,
+    UserFilled,
+    UserKey,
+    UserLock,
+    UserOutlined,
+    Wallet,
+    FrequencyIconFilled,
+    FrequencyIcon,
+    FrequencyAccessLogo,
+  } from './index';
 
   const icons = {
     Arrow,

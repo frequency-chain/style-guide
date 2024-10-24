@@ -1,4 +1,4 @@
-export const tailwindColors: { [key: string]: string } = {
+export default {
   //Branding Colors
   navy: '#18465E',
   teal: '#55B1AB',

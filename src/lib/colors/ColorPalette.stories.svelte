@@ -1,6 +1,6 @@
 <script>
   import { Meta, Story } from '@storybook/addon-svelte-csf';
-  import { tailwindColors } from '../../../tailwindColors.ts';
+  import tailwindColors from '../styles/tailwindColors';
 </script>
 
 <Meta title="Design System/Colors" />

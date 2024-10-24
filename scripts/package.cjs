@@ -15,18 +15,24 @@ rootPackage['scripts'] = {};
 rootPackage.main = 'index.js';
 rootPackage.module = 'index.js';
 rootPackage.exports = {
-  '.': {
-    types: './index.d.ts',
-    svelte: './index.js',
-    default: './index.js',
-  },
-  './tailwind': './tailwind.config.mjs',
+    '.': {
+        types: './index.d.ts',
+        svelte: './index.js',
+        default: './index.js',
+    },
+    './tailwind.config': './tailwind.config.js',
+    './tailwindColors': './styles/tailwindColors.js',
+    "./styles": "./styles/index.css"
 };
+
+rootPackage.style = {
+    "./styles": "./styles/index.css"
+}
 
 // Don't keep dev dependencies
 delete rootPackage['devDependencies'];
 
 // Write it out
 fs.writeFileSync(`${path.join(__dirname, '../dist', 'package.json')}`, JSON.stringify(rootPackage, null, 2), (err) => {
-  if (err) throw new Error(err);
+    if (err) throw new Error(err);
 });

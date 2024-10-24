@@ -11,15 +11,18 @@
       "svelte": "./dist/index.js",
       "default": "./dist/index.js"
     },
-    "./tailwind": "./dist/tailwind.config.mjs"
+    "./tailwind.config": "./dist/tailwind.config.js",
+    "./styles/index.css": "./dist/styles/index.css"
   },
+  "style": "./src/lib/styles/index.css",
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build:package-json": "node scripts/package.cjs",
     "build:svelte": "svelte-package",
-    "build:static": "cp src/styles/index.css tailwindColors.ts tailwind.config.mjs .npmignore README.md LICENSE dist/",
-    "build": "rm -rf ./dist && npm run build:svelte && npm run build:static && npm run build:package-json",
+    "build:static": "cp .npmignore README.md LICENSE dist/",
+    "build:tsc": "tsc tailwind.config.ts --outDir dist --declaration",
+    "build": "rm -rf ./dist && npm run build:svelte && npm run build:static && npm run build:package-json && npm run build:tsc",
     "dry-run": "cd dist && npm pack --dry-run",
     "publish": "cd dist && npm publish",
     "lint": "eslint",
