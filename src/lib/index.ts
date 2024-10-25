@@ -7,6 +7,7 @@ export { default as AccordionList } from './features/AccordionList.svelte';
 export { default as Header } from './features/Header.svelte';
 export { default as NavMenu } from './features/NavMenu.stories.svelte';
 export { default as NavMenuMobile } from './features/NavMenuMobile.svelte';
+export { default as Card } from './features/Card.svelte'
 
 // icons & logos
 export * as Assets from './assets/index';
