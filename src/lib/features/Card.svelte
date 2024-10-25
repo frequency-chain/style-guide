@@ -17,9 +17,3 @@
     </slot>
 </div>
 
-<style>
-    .card-shadow {
-        box-shadow: 4px 4px 10px 0 rgb(0 0 0 / 25%);
-    }
-</style>
-
