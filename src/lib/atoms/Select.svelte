@@ -12,7 +12,7 @@
 <Root>
   <Label {isRequired}>{label}</Label>
   {#if description}
-    <span class="text-sm text-gray2">{description}</span>
+    <span class="form-item-description">{description}</span>
   {/if}
   <Trigger {error}>
     <Value {placeholder} />
@@ -23,6 +23,6 @@
     {/each}
   </Content>
   {#if error}
-    <span class="text-sm font-bold text-error">{error}</span>
+    <span class="form-error">{error}</span>
   {/if}
 </Root>

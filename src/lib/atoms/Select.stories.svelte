@@ -2,9 +2,9 @@
   import { Meta, Story } from '@storybook/addon-svelte-csf';
   import Select from './Select.svelte';
 
-  export let label = 'Select Option';
-  export let description = 'Please choose an option';
-  export let placeholder = 'Select an option...';
+  export let label = 'Favorite Food';
+  export let description = 'Ex: Spaghetti and meatballs';
+  export let placeholder = 'Enter your ';
   export let isRequired = false;
   export let options = [
     { optionLabel: 'Option 1', value: '1' },
