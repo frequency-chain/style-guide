@@ -30,7 +30,7 @@
     color="white"
     >
     <div slot="content">
-      <h4 class="font-bold text-md text-navy">Slot content title</h4>
+      <h4 class="font-bold md text-navy">Slot content title</h4>
       <p class="text-error bg-white w-fit px-2 rounded">Slot content: Error text!</p>
       <p class="">Slot content: error message!</p>
     </div>
