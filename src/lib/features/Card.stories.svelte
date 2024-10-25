@@ -23,7 +23,7 @@
   />
   <Card
     title="Some other color card"
-    headerColor="cream"
+    titleColor="cream"
     bgColor="teal"
     color="white"
     />
