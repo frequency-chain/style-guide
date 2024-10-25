@@ -21,4 +21,10 @@
       icon={Wallet}
       class="w-1/2 mb-4"
   />
+  <Card
+    title="Some other color card"
+    headerColor="cream"
+    bgColor="teal"
+    color="white"
+    />
 </Story>
