@@ -61,6 +61,7 @@ export default {
         f192: '192px',
         f224: '224px',
         f256: '256px',
+        f320: '320px',
       },
       boxShadow: {
         md: '0px 4px 7px #00000040',
