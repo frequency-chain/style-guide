@@ -2,7 +2,6 @@
   import { UserFilled } from '/src/lib/assets/index';
 
   export let title = 'Default Card Header';
-  export let content = 'This is default content';
   export let bgColor = 'cream';
   export let color = 'black'
   export let titleColor = 'navy'
@@ -15,7 +14,9 @@
     <svelte:component this={icon} class="w-f48 h-f48"/>
   </div>
   <div class="text-{color}">
-    {content}
+    <slot name="content" >
+      This is default content
+    </slot>
   </div>
 </div>
 

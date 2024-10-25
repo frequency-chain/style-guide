@@ -11,20 +11,28 @@
   <Card></Card>
   <Card
     title="320px width card"
-    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun"
     icon={UserKey}
     class="w-f320 my-4"
   />
   <Card
       title="Half width card"
-      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun"
       icon={Wallet}
       class="w-1/2 mb-4"
-  />
+  >
+    <p slot="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun
+    </p>
+  </Card>
   <Card
-    title="Some other color card"
+    title="Another color card"
     titleColor="cream"
     bgColor="teal"
     color="white"
-    />
+    >
+    <div slot="content">
+      <h4 class="font-bold text-md text-navy">Slot content title</h4>
+      <p class="text-error bg-white w-fit px-2 rounded">Slot content: Error text!</p>
+      <p class="">Slot content: error message!</p>
+    </div>
+  </Card>
 </Story>
