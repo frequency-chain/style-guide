@@ -19,6 +19,7 @@
     FrequencyIconFilled,
     FrequencyIcon,
     FrequencyAccessLogo,
+    FrequencyLogo,
   } from './index';
 
   const icons = {
@@ -43,6 +44,7 @@
     FrequencyIconFilled,
     FrequencyIcon,
     FrequencyAccessLogo,
+    FrequencyLogo,
   };
 </script>
 

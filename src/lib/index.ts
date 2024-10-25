@@ -5,6 +5,7 @@ export { default as Select } from './atoms/Select.svelte';
 export { default as Typography } from './typography/Typography.svelte';
 export { default as Accordion } from './features/Accordion.svelte';
 export { default as AccordionList } from './features/AccordionList.svelte';
+export { default as Footer } from './features/Footer.svelte';
 export { default as Header } from './features/Header.svelte';
 export { default as Modal } from './features/Modal.stories.svelte';
 export { default as NavMenu } from './features/NavMenu.stories.svelte';

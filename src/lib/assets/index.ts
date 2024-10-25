@@ -19,3 +19,8 @@ export { default as Wallet } from './icons/Wallet.svelte';
 export { default as FrequencyAccessLogo } from './logos/FrequencyAccessLogo.svelte';
 export { default as FrequencyIcon } from './logos/FrequencyIcon.svelte';
 export { default as FrequencyIconFilled } from './logos/FrequencyIconFilled.svelte';
+export { default as FrequencyLogo } from './logos/FrequencyLogo.svelte';
+//External Logos
+export { default as DiscordLogo } from './logos/DiscordLogo.svelte';
+export { default as LinkedInLogo } from './logos/LinkedInLogo.svelte';
+export { default as XLogo } from './logos/XLogo.svelte';
