@@ -13,11 +13,9 @@
     <h5 class="font-bold text-{titleColor} inline">{title}</h5>
     <svelte:component this={icon} class="w-f48 h-f48"/>
   </div>
-  <div class="text-{color}">
     <slot name="content" >
       This is default content
     </slot>
-  </div>
 </div>
 
 <style>
