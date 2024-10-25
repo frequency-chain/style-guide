@@ -2,9 +2,9 @@
   import { Meta, Story } from '@storybook/addon-svelte-csf';
   import Input from './Input.svelte';
 
-  export let label = 'Select Option';
-  export let description = 'Please choose an option';
-  export let placeholder = 'Select an option...';
+  export let label = 'What is your favorite food?';
+  export let description = 'Ex: Spaghetti and Meatballs';
+  export let placeholder = 'Enter your response...';
   export let isRequired = false;
   export let value = '';
   export let error = 'Error message.';

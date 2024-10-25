@@ -2,7 +2,7 @@
   import { cn } from '../../utils/utils';
   import { Error } from '../assets';
 
-  export let label = 'Label';
+  export let label = '';
   export let isRequired = false;
   export let description = '';
   export let value = '';
