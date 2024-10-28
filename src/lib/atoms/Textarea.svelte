@@ -1,11 +1,16 @@
 <script lang="ts">
 <<<<<<< HEAD
+<<<<<<< HEAD
     import {cn} from '../utils/utils';
     import FormElement from './FormElement.svelte';
 =======
   import { cn } from '$lib/utils/utils';
   import FormElement from './FormElement.svelte';
 >>>>>>> fe21dd2 (fix utils path hotfix)
+=======
+    import {cn} from '../utils/utils';
+    import FormElement from './FormElement.svelte';
+>>>>>>> 0ccce23 (fix paths)
 
     export let label = '';
     export let isRequired = false;
