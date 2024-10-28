@@ -42,7 +42,6 @@
     "@sveltejs/vite-plugin-svelte": "^2.5.3",
     "@typescript-eslint/parser": "^8.8.0",
     "autoprefixer": "^10.4.13",
-    "bits-ui": "^0.21.16",
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-html": "^7.1.0",
@@ -64,6 +63,7 @@
   },
   "dependencies": {
     "@storybook/addons": "^7.6.17",
+    "bits-ui": "^0.21.16",
     "clsx": "^2.1.1",
     "svelte": "^4.2.19",
     "tailwind-merge": "^2.5.2"

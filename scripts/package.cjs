@@ -31,9 +31,6 @@ rootPackage.style = {
 
 // Don't keep dev dependencies
 delete rootPackage['devDependencies'];
-rootPackage.devDependencies = {
-  'bits-ui': '^0.21.16',
-};
 
 // Write it out
 fs.writeFileSync(`${path.join(__dirname, '../dist', 'package.json')}`, JSON.stringify(rootPackage, null, 2), (err) => {
