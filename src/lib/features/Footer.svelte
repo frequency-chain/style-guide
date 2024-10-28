@@ -12,10 +12,10 @@
   <aside>{`© ${new Date().getFullYear()} Frequency Network Foundation. All Right Reserved`}</aside>
   <div class="flex gap-f16" aria-label="Social Links">
     <IconButton label="X/Twitter" href={'https://twitter.com/one_frequency'}>
-      <XLogo slot="icon" class="fill-white text-white" />
+      <XLogo />
     </IconButton>
     <IconButton label="Discord" href="https://discord.com/invite/JchmHX5afV">
-      <DiscordLogo slot="icon" />
+      <DiscordLogo />
     </IconButton>
   </div>
 </footer>
