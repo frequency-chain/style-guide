@@ -23,5 +23,6 @@
     <div class="w-f192 bg-teal">f192 - 192px</div>
     <div class="w-f224 bg-teal">f224 - 224px</div>
     <div class="w-f256 bg-teal">f256 - 256px</div>
+    <div class="w-f320 bg-teal">f320 - 320px</div>
   </div>
 </Story>
