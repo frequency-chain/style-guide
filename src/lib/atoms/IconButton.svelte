@@ -1,5 +1,9 @@
 <script lang="ts">
+<<<<<<< HEAD
     import {cn} from '../utils/utils';
+=======
+  import { cn } from '$lib/utils/utils';
+>>>>>>> fe21dd2 (fix utils path hotfix)
 
     export let label: string = '';
     export let href: string = '';
