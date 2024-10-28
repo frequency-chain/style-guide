@@ -2,6 +2,7 @@
 export { default as Button } from './atoms/Button.svelte';
 export { default as Input } from './atoms/Input.svelte';
 export { default as Select } from './atoms/Select.svelte';
+export { default as Textarea } from './atoms/Textarea.svelte';
 export { default as Typography } from './typography/Typography.svelte';
 export { default as Accordion } from './features/Accordion.svelte';
 export { default as AccordionList } from './features/AccordionList.svelte';
