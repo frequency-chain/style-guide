@@ -1,5 +1,5 @@
 <script>
-  import { UserFilled } from '/src/lib/assets/index';
+  import { UserFilled } from '../assets';
 
   export let title = 'Default Card Header';
   export let bgColor = 'cream';
