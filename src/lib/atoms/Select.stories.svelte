@@ -3,8 +3,8 @@
   import Select from './Select.svelte';
 
   export let label = 'Favorite Food';
-  export let description = 'Ex: Spaghetti and meatballs';
-  export let placeholder = 'Enter your ';
+  export let description = 'Choose your favorite food.';
+  export let placeholder = 'Select an option';
   export let isRequired = false;
   export let options = [
     { optionLabel: 'Option 1', value: '1' },
