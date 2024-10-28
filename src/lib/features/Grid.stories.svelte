@@ -20,7 +20,7 @@
 <Meta title="Design System/Grid" />
 Resize window or activate responsive sizing in the development panel to see grid changes.
 <Story name="Grid">
-  <Grid class="xs:text-xs md:text-sm">
+  <Grid class="xs:xs md:sm">
     {#each content as line, i}
       <p><b>Paragraph {i+1}: </b>
         {line}
