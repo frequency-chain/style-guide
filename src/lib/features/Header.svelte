@@ -2,7 +2,7 @@
   import { FrequencyAccessLogo, OpenClose } from '../assets/index';
   import NavMenu from './NavMenu.svelte';
   import NavMenuMobile from './NavMenuMobile.svelte';
-  import { MenuItem } from '../../utils/types.js';
+  import { MenuItem } from '$lib/utils/types.js';
 
   export let menuItems: MenuItem[] = [];
 

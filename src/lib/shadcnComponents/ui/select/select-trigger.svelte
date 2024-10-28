@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Select as SelectPrimitive } from 'bits-ui';
-  import { cn } from '../../../../utils/utils';
+  import { cn } from '../../../utils/utils';
   import { Error, Chevron } from '../../../assets/index';
 
   export let error: string | undefined;
