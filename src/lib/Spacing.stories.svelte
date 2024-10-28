@@ -18,6 +18,7 @@
     <div class="w-f64 bg-teal">f64 - 64px</div>
     <div class="w-f80 bg-teal">f80 - 80px</div>
     <div class="w-f96 bg-teal">f96 - 96px</div>
+    <div class="w-f120 bg-teal">f120 - 120px</div>
     <div class="w-f128 bg-teal">f128 - 128px</div>
     <div class="w-f160 bg-teal">f160 - 160px</div>
     <div class="w-f192 bg-teal">f192 - 192px</div>
