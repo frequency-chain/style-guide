@@ -13,36 +13,22 @@
 
 <!-- 320px Width -->
 <Story name="Specific Width">
-  <Card
-      title="320px width"
-      class="w-f320 my-4"
-      icon={UserKey}
-  />
+  <Card title="320px width" class="my-4 w-f320" icon={UserKey} />
 </Story>
 
 <!-- Half Width -->
-<Story name="Half Width" >
-  <Card
-    title="Half width"
-    icon={Wallet}
-    class="w-1/2 mb-4"
-  >
-    <p slot="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun
-    </p>
+<Story name="Half Width">
+  <Card title="Half width" icon={Wallet} class="mb-4 w-1/2">
+    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun</p>
   </Card>
 </Story>
 
 <!-- Another color -->
-<Story name="Alt Color" >
-  <Card
-    title="Alternate color card"
-    titleColor="cream"
-    bgColor="teal"
-    >
+<Story name="Alt Color">
+  <Card title="Alternate color card" titleColor="cream" bgColor="teal">
     <div slot="content">
-      <h4 class="font-bold md text-navy">Slot content title</h4>
-      <p class="text-error bg-white w-fit px-2 rounded">Slot content: Error text!</p>
+      <h4 class="md font-bold text-navy">Slot content title</h4>
+      <p class="w-fit rounded bg-white px-2 text-error">Slot content: Error text!</p>
       <p class="text-white">Slot content: error message!</p>
     </div>
   </Card>

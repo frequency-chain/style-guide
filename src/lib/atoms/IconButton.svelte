@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { cn } from '../../utils/utils';
+  import { cn } from '$lib/utils/utils';
 
   export let label: string = '';
   export let href: string = '';

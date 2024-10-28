@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { MenuItem } from '../../utils/types.js';
+  import { MenuItem } from '../utils/types.js';
   import Button from '../atoms/Button.svelte';
 
   export let menuItems: MenuItem[] = [];
