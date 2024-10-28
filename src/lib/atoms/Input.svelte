@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { cn } from '../../utils/utils';
+  import { cn } from '../utils/utils';
   import FormElement from './FormElement.svelte';
 
   export let label = '';
