@@ -20,6 +20,9 @@
     FrequencyIcon,
     FrequencyAccessLogo,
     FrequencyLogo,
+    DiscordLogo,
+    LinkedInLogo,
+    XLogo,
   } from './index';
 
   const icons = {
@@ -45,6 +48,9 @@
     FrequencyIcon,
     FrequencyAccessLogo,
     FrequencyLogo,
+    DiscordLogo,
+    LinkedInLogo,
+    XLogo,
   };
 </script>
 

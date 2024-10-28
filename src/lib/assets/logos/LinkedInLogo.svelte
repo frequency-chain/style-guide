@@ -1,11 +1,4 @@
-<svg
-  width="23"
-  height="23"
-  viewBox="0 0 23 23"
-  class={`h-auto w-[100%] ${$$restProps.class}`}
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
+<svg viewBox="0 0 23 23" class={$$restProps.class} fill="none" xmlns="http://www.w3.org/2000/svg">
   <g clip-path="url(#clip0_15_7631)">
     <path
       d="M11.5 23C17.8513 23 23 17.8513 23 11.5C23 5.14873 17.8513 0 11.5 0C5.14873 0 0 5.14873 0 11.5C0 17.8513 5.14873 23 11.5 23Z"
