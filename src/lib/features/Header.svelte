@@ -6,11 +6,7 @@
 
   export let menuItems: MenuItem[] = [];
   export let logoType: 'primary' | 'access' = 'primary';
-<<<<<<< HEAD
-  export let logoHex;
-=======
   export let logoHex = '#55B1AB';
->>>>>>> cb07635 (change)
 
   $: isNavOpen = false;
 
