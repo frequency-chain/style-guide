@@ -10,13 +10,38 @@
     { label: 'Login', href: '/', isButton: true },
   ];
 
-  const logoType = 'primary';
-  const logoHex = '#55B1AB';
+  // brightBlue
+  const logoHex = '#5E69FF';
 </script>
 
 <Meta title="UI Components/Features/Header" component={Header} />
 
 <!--Primary-->
-<Story name="Header">
-  <Header {menuItems} {logoType} {logoHex}/>
+<Story name="Header - Frequency Logo">
+  <Header {menuItems} />
+</Story>
+
+<!--Text Color-->
+<Story name="Header - Frequency Logo - Text Color">
+  <Header {menuItems} class="text-navy" />
+</Story>
+
+<!--LogoHex + Text Color-->
+<Story name="Header - Frequency Logo - LogoHex">
+  <Header {menuItems} {logoHex} class="text-navy" />
+</Story>
+
+<!--Access Logo-->
+<Story name="Header - Access Logo">
+  <Header {menuItems} logoType="access" />
+</Story>
+
+<!--Access Logo Text Color-->
+<Story name="Header - Access Logo - Text Color">
+  <Header {menuItems} logoType="access" class="text-navy" />
+</Story>
+
+<!--Access Logo LogoHex + Text Color-->
+<Story name="Header - Access Logo - LogoHex + Text Color">
+  <Header {menuItems} logoType="access" {logoHex} class="text-navy" />
 </Story>

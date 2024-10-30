@@ -12,23 +12,23 @@
 
   $: innerWidth = window.innerWidth;
 
-  $: hasMobileNav = innerWidth <= 900;
+  $: hasMobileNav = innerWidth <= 744;
 
   $: {
     window.addEventListener('resize', () => {
       innerWidth = window.innerWidth;
-      hasMobileNav = innerWidth <= 900;
+      hasMobileNav = innerWidth <= 744;
       if (!hasMobileNav) isNavOpen = false;
     });
   }
 </script>
 
-<div class="flex justify-between bg-navy p-f16 md:bg-transparent md:p-0">
+<div class={`flex justify-between bg-navy p-f16 md:bg-transparent md:p-0 ${$$restProps.class}`}>
   <!-- For Desktop -->
   {#if logoType == 'primary'}
-    <FrequencyLogo class={`text-[${logoHex}]`} />
+    <FrequencyLogo class={hasMobileNav ? 'text-white' : `text-[${logoHex}]`} />
   {:else if logoType == 'access'}
-    <FrequencyAccessLogo accessColor={hasMobileNav ? '#fff' : '#000'} />
+    <FrequencyAccessLogo accessColor={hasMobileNav ? '#fff' : '#000'} frequencyColor={logoHex} />
   {/if}
 
   <NavMenu {menuItems} />
