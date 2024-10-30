@@ -9,11 +9,13 @@
     { label: 'External', href: 'https://www.google.com/', isExternal: true },
     { label: 'Login', href: '/', isButton: true },
   ];
+
+  const logoType = 'primary';
 </script>
 
 <Meta title="UI Components/Features/Header" component={Header} />
 
 <!--Primary-->
 <Story name="Header">
-  <Header {menuItems} />
+  <Header {menuItems} {logoType} />
 </Story>
