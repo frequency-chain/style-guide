@@ -11,11 +11,12 @@
   ];
 
   const logoType = 'primary';
+  const logoHex = '#55B1AB';
 </script>
 
 <Meta title="UI Components/Features/Header" component={Header} />
 
 <!--Primary-->
 <Story name="Header">
-  <Header {menuItems} {logoType} />
+  <Header {menuItems} {logoType} {logoHex}/>
 </Story>

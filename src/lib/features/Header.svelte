@@ -6,6 +6,8 @@
 
   export let menuItems: MenuItem[] = [];
   export let logoType: 'primary' | 'access' = 'primary';
+  export let logoHex = '#55B1AB';
+
   $: isNavOpen = false;
 
   $: innerWidth = window.innerWidth;
@@ -21,10 +23,12 @@
   }
 </script>
 
-<div class="flex justify-between bg-navy p-f16 md:bg-transparent md:p-0" style="color: #55B1AB;">
+<div class="flex justify-between bg-navy p-f16 md:bg-transparent md:p-0">
   <!-- For Desktop -->
   {#if logoType == 'primary'}
-    <FrequencyLogo />
+    <span  style={`color: ${logoHex}`}>
+      <FrequencyLogo />
+    </span>
   {:else if logoType == 'access'}
     <FrequencyAccessLogo accessColor={hasMobileNav ? '#fff' : '#000'} />
   {/if}
