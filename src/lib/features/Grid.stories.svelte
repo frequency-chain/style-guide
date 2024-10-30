@@ -3,7 +3,7 @@
   import { Meta, Story } from '@storybook/addon-svelte-csf';
 
   const content = [
-    'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,',
+    "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
     'when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
     'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,',
@@ -17,15 +17,17 @@
     'Aliquam lobortis nisl mi, et ultrices mi gravida ac.',
   ];
 </script>
+
 <Meta title="Design System/Grid" />
 Resize window or activate responsive sizing in the development panel to see grid changes.
 <Story name="Grid">
   <Grid class="xs:xs md:sm">
     {#each content as line, i}
-      <p><b>Paragraph {i+1}: </b>
+      <p>
+        <b>Paragraph {i + 1}: </b>
         {line}
       </p>
     {/each}
   </Grid>
-  <p>Source: <a class="underline text-brightBlue hover:text-gray2" href="https://www.lipsum.com/">Lorem Ipsum</a></p>
+  <p>Source: <a class="text-brightBlue underline hover:text-gray2" href="https://www.lipsum.com/">Lorem Ipsum</a></p>
 </Story>
