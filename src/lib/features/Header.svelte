@@ -26,9 +26,7 @@
 <div class="flex justify-between bg-navy p-f16 md:bg-transparent md:p-0">
   <!-- For Desktop -->
   {#if logoType == 'primary'}
-    <span  style={`color: ${logoHex}`}>
-      <FrequencyLogo />
-    </span>
+    <FrequencyLogo class={`text-[${logoHex}]`} />
   {:else if logoType == 'access'}
     <FrequencyAccessLogo accessColor={hasMobileNav ? '#fff' : '#000'} />
   {/if}
