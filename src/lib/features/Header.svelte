@@ -6,6 +6,7 @@
 
   export let menuItems: MenuItem[] = [];
   export let logoType: 'primary' | 'access' = 'primary';
+  // logoHex = teal
   export let logoHex = '#55B1AB';
 
   $: isNavOpen = false;
@@ -21,19 +22,12 @@
       if (!hasMobileNav) isNavOpen = false;
     });
   }
-
-  const textColor = () => {
-    if (hasMobileNav) return 'text-white';
-    if (logoHex) return `text-[${logoHex}]`;
-    // default to teal
-    return 'text-teal';
-  };
 </script>
 
 <div class={`flex justify-between bg-navy p-f16 md:bg-transparent md:p-0 ${$$restProps.class}`}>
   <!-- For Desktop -->
   {#if logoType == 'primary'}
-    <FrequencyLogo class={textColor()} />
+    <FrequencyLogo logoHex={hasMobileNav ? '#fff' : logoHex} />
   {:else if logoType == 'access'}
     <FrequencyAccessLogo accessColor={hasMobileNav ? '#fff' : '#000'} frequencyColor={logoHex} />
   {/if}
