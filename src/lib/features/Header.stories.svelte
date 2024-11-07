@@ -19,8 +19,3 @@
 <Story name="Header - Frequency Logo">
   <Header {menuItems} />
 </Story>
-
-<!--Text Color-->
-<Story name="Header - Text Color">
-  <Header {menuItems} class="text-navy" />
-</Story>
