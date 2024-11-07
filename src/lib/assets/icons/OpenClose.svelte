@@ -9,7 +9,7 @@
   for={toggleIdentifier}
   aria-label="Open main navigation"
   aria-controls="mobile-navigation"
-  class={`group z-50 stroke-black ${classes}`}
+  class={`group z-50 ${classes}`}
 >
   <svg class="h-[40px] w-[40px]" role="none">
     <line
