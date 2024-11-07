@@ -45,6 +45,7 @@
     }[size] || 'w-[263px]';
 </script>
 
+<!--TODO: once we have upgraded to svelte 5, implement snippets for duplicate code.-->
 {#if href.length > 0}
   <a {...$$restProps} {href} class={disabled ? 'pointer-events-none' : 'pointer-events-auto'}>
     <button
