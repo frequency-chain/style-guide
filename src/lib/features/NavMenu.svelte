@@ -43,7 +43,7 @@
   });
 </script>
 
-<nav class="flex items-stretch gap-f32">
+<nav class="flex items-stretch gap-f40">
   {#each menuItems as item}
     {#if item.isButton}
       <div class="content-center">
@@ -55,7 +55,7 @@
       <a
         href={item.href}
         target={item.isExternal ? '_blank' : '_self'}
-        class={`h6 underline-on-nav-hover border-color content-center px-2 font-bold transition-all duration-1000 after:bg-current ${item.viewportHighlightId && highlightId === item.viewportHighlightId ? 'underline-on-nav' : ''}`}
+        class={`h6 underline-on-nav-hover border-color flex content-center px-2 py-6 font-bold text-navy transition-all duration-1000 after:bg-current ${item.viewportHighlightId && highlightId === item.viewportHighlightId ? 'underline-on-nav' : ''}`}
       >
         {`${item.label}`}
       </a>
@@ -67,7 +67,7 @@
   /* Underline on hover animation */
   .underline-on-nav-hover,
   .underline-on-nav {
-    @apply relative block cursor-pointer overflow-hidden px-0 py-1;
+    @apply relative block cursor-pointer overflow-hidden;
   }
 
   .underline-on-nav-hover::after,
