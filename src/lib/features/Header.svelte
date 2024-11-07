@@ -7,13 +7,13 @@
   export let menuItems: MenuItem[] = [];
 </script>
 
-<div class={`flex h-[80px] justify-between bg-navy p-f16 md:bg-white md:p-0 ${$$restProps.class}`}>
+<div class={`flex h-[80px] justify-between p-f16 md:p-0 ${$$restProps.class}`}>
   <!-- For Desktop -->
   <div class="flex w-[146px] items-center text-teal md:w-[200px]">
     <FrequencyLogo />
   </div>
 
-  <div class="hidden items-stretch md:flex">
+  <div class="hidden items-stretch lg:flex">
     <NavMenu {menuItems} />
   </div>
 
