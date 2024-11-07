@@ -20,16 +20,3 @@
   <!-- For Mobile -->
   <NavMenuMobile {menuItems} />
 </div>
-
-<!--
-
-TODO:
-- [x] JS or CSS + Checkbox?
-- [ ] Update Logo Color
-- [ ] Active state
-- [ ] Scroll active state
-
--->
-
-<style>
-</style>
