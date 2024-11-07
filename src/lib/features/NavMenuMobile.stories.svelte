@@ -3,10 +3,13 @@
   import NavMenuMobile from './NavMenuMobile.svelte';
 
   const menuItems = [
-    { label: 'Home', href: '/' },
-    { label: 'FAQ', href: '/faq' },
+    { label: 'Mission', href: '#mission', viewportHighlightId: 'mission' },
+    { label: 'About', href: '#about', viewportHighlightId: 'about' },
+    { label: 'User', href: '#user', viewportHighlightId: 'user' },
+    { label: 'Developers', href: '#developers', viewportHighlightId: 'developers' },
+    { label: 'Partners', href: '#partners', viewportHighlightId: 'partners' },
     { label: 'External', href: 'https://www.google.com/', isExternal: true },
-    { label: 'Login', href: '/', isButton: true },
+    { label: 'Developer Portal', href: '/', isButton: true },
   ];
 </script>
 

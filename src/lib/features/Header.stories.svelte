@@ -4,14 +4,13 @@
   import { MenuItem } from '../utils/types.js';
 
   const menuItems: MenuItem[] = [
-    { label: 'Home', href: '/' },
-    { label: 'FAQ', href: '/faq' },
-    { label: 'External', href: 'https://www.google.com/', isExternal: true },
-    { label: 'Login', href: '/', isButton: true },
+    { label: 'Mission', href: '#mission', viewportHighlightId: 'mission' },
+    { label: 'About', href: '#about', viewportHighlightId: 'about' },
+    { label: 'User', href: '#user', viewportHighlightId: 'user' },
+    { label: 'Developers', href: '#developers', viewportHighlightId: 'developers' },
+    { label: 'Contact', href: '#contact', viewportHighlightId: 'contact' },
+    { label: 'Developer Portal', href: '/', isButton: true },
   ];
-
-  // brightBlue
-  const logoHex = '#5E69FF';
 </script>
 
 <Meta title="UI Components/Features/Header" component={Header} />
@@ -22,11 +21,6 @@
 </Story>
 
 <!--Text Color-->
-<Story name="Header - Frequency Logo - Text Color">
+<Story name="Header - Text Color">
   <Header {menuItems} class="text-navy" />
-</Story>
-
-<!--LogoHex + Text Color-->
-<Story name="Header - Frequency Logo - LogoHex">
-  <Header {menuItems} {logoHex} class="text-navy" />
 </Story>

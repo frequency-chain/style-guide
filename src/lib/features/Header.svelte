@@ -5,32 +5,31 @@
   import { MenuItem } from '$lib/utils/types.js';
 
   export let menuItems: MenuItem[] = [];
-  export let logoType: 'primary' = 'primary';
-  // logoHex = teal
-  export let logoHex = '#55B1AB';
-
-  $: isNavOpen = false;
-
-  $: innerWidth = window.innerWidth;
-
-  $: hasMobileNav = innerWidth <= 744;
-
-  $: {
-    window.addEventListener('resize', () => {
-      innerWidth = window.innerWidth;
-      hasMobileNav = innerWidth <= 744;
-      if (!hasMobileNav) isNavOpen = false;
-    });
-  }
 </script>
 
-<div class={`flex justify-between bg-navy p-f16 md:bg-transparent md:p-0 ${$$restProps.class}`}>
+<div class={`flex h-[80px] justify-between bg-navy p-f16 md:bg-white md:p-0 ${$$restProps.class}`}>
   <!-- For Desktop -->
-  <FrequencyLogo logoHex={hasMobileNav ? '#fff' : logoHex} />
+  <div class="flex w-[146px] items-center text-teal md:w-[200px]">
+    <FrequencyLogo />
+  </div>
 
-  <NavMenu {menuItems} />
+  <div class="hidden items-stretch md:flex">
+    <NavMenu {menuItems} />
+  </div>
 
   <!-- For Mobile -->
-  <OpenClose onClick={() => (isNavOpen = !isNavOpen)} isOpen={isNavOpen} classes="stroke-white md:hidden lg:hidden" />
-  <NavMenuMobile isOpen={isNavOpen} {menuItems} />
+  <NavMenuMobile {menuItems} />
 </div>
+
+<!--
+
+TODO:
+- [x] JS or CSS + Checkbox?
+- [ ] Update Logo Color
+- [ ] Active state
+- [ ] Scroll active state
+
+-->
+
+<style>
+</style>

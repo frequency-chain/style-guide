@@ -24,7 +24,7 @@
   $: typeClass =
     type === 'primary'
       ? 'bg-teal text-navy hover:bg-tealDark hover:text-black hover:shadow-md'
-      : 'bg-transparent border border-white hover:border-navy hover:text-primary';
+      : 'bg-transparent border border-white hover:border-navy hover:text-navy';
 
   // Define disabled classes
   $: disabledClass = disabled ? 'bg-gray3 text-white cursor-default pointer-events-none' : '';
