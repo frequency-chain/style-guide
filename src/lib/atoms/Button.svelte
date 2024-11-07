@@ -11,7 +11,7 @@
   /**
    * Specify the size of the component.
    */
-  export let size: 'xs' | 'sm' | 'normal' | 'md' | 'lg' = 'normal';
+  export let size: 'xs' | 'sm' | 'normal' | 'md' | 'lg' | 'auto' | 'full' = 'normal';
 
   /**
    * Specify if the component is disabled.
@@ -38,6 +38,8 @@
       md: 'w-[339px]',
       lg: 'w-[388px]',
       normal: 'w-[263px]',
+      auto: '',
+      full: 'w-full',
     }[size] || 'w-[263px]';
 </script>
 

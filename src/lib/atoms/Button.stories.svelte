@@ -13,6 +13,8 @@
     <Button size="normal">Primary Normal</Button>
     <Button size="md">Primary MD</Button>
     <Button size="lg">Primary LG</Button>
+    <Button size="auto">Primary Auto</Button>
+    <Button size="full">Primary Full</Button>
   </div>
 </Story>
 
@@ -24,6 +26,8 @@
     <Button type="secondary" size="normal">Secondary Normal</Button>
     <Button type="secondary" size="md">Secondary MD</Button>
     <Button type="secondary" size="lg">Secondary LG</Button>
+    <Button type="secondary" size="auto">Secondary Auto</Button>
+    <Button type="secondary" size="full">Secondary Full</Button>
   </div>
 </Story>
 
@@ -35,5 +39,7 @@
     <Button size="normal" disabled={true}>Primary Normal</Button>
     <Button size="md" disabled={true}>Primary MD</Button>
     <Button size="lg" disabled={true}>Primary LG</Button>
+    <Button size="auto" disabled={true}>Primary Auto</Button>
+    <Button size="full" disabled={true}>Primary Full</Button>
   </div>
 </Story>
