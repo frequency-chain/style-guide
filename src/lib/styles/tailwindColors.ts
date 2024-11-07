@@ -8,7 +8,6 @@ export default {
   gray2: '#828282',
   gray3: '#C8CDD0',
   white: '#FFFFFF',
-  cream: '#FEFAF3',
   shadow: '#00000040',
   // Supporting Colors
   brightBlue: '#5E69FF',

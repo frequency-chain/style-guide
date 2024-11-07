@@ -2,7 +2,7 @@
   import { UserFilled } from '../assets';
 
   export let title = 'Default Card Header';
-  export let bgColor = 'cream';
+  export let bgColor = 'white';
   export let titleColor = 'navy';
   export let icon = UserFilled;
 </script>
