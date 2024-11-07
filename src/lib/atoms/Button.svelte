@@ -3,6 +3,8 @@
 
   export let onClick = () => {};
 
+  export let href = '';
+
   /**
    * Specify the kind of button.
    */
@@ -43,13 +45,28 @@
     }[size] || 'w-[263px]';
 </script>
 
-<button
-  {...$$restProps}
-  on:click|preventDefault={onClick}
-  class={`rounded-full p-f8 text-center transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
-  {disabled}
->
-  <Typography bold={true} class="flex items-center justify-center gap-f8">
-    <slot />
-  </Typography>
-</button>
+<!--TODO: once we have upgraded to svelte 5, implement snippets for duplicate code.-->
+{#if href.length > 0}
+  <a {...$$restProps} {href} class={disabled ? 'pointer-events-none' : 'pointer-events-auto'}>
+    <button
+      {...$$restProps}
+      class={`rounded-full p-f8 text-center transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
+      {disabled}
+    >
+      <Typography bold={true} class="flex items-center justify-center gap-f8">
+        <slot />
+      </Typography>
+    </button>
+  </a>
+{:else}
+  <button
+    {...$$restProps}
+    on:click|preventDefault={onClick}
+    class={`rounded-full p-f8 text-center transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
+    {disabled}
+  >
+    <Typography bold={true} class="flex items-center justify-center gap-f8">
+      <slot />
+    </Typography>
+  </button>
+{/if}

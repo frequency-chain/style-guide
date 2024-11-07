@@ -6,6 +6,7 @@
 
 <Meta title="UI Components/Atoms/Button" component={Button} />
 
+<!-- Primary Button - Type Button -->
 <Story name="PrimaryButton">
   <div class="flex flex-col gap-f8">
     <Button size="xs">P-XS</Button>
@@ -16,6 +17,13 @@
     <Button size="auto">Primary Auto</Button>
     <Button size="full">Primary Full</Button>
   </div>
+</Story>
+
+<!-- Primary Button - Type Link -->
+<Story name="PrimaryLinkButton">
+  <Button size="normal" href="https://www.google.com/" target="_blank">Primary</Button>
+  <Button size="normal" href="?path=/story/ui-components-atoms-button--primary-button">Internal</Button>
+  <Button size="normal" href="https://www.google.com/" target="_blank" disabled={true}>Disabled</Button>
 </Story>
 
 <!-- Secondary -->
