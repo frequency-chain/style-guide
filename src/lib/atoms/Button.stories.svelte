@@ -6,6 +6,7 @@
 
 <Meta title="UI Components/Atoms/Button" component={Button} />
 
+<!-- Primary Button - Type Button -->
 <Story name="PrimaryButton">
   <div class="flex flex-col gap-f8">
     <Button size="xs">P-XS</Button>
@@ -17,6 +18,11 @@
     <Button size="full">Primary Full</Button>
   </div>
 </Story>
+
+<!-- Primary Button - Type Link -->
+<!-- <Story name="PrimaryLinkButton">
+  <Button size="normal" href="google.com" target="_blank">P-XS</Button>
+</Story> -->
 
 <!-- Secondary -->
 <Story name="Secondary">
