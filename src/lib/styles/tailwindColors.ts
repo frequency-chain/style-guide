@@ -1,6 +1,6 @@
 export default {
   //Branding Colors
-  navy: '#18465E',
+  navy: '#14313F',
   teal: '#55B1AB',
   // Neutral Colors
   black: '#000000',
@@ -8,9 +8,9 @@ export default {
   gray2: '#828282',
   gray3: '#C8CDD0',
   white: '#FFFFFF',
-  cream: '#FEFAF3',
   shadow: '#00000040',
   // Supporting Colors
+  tealDark: '#339B94',
   brightBlue: '#5E69FF',
   dustyRose: '#A06B87',
   orange: '#F77C47',

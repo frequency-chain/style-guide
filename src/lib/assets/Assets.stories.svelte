@@ -18,7 +18,6 @@
     Wallet,
     FrequencyIconFilled,
     FrequencyIcon,
-    FrequencyAccessLogo,
     FrequencyLogo,
     DiscordLogo,
     LinkedInLogo,
@@ -46,7 +45,6 @@
   const logos = {
     FrequencyIconFilled,
     FrequencyIcon,
-    FrequencyAccessLogo,
     FrequencyLogo,
     DiscordLogo,
     LinkedInLogo,

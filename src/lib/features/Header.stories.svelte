@@ -30,18 +30,3 @@
 <Story name="Header - Frequency Logo - LogoHex">
   <Header {menuItems} {logoHex} class="text-navy" />
 </Story>
-
-<!--Access Logo-->
-<Story name="Header - Access Logo">
-  <Header {menuItems} logoType="access" />
-</Story>
-
-<!--Access Logo Text Color-->
-<Story name="Header - Access Logo - Text Color">
-  <Header {menuItems} logoType="access" class="text-navy" />
-</Story>
-
-<!--Access Logo LogoHex + Text Color-->
-<Story name="Header - Access Logo - LogoHex + Text Color">
-  <Header {menuItems} logoType="access" {logoHex} class="text-navy" />
-</Story>

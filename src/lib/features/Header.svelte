@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { FrequencyAccessLogo, FrequencyLogo, OpenClose } from '../assets/index';
+  import { FrequencyLogo, OpenClose } from '../assets/index';
   import NavMenu from './NavMenu.svelte';
   import NavMenuMobile from './NavMenuMobile.svelte';
   import { MenuItem } from '$lib/utils/types.js';
 
   export let menuItems: MenuItem[] = [];
-  export let logoType: 'primary' | 'access' = 'primary';
+  export let logoType: 'primary' = 'primary';
   // logoHex = teal
   export let logoHex = '#55B1AB';
 
@@ -26,11 +26,7 @@
 
 <div class={`flex justify-between bg-navy p-f16 md:bg-transparent md:p-0 ${$$restProps.class}`}>
   <!-- For Desktop -->
-  {#if logoType == 'primary'}
-    <FrequencyLogo logoHex={hasMobileNav ? '#fff' : logoHex} />
-  {:else if logoType == 'access'}
-    <FrequencyAccessLogo accessColor={hasMobileNav ? '#fff' : '#000'} frequencyColor={logoHex} />
-  {/if}
+  <FrequencyLogo logoHex={hasMobileNav ? '#fff' : logoHex} />
 
   <NavMenu {menuItems} />
 

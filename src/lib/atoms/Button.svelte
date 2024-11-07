@@ -11,7 +11,7 @@
   /**
    * Specify the size of the component.
    */
-  export let size: 'xs' | 'sm' | 'normal' | 'md' | 'lg' = 'normal';
+  export let size: 'xs' | 'sm' | 'normal' | 'md' | 'lg' | 'auto' | 'full' = 'normal';
 
   /**
    * Specify if the component is disabled.
@@ -21,11 +21,11 @@
   // Define button type classes
   $: typeClass =
     type === 'primary'
-      ? 'bg-teal border-teal hover:border-white hover:bg-transparent'
-      : 'bg-transparent border-white hover:border-navy hover:text-primary';
+      ? 'bg-teal text-navy hover:bg-tealDark hover:text-black hover:shadow-md'
+      : 'bg-transparent border border-white hover:border-navy hover:text-primary';
 
   // Define disabled classes
-  $: disabledClass = disabled ? 'bg-gray3 border-gray3 cursor-default pointer-events-none' : '';
+  $: disabledClass = disabled ? 'bg-gray3 text-white cursor-default pointer-events-none' : '';
 
   // Define final brn style classes
   $: btnStylesClass = disabled ? disabledClass : typeClass;
@@ -38,13 +38,15 @@
       md: 'w-[339px]',
       lg: 'w-[388px]',
       normal: 'w-[263px]',
+      auto: '',
+      full: 'w-full',
     }[size] || 'w-[263px]';
 </script>
 
 <button
   {...$$restProps}
   on:click|preventDefault={onClick}
-  class={`rounded-full border p-f8 text-center text-white transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
+  class={`rounded-full p-f8 text-center transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
   {disabled}
 >
   <Typography bold={true} class="flex items-center justify-center gap-f8">
