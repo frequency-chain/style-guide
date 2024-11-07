@@ -13,7 +13,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins'],
+        title: ['Newake', 'Arial Black', 'Arial Bold', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
       },
       colors: tailwindColors,
       fontSize: {
