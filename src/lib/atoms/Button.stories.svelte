@@ -20,9 +20,11 @@
 </Story>
 
 <!-- Primary Button - Type Link -->
-<!-- <Story name="PrimaryLinkButton">
-  <Button size="normal" href="google.com" target="_blank">P-XS</Button>
-</Story> -->
+<Story name="PrimaryLinkButton">
+  <Button size="normal" href="https://www.google.com/" target="_blank">Primary</Button>
+  <Button size="normal" href="?path=/story/ui-components-atoms-button--primary-button">Internal</Button>
+  <Button size="normal" href="https://www.google.com/" target="_blank" disabled={true}>Disabled</Button>
+</Story>
 
 <!-- Secondary -->
 <Story name="Secondary">
