@@ -1,76 +1,71 @@
 <script lang="ts">
-    import Typography from '../typography/Typography.svelte';
+  import Typography from '../typography/Typography.svelte';
 
-    export let onClick = () => {
-    };
+  export let onClick = () => {};
 
-    export let href = '';
+  export let href = '';
 
-    /**
-     * Specify the kind of button.
-     */
-    export let type: 'primary' | 'secondary' = 'primary';
+  /**
+   * Specify the kind of button.
+   */
+  export let type: 'primary' | 'secondary' = 'primary';
 
-    /**
-     * Specify the size of the component.
-     */
-    export let size: 'xs' | 'sm' | 'normal' | 'md' | 'lg' | 'auto' | 'full' = 'normal';
+  /**
+   * Specify the size of the component.
+   */
+  export let size: 'xs' | 'sm' | 'normal' | 'md' | 'lg' | 'auto' | 'full' = 'normal';
 
-    /**
-     * Specify if the component is disabled.
-     */
-    export let disabled: boolean = false;
+  /**
+   * Specify if the component is disabled.
+   */
+  export let disabled: boolean = false;
 
-    // Define button type classes
-    $: typeClass =
-        type === 'primary'
-            ? 'bg-teal text-navy hover:bg-tealDark hover:text-black hover:shadow-md'
-            : 'bg-transparent border border-white hover:border-navy hover:text-primary';
+  // Define button type classes
+  $: typeClass =
+    type === 'primary'
+      ? 'bg-teal text-navy hover:bg-tealDark hover:text-black hover:shadow-md'
+      : 'bg-transparent border border-white hover:border-navy hover:text-primary';
 
-    // Define disabled classes
-    $: disabledClass = disabled ? 'bg-gray3 text-white cursor-default pointer-events-none' : '';
+  // Define disabled classes
+  $: disabledClass = disabled ? 'bg-gray3 text-white cursor-default pointer-events-none' : '';
 
-    // Define final brn style classes
-    $: btnStylesClass = disabled ? disabledClass : typeClass;
+  // Define final brn style classes
+  $: btnStylesClass = disabled ? disabledClass : typeClass;
 
-    // Define button size classes
-    $: btnSizeClass =
-        {
-            xs: 'w-[115px]',
-            sm: 'w-[197px]',
-            md: 'w-[339px]',
-            lg: 'w-[388px]',
-            normal: 'w-[263px]',
-            auto: '',
-            full: 'w-full',
-        }[size] || 'w-[263px]';
+  // Define button size classes
+  $: btnSizeClass =
+    {
+      xs: 'w-[115px]',
+      sm: 'w-[197px]',
+      md: 'w-[339px]',
+      lg: 'w-[388px]',
+      normal: 'w-[263px]',
+      auto: '',
+      full: 'w-full',
+    }[size] || 'w-[263px]';
 </script>
 
 {#if href.length > 0}
-    <a
-            {...$$restProps}
-            {href}
-            class={disabled ? 'pointer-events-none' : 'pointer-events-auto'}
-    >
-        <button
-                {...$$restProps}
-                class={`rounded-full p-f8 text-center transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
-                {disabled}
-        >
-            <Typography bold={true} class="flex items-center justify-center gap-f8">
-                <slot/>
-            </Typography>
-        </button>
-    </a>
-{:else}
+  <a {...$$restProps} {href} class={disabled ? 'pointer-events-none' : 'pointer-events-auto'}>
     <button
-            {...$$restProps}
-            on:click|preventDefault={onClick}
-            class={`rounded-full p-f8 text-center transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
-            {disabled}
+      {...$$restProps}
+      class={`rounded-full p-f8 text-center transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
+      {disabled}
     >
-        <Typography bold={true} class="flex items-center justify-center gap-f8">
-            <slot/>
-        </Typography>
+      <Typography bold={true} class="flex items-center justify-center gap-f8">
+        <slot />
+      </Typography>
     </button>
+  </a>
+{:else}
+  <button
+    {...$$restProps}
+    on:click|preventDefault={onClick}
+    class={`rounded-full p-f8 text-center transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
+    {disabled}
+  >
+    <Typography bold={true} class="flex items-center justify-center gap-f8">
+      <slot />
+    </Typography>
+  </button>
 {/if}
