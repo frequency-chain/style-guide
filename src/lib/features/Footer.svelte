@@ -6,25 +6,31 @@
   export let privacyHref: string = '/privacy';
   export let type: 'light' | 'dark' = 'light';
 
-  let fgColor = {
-    dark: 'white',
-    light: 'black',
+  let fgColorText = {
+    dark: 'text-white',
+    light: 'text-black',
+  }[type];
+  let fgColorBg = {
+    dark: 'bg-white',
+    light: 'bg-black',
   }[type];
 </script>
 
 <footer
   class={cn(
-    `sm md:md flex flex-col items-center gap-f16 border-t-[2px] border-current text-${fgColor} mx-auto my-0 max-w-screen-xl py-f48 md:gap-f48`
+    'sm md:md mx-auto my-0 flex max-w-screen-xl flex-col items-center gap-f16 border-t-[2px] border-current py-f48 md:gap-f48',
+    fgColorText,
+    $$restProps.class
   )}
 >
   <FrequencyLogo class="w-[146px] md:w-[257px]" />
   <aside class="flex flex-col items-center space-y-4 leading-none md:flex-row md:space-x-4 md:space-y-0">
     <div>
-      © {new Date().getFullYear()} Frequency Network Foundation. <span class="md:hidden">All Right Reserved</span>
+      © {new Date().getFullYear()} Frequency Network Foundation <span class="md:hidden">All Rights Reserved</span>
     </div>
-    <div class={cn(`hidden w-[2px] self-stretch md:block bg-${fgColor}`)}></div>
-    <div class="hidden md:block">All Right Reserved</div>
-    <div class={cn(`hidden w-[2px] self-stretch md:block bg-${fgColor}`)}></div>
+    <div class="hidden w-[2px] self-stretch md:block {fgColorBg}"></div>
+    <div class="hidden md:block">All Rights Reserved</div>
+    <div class="hidden w-[2px] self-stretch md:block {fgColorBg}"></div>
     <div>
       <a href={privacyHref} class="underline transition duration-[0.3s] hover:text-teal">Privacy Policy</a>
     </div>
