@@ -14,7 +14,7 @@
 
 <footer
   class={cn(
-    `sm md:md flex flex-col items-center gap-f16 border-t-[2px] border-current text-${fgColor} py-f48 md:gap-f48`
+    `sm md:md flex flex-col items-center gap-f16 border-t-[2px] border-current text-${fgColor} mx-auto my-0 max-w-screen-xl py-f48 md:gap-f48`
   )}
 >
   <FrequencyLogo class="w-[146px] md:w-[257px]" />
