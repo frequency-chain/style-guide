@@ -62,8 +62,10 @@
         {#if Icon === OpenClose}
           <input type="checkbox" class="peer hidden" id="mobile-menu-toggle" />
           <aside>Click it!</aside>
+          <svelte:component this={Icon} class="mb-1 h-8 w-auto stroke-black" isDemo={true} />
+        {:else}
+          <svelte:component this={Icon} class="mb-1 h-8 w-auto" isDemo={true} />
         {/if}
-        <svelte:component this={Icon} class="mb-1 h-8 w-auto" isDemo={true} />
       </div>
     {/each}
   </div>

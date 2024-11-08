@@ -11,20 +11,33 @@
   aria-controls="mobile-navigation"
   class={`group z-50 ${classes}`}
 >
-  <svg class="h-[40px] w-[40px]" role="none">
+  <svg class="h-[40px] w-[40px] stroke-current" role="none">
     <line
-      x1="0"
+      x1="5%"
       y1="50%"
-      x2="100%"
+      x2="95%"
       y2="50%"
-      class="origin-left translate-y-[20%] stroke-[10%] transition-all duration-[0.3s] peer-checked:group-[]:translate-x-[8px] peer-checked:group-[]:translate-y-[35%] peer-checked:group-[]:-rotate-45"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="origin-left translate-y-[25%] stroke-[10%] transition-all duration-[0.3s] peer-checked:group-[]:translate-x-[8px] peer-checked:group-[]:translate-y-[35%] peer-checked:group-[]:-rotate-45"
     />
     <line
-      x1="0"
+      x1="5%"
       y1="50%"
-      x2="100%"
+      x2="95%"
       y2="50%"
-      class="origin-left translate-y-[-20%] stroke-[10%] transition-all duration-[0.3s] peer-checked:group-[]:translate-x-[8px] peer-checked:group-[]:translate-y-[-35%] peer-checked:group-[]:rotate-45
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="origin-center stroke-[10%] transition-all duration-[0.3s] peer-checked:group-[]:scale-x-0"
+    />
+    <line
+      x1="5%"
+      y1="50%"
+      x2="95%"
+      y2="50%"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="origin-left translate-y-[-25%] stroke-[10%] transition-all duration-[0.3s] peer-checked:group-[]:translate-x-[8px] peer-checked:group-[]:translate-y-[-35%] peer-checked:group-[]:rotate-45
       "
     />
   </svg>
