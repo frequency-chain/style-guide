@@ -10,3 +10,7 @@
 <Story name="Footer">
   <Footer />
 </Story>
+
+<Story name="FooterDark">
+  <Footer classes="bg-navy text-white border-opacity-25" />
+</Story>
