@@ -16,6 +16,6 @@
 <Meta title="UI Components/Features/Header" component={Header} />
 
 <!--Primary-->
-<Story name="Header - Frequency Logo">
-  <Header {menuItems} />
+<Story name="Header">
+  <Header {menuItems} class="fixed left-0 top-0 w-full" />
 </Story>

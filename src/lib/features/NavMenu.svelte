@@ -1,4 +1,5 @@
 <script lang="ts">
+  // Note: Shows the buttons still in md view, but not the non-buttons
   import { onMount, tick } from 'svelte';
   import { MenuItem } from '../utils/types.js';
   import Button from '../atoms/Button.svelte';
@@ -43,21 +44,21 @@
   });
 </script>
 
-<nav class="flex items-stretch gap-f40">
+<nav class="hidden items-stretch gap-f40 md:flex">
   {#each menuItems as item}
     {#if item.isButton}
       <div class="content-center">
-        <Button class="px-6">
-          <a href={item.href} target={item.isExternal ? '_blank' : '_self'}>{`${item.label}`}</a>
+        <Button size="auto" href={item.href} target={item.isExternal ? '_blank' : '_self'}>
+          {item.label}
         </Button>
       </div>
     {:else}
       <a
         href={item.href}
         target={item.isExternal ? '_blank' : '_self'}
-        class={`h6 underline-on-nav-hover border-color flex content-center px-2 py-6 font-bold text-navy transition-all duration-1000 after:bg-current ${item.viewportHighlightId && highlightId === item.viewportHighlightId ? 'underline-on-nav' : ''}`}
+        class={`h6 underline-on-nav-hover border-color hidden content-center px-2 text-navy transition-all duration-1000 after:bg-current lg:block ${item.viewportHighlightId && highlightId === item.viewportHighlightId ? 'underline-on-nav' : ''}`}
       >
-        {`${item.label}`}
+        {item.label}
       </a>
     {/if}
   {/each}
@@ -67,7 +68,7 @@
   /* Underline on hover animation */
   .underline-on-nav-hover,
   .underline-on-nav {
-    @apply relative block cursor-pointer overflow-hidden;
+    @apply relative cursor-pointer overflow-hidden;
   }
 
   .underline-on-nav-hover::after,
