@@ -7,14 +7,14 @@
 <Meta title="UI Components/Features/Footer" component={Footer} />
 
 <!--Primary-->
-<Story name="Footer - Light Background (Gray example)">
+<Story name="Footer - Light Background (Gray example)" id="footerLight">
   <div class="bg-gray-100 p-6">
     <Footer type="light" />
   </div>
 </Story>
 
 <!--Primary-->
-<Story name="Footer - Dark Background (Navy example)">
+<Story name="Footer - Dark Background (Navy example)" id="footerDark">
   <div class="bg-navy p-6">
     <Footer type="dark" />
   </div>

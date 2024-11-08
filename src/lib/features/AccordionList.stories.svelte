@@ -8,7 +8,7 @@
 <Meta title="UI Components/Features/AccordionList" component={AccordionList} />
 
 <!-- Primary -->
-<Story name="AccordionList">
+<Story name="AccordionList" id="accordionlist">
   <AccordionList>
     <Accordion trigger="Hello world." content="Hello there." />
   </AccordionList>

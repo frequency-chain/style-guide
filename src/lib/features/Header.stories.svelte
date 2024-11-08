@@ -16,6 +16,6 @@
 <Meta title="UI Components/Features/Header" component={Header} />
 
 <!--Primary-->
-<Story name="Header">
+<Story name="Header" id="header">
   <Header {menuItems} class="fixed left-0 top-0 w-full" />
 </Story>

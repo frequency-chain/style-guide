@@ -7,21 +7,21 @@
 <Meta title="UI Components/Atoms/IconButton" component={IconButton} />
 
 <!--Primary-->
-<Story name="IconButton">
+<Story name="IconButton" id="iconButton">
   <IconButton>
     <Arrow />
   </IconButton>
 </Story>
 
 <!-- Secondary -->
-<Story name="IconButton Alt">
+<Story name="IconButton Alt" id="iconButtonAlt">
   <IconButton>
     <Arrow />
   </IconButton>
 </Story>
 
 <!-- Round -->
-<Story name="IconButton Round">
+<Story name="IconButton Round" id="iconButtonRound">
   <IconButton isRound="true">
     <Arrow />
   </IconButton>

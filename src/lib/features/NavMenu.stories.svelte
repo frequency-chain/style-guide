@@ -15,7 +15,7 @@
 
 <Meta title="UI Components/Features/NavMenu" component={NavMenu} />
 
-<Story name="NavMenu">
+<Story name="NavMenu" id="navMenu">
   <div class="sticky top-0">
     <NavMenu {menuItems} />
     <p class="block md:hidden">*** If you are not seeing the menu, try increasing the window size.</p>
