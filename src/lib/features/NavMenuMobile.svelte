@@ -1,26 +1,41 @@
 <script lang="ts">
+  // Note: Menu "Buttons" are shown on the nav bar in "md" view
+
+  import { OpenClose } from '../assets/index';
   import { MenuItem } from '$lib/utils/types.js';
   import Button from '../atoms/Button.svelte';
 
   export let menuItems: MenuItem[] = [];
-  export let isOpen: boolean;
+  export let toggleIdentifier: string = 'mobile-menu-toggle';
+
+  // isOpen for updating Aria state only
+  let isOpen: boolean = false;
 </script>
 
+<input type="checkbox" class="peer hidden" bind:checked={isOpen} id={toggleIdentifier} />
+<OpenClose
+  classes="cursor-pointer stroke-navy peer-checked:stroke-white peer-checked:hover:stroke-teal hover:stroke-teal flex self-center lg:hidden"
+/>
 <div
-  class={`z-1 fixed right-0 top-0 z-10 flex w-[100vw] flex-col justify-between gap-f24 overflow-y-scroll bg-navy px-[12%] transition-[height] duration-[1s] sm:flex md:hidden lg:hidden ${isOpen ? 'h-[100vh]' : 'h-0'}`}
+  class="z-1 fixed right-0 top-0 z-10 flex h-0 w-[100vw] flex-col justify-between gap-f24 overflow-y-scroll bg-navy px-[12%] transition-[height] duration-[1s] peer-checked:h-[100vh] lg:hidden"
   aria-expanded={isOpen}
 >
-  <nav id="mobile-navigation" aria-label="Main" class="mt-[60px] flex flex-col gap-4 uppercase text-white">
+  <nav id="mobile-navigation" aria-label="Main" class="mb-f20 mt-[85px] flex flex-col gap-f24 text-white">
     {#each menuItems as item}
       {#if item.isButton}
-        <Button size="xs">
-          <a href={item.href} target={item.isExternal ? '_blank' : '_self'}>{item.label}</a>
+        <Button
+          size="full"
+          class="mt-f24 max-w-[360px] md:hidden"
+          href={item.href}
+          target={item.isExternal ? '_blank' : '_self'}
+        >
+          {item.label}
         </Button>
       {:else}
         <a
           href={item.href}
           target={item.isExternal ? '_blank' : '_self'}
-          class={`h6 underline-on-hover font-bold after:bg-current`}>{item.label}.</a
+          class={`h4 underline-on-hover font-bold after:bg-current`}>{item.label}</a
         >
       {/if}
     {/each}

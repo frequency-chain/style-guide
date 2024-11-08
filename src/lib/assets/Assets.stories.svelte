@@ -60,9 +60,12 @@
       <div class="flex flex-col items-start justify-start p-4">
         <h2 class="mb-2 text-lg font-semibold">{name}</h2>
         {#if Icon === OpenClose}
-          <aside>* Click me!</aside>
+          <input type="checkbox" class="peer hidden" id="mobile-menu-toggle" />
+          <aside>Click it!</aside>
+          <svelte:component this={Icon} class="mb-1 h-8 w-auto stroke-black" isDemo={true} />
+        {:else}
+          <svelte:component this={Icon} class="mb-1 h-8 w-auto" isDemo={true} />
         {/if}
-        <svelte:component this={Icon} class="mb-1 h-8 w-auto" isDemo={true} />
       </div>
     {/each}
   </div>

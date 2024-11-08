@@ -5,32 +5,23 @@
   import { MenuItem } from '$lib/utils/types.js';
 
   export let menuItems: MenuItem[] = [];
-  export let logoType: 'primary' = 'primary';
-  // logoHex = teal
-  export let logoHex = '#55B1AB';
-
-  $: isNavOpen = false;
-
-  $: innerWidth = window.innerWidth;
-
-  $: hasMobileNav = innerWidth <= 744;
-
-  $: {
-    window.addEventListener('resize', () => {
-      innerWidth = window.innerWidth;
-      hasMobileNav = innerWidth <= 744;
-      if (!hasMobileNav) isNavOpen = false;
-    });
-  }
 </script>
 
-<div class={`flex justify-between bg-navy p-f16 md:bg-transparent md:p-0 ${$$restProps.class}`}>
-  <!-- For Desktop -->
-  <FrequencyLogo logoHex={hasMobileNav ? '#fff' : logoHex} />
+<div class={`header-shadow flex h-[85px] font-title ${$$restProps.class}`}>
+  <div class="m-auto flex h-[85px] w-full max-w-screen-lg items-stretch justify-around sm:px-f20 md:px-f32">
+    <!-- For Desktop -->
+    <div class="flex w-[146px] items-center text-teal md:w-[200px]">
+      <FrequencyLogo />
+    </div>
 
-  <NavMenu {menuItems} />
-
-  <!-- For Mobile -->
-  <OpenClose onClick={() => (isNavOpen = !isNavOpen)} isOpen={isNavOpen} classes="stroke-white md:hidden lg:hidden" />
-  <NavMenuMobile isOpen={isNavOpen} {menuItems} />
+    <NavMenu {menuItems} />
+    <!-- For Mobile -->
+    <NavMenuMobile {menuItems} />
+  </div>
 </div>
+
+<style>
+  .header-shadow {
+    box-shadow: 0 4px 4px 0 #00000040;
+  }
+</style>
