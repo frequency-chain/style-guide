@@ -6,6 +6,8 @@
 <Meta title="Design System/Typography" component={Typography} />
 
 <Story name="Header">
+  <Typography tag={'h0'}>H0</Typography>
+  <Typography tag={'h0'} bold={true}>H0 Bold</Typography>
   <Typography tag={'h1'}>H1</Typography>
   <Typography tag={'h1'} bold={true}>H1 Bold</Typography>
   <Typography tag={'h2'}>H2</Typography>

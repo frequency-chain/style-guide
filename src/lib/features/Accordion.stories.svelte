@@ -7,6 +7,6 @@
 <Meta title="UI Components/Features/Accordion" component={Accordion} />
 
 <!-- Primary -->
-<Story name="Accordion">
+<Story name="Accordion" id="accordion">
   <Accordion trigger="Hello world." content="Hello there." />
 </Story>

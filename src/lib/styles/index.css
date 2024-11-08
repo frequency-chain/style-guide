@@ -65,6 +65,9 @@
 }
 
 @layer base {
+  .h0 {
+    @apply text-h0 leading-h0;
+  }
   h1,
   .h1 {
     @apply text-h1 leading-h1;

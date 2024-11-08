@@ -24,7 +24,7 @@
 <Meta title="UI Components/Features/Modal" component={Modal} />
 
 <!--Primary-->
-<Story name="Primary Modal">
+<Story name="Primary Modal" id="modalPrimary">
   <Modal {title} {description}>
     <Button slot="trigger">Open</Button>
     <form slot="body">
@@ -37,7 +37,7 @@
 </Story>
 
 <!--No Description-->
-<Story name="No Description">
+<Story name="No Description" id="modalNoDesc">
   <Modal {title}>
     <Button slot="trigger">Open</Button>
     <form slot="body">
@@ -50,7 +50,7 @@
 </Story>
 
 <!--Text Body-->
-<Story name="Text Body">
+<Story name="Text Body" id="modalText">
   <Modal {title} {description}>
     <Button slot="trigger">Open</Button>
     <div slot="body">

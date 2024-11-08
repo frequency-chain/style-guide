@@ -12,6 +12,10 @@
   $: isBold = bold ? 'font-bold	' : '';
 </script>
 
-<svelte:element this={tag} {...$$restProps} class={`${isBold} ${$$restProps.class ?? ''}`}>
+<svelte:element
+  this={tag === 'h0' ? 'h1' : tag}
+  {...$$restProps}
+  class={`${tag === 'h0' ? 'h0' : ''} ${isBold} ${$$restProps.class ?? ''}`}
+>
   <slot />
 </svelte:element>
