@@ -19,6 +19,7 @@ export default {
       colors: tailwindColors,
       fontSize: {
         default: '16px',
+        h0: '70px',
         h1: '56px',
         h2: '48px',
         h3: '40px',
@@ -33,6 +34,7 @@ export default {
       },
       lineHeight: {
         default: '22px',
+        h0: '70px',
         h1: '61px',
         h2: '52px',
         h3: '44px',
