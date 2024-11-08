@@ -21,9 +21,15 @@
 
 <!-- Primary Button - Type Link -->
 <Story name="PrimaryLinkButton">
-  <Button size="normal" href="https://www.google.com/" target="_blank">Primary</Button>
-  <Button size="normal" href="?path=/story/ui-components-atoms-button--primary-button">Internal</Button>
-  <Button size="normal" href="https://www.google.com/" target="_blank" disabled={true}>Disabled</Button>
+  <div class="m-6">
+    <Button size="normal" href="https://www.google.com/" target="_blank">Primary</Button>
+  </div>
+  <div class="m-6">
+    <Button size="normal" href="?path=/story/ui-components-atoms-button--primary-button">Internal</Button>
+  </div>
+  <div class="m-6">
+    <Button size="normal" href="https://www.google.com/" target="_blank" disabled={true}>Disabled</Button>
+  </div>
 </Story>
 
 <!-- Secondary -->

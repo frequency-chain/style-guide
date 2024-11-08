@@ -40,20 +40,20 @@
       md: 'w-[339px]',
       lg: 'w-[388px]',
       normal: 'w-[263px]',
-      auto: '',
+      auto: 'w-auto',
       full: 'w-full',
     }[size] || 'w-[263px]';
 </script>
 
 <!--TODO: once we have upgraded to svelte 5, implement snippets for duplicate code.-->
 {#if href.length > 0}
-  <a {...$$restProps} {href} class={disabled ? 'pointer-events-none' : 'pointer-events-auto'}>
+  <a {...$$restProps} {href} class={disabled ? 'pointer-events-none block' : 'pointer-events-auto block'}>
     <button
       {...$$restProps}
-      class={`rounded-full p-f8 text-center transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
+      class={`rounded-full px-f24 py-f8 text-center transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
       {disabled}
     >
-      <Typography bold={true} class="flex items-center justify-center gap-f8">
+      <Typography bold={true} class="flex items-center justify-center gap-f8 font-sans">
         <slot />
       </Typography>
     </button>
@@ -65,7 +65,7 @@
     class={`rounded-full p-f8 text-center transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
     {disabled}
   >
-    <Typography bold={true} class="flex items-center justify-center gap-f8">
+    <Typography bold={true} class="flex items-center justify-center gap-f8 font-sans">
       <slot />
     </Typography>
   </button>
