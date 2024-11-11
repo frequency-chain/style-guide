@@ -1,10 +1,11 @@
 <script lang="ts">
-  import { FrequencyLogo, OpenClose } from '../assets/index';
+  import { FrequencyLogo } from '../assets/index';
   import NavMenu from './NavMenu.svelte';
   import NavMenuMobile from './NavMenuMobile.svelte';
   import { MenuItem } from '$lib/utils/types.js';
 
   export let menuItems: MenuItem[] = [];
+  export let highlightMarginTop = '90px';
 </script>
 
 <div class={`header-shadow flex h-[85px] font-title ${$$restProps.class}`}>
@@ -14,7 +15,7 @@
       <FrequencyLogo />
     </div>
 
-    <NavMenu {menuItems} />
+    <NavMenu {highlightMarginTop} {menuItems} />
     <!-- For Mobile -->
     <NavMenuMobile {menuItems} />
   </div>
