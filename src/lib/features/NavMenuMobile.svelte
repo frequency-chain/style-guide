@@ -8,7 +8,7 @@
   export let menuItems: MenuItem[] = [];
   export let toggleIdentifier: string = 'mobile-menu-toggle';
 
-  // isOpen for updating Aria state only
+  // isOpen is bound to the checkbox state
   let isOpen: boolean = false;
 </script>
 
@@ -35,8 +35,11 @@
         <a
           href={item.href}
           target={item.isExternal ? '_blank' : '_self'}
-          class={`h4 underline-on-hover font-bold after:bg-current`}>{item.label}</a
+          class={`h4 underline-on-hover font-bold after:bg-current`}
+          on:click={() => (item.isExternal ? null : (isOpen = false))}
         >
+          {item.label}
+        </a>
       {/if}
     {/each}
   </nav>
