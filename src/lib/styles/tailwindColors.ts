@@ -1,6 +1,7 @@
 export default {
   //Branding Colors
   navy: '#14313F',
+  navyLight: '#18465E',
   teal: '#55B1AB',
   // Neutral Colors
   black: '#000000',
