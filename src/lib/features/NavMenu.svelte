@@ -48,7 +48,12 @@
   {#each menuItems as item}
     {#if item.isButton}
       <div class="content-center">
-        <Button size="auto" href={item.href} target={item.isExternal ? '_blank' : '_self'}>
+        <Button
+          size="auto"
+          active={item.isActive || false}
+          href={item.href}
+          target={item.isExternal ? '_blank' : '_self'}
+        >
           {item.label}
         </Button>
       </div>
