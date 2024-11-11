@@ -64,7 +64,7 @@
           <aside>Click it!</aside>
           <svelte:component this={Icon} class="mb-1 h-8 w-auto stroke-black" isDemo={true} />
         {:else}
-          <svelte:component this={Icon} class="mb-1 h-8 w-auto" isDemo={true} />
+          <svelte:component this={Icon} class="mb-1 h-8 w-auto stroke-black" isDemo={true} />
         {/if}
       </div>
     {/each}
