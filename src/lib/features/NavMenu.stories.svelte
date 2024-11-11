@@ -10,13 +10,14 @@
     { label: 'Partners', href: '#partners', viewportHighlightId: 'partners' },
     { label: 'External', href: 'https://www.google.com/', isExternal: true },
     { label: 'Developer Portal', href: '/', isButton: true },
+    { label: 'Portal Active', href: '/', isButton: true, isActive: true },
   ];
 </script>
 
 <Meta title="UI Components/Features/NavMenu" component={NavMenu} />
 
 <Story name="NavMenu" id="navMenu">
-  <div class="sticky top-0">
+  <div class="sticky top-0 bg-white">
     <NavMenu {menuItems} />
     <p class="block md:hidden">*** If you are not seeing the menu, try increasing the window size.</p>
   </div>

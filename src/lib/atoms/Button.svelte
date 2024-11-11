@@ -1,5 +1,6 @@
 <script lang="ts">
   import Typography from '../typography/Typography.svelte';
+  import { cn } from '../utils/utils';
 
   export let onClick = () => {};
 
@@ -20,17 +21,20 @@
    */
   export let disabled: boolean = false;
 
+  /**
+   * Specify if the component is supposed to be active.
+   */
+  export let active: boolean = false;
+
   // Define button type classes
   $: typeClass =
     type === 'primary'
       ? 'bg-teal text-navy hover:bg-tealDark hover:text-black hover:shadow-md'
       : 'bg-transparent border border-white hover:border-navy hover:text-navy';
 
-  // Define disabled classes
+  // Define classes
   $: disabledClass = disabled ? 'bg-gray3 text-white cursor-default pointer-events-none' : '';
-
-  // Define final brn style classes
-  $: btnStylesClass = disabled ? disabledClass : typeClass;
+  $: activeClass = active ? (type === 'primary' ? 'bg-navyLight text-teal shadow-md' : 'border-navy text-navy') : '';
 
   // Define button size classes
   $: btnSizeClass =
@@ -50,7 +54,14 @@
   <a {...$$restProps} {href} class={disabled ? 'pointer-events-none block' : 'pointer-events-auto block'}>
     <button
       {...$$restProps}
-      class={`rounded-full px-f24 py-f8 text-center transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
+      class={cn(
+        'rounded-full px-f24 py-f8 text-center transition-all',
+        typeClass,
+        activeClass,
+        disabledClass,
+        btnSizeClass,
+        $$restProps.class
+      )}
       {disabled}
     >
       <Typography bold={true} class="flex items-center justify-center gap-f8 font-sans">
@@ -62,7 +73,14 @@
   <button
     {...$$restProps}
     on:click|preventDefault={onClick}
-    class={`rounded-full p-f8 text-center transition-all ${btnStylesClass} ${btnSizeClass} ${$$restProps.class ?? ''}`}
+    class={cn(
+      'rounded-full p-f8 text-center transition-all',
+      typeClass,
+      activeClass,
+      disabledClass,
+      btnSizeClass,
+      $$restProps.class
+    )}
     {disabled}
   >
     <Typography bold={true} class="flex items-center justify-center gap-f8 font-sans">

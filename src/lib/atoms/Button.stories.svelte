@@ -10,6 +10,7 @@
 <Story name="PrimaryButton">
   <div class="flex flex-col gap-f8">
     <Button size="xs">P-XS</Button>
+    <Button size="xs" active="true">P-XS Active</Button>
     <Button size="sm">Primary SM</Button>
     <Button size="normal">Primary Normal</Button>
     <Button size="md">Primary MD</Button>
@@ -36,6 +37,7 @@
 <Story name="Secondary">
   <div class="flex flex-col gap-f8">
     <Button type="secondary" size="xs">S-XS</Button>
+    <Button type="secondary" size="xs" active="true">S-XS Active</Button>
     <Button type="secondary" size="sm">Secondary SM</Button>
     <Button type="secondary" size="normal">Secondary Normal</Button>
     <Button type="secondary" size="md">Secondary MD</Button>
@@ -49,6 +51,7 @@
 <Story name="Disabled">
   <div class="flex flex-col gap-f8">
     <Button size="xs" disabled={true}>P-XS</Button>
+    <Button size="xs" disabled={true} active="true">P-XS</Button>
     <Button size="sm" disabled={true}>Primary SM</Button>
     <Button size="normal" disabled={true}>Primary Normal</Button>
     <Button size="md" disabled={true}>Primary MD</Button>
