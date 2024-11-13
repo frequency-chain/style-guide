@@ -46,13 +46,15 @@
     label: 'Textarea with Error',
   }}
 >
-  <Textarea {label} {placeholder} {isRequired} {value} {error}/>
+  <Textarea {label} {placeholder} {isRequired} {value} {error} />
 </Story>
 
 <!-- Extra classes Example -->
-<Story name="Textarea + Class"
+<Story
+  name="Textarea + Class"
   args={{
-    label: "Textarea with extra classes"
-  }}>
+    label: 'Textarea with extra classes',
+  }}
+>
   <Textarea {label} {placeholder} {value} class="h-f160"></Textarea>
 </Story>
