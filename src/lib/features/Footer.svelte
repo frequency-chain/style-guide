@@ -24,7 +24,7 @@
   )}
 >
   <FrequencyLogo class="w-[146px] md:w-[257px]" />
-  <aside class="flex flex-col items-center space-y-4 leading-none md:flex-row md:space-x-4 md:space-y-0">
+  <aside class="flex flex-col items-center space-y-4 text-center leading-none md:flex-row md:space-x-4 md:space-y-0">
     <div>
       © {new Date().getFullYear()} Frequency Network Foundation <span class="md:hidden">All Rights Reserved</span>
     </div>
