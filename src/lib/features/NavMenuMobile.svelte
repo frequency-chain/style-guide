@@ -25,7 +25,7 @@
       {#if item.isButton}
         <Button
           size="full"
-          class="mt-f24 max-w-[360px] md:hidden"
+          class="mt-f24 max-w-[360px] text-navy md:hidden"
           href={item.href}
           target={item.isExternal ? '_blank' : '_self'}
         >
