@@ -16,6 +16,11 @@
 <Meta title="UI Components/Features/Header" component={Header} />
 
 <!--Primary-->
-<Story name="Header" id="header">
+<Story name="Primary" id="primary">
   <Header {menuItems} class="fixed left-0 top-0 w-full" />
+</Story>
+
+<!--Logo Link-->
+<Story name="LogoLink">
+  <Header {menuItems} class="fixed left-0 top-0 w-full" logoLink="/" />
 </Story>

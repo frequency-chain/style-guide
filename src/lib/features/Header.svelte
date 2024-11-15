@@ -4,16 +4,17 @@
   import NavMenuMobile from './NavMenuMobile.svelte';
   import { MenuItem } from '$lib/utils/types.js';
 
+  export let logoLink = '';
   export let menuItems: MenuItem[] = [];
   export let highlightMarginTop = '90px';
 </script>
 
 <div class={`header-shadow flex h-[85px] font-title ${$$restProps.class}`}>
-  <div class="m-auto flex h-[85px] w-full max-w-screen-lg items-stretch justify-around sm:px-f20 md:px-f32">
+  <div class="m-auto flex h-[85px] w-full max-w-screen-xl justify-between sm:px-f20 md:px-f32">
     <!-- For Desktop -->
-    <div class="flex w-[146px] items-center text-teal md:w-[200px]">
-      <FrequencyLogo />
-    </div>
+    <a href={logoLink} class={`self-center ${logoLink ? '' : 'pointer-events-none'}`}>
+      <FrequencyLogo class="w-[146px] text-teal md:w-[200px]" />
+    </a>
 
     <NavMenu {highlightMarginTop} {menuItems} />
     <!-- For Mobile -->
