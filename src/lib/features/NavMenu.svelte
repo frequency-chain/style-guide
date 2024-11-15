@@ -50,7 +50,7 @@
       <div class="content-center">
         <Button
           size="auto"
-          class="text-navy"
+          class={item.isActive ? 'text-teal' : 'text-navy'}
           active={item.isActive || false}
           href={item.href}
           target={item.isExternal ? '_blank' : '_self'}
