@@ -29,12 +29,16 @@
   // Define button type classes
   $: typeClass =
     type === 'primary'
-      ? 'bg-teal text-navy hover:bg-tealDark hover:text-black hover:shadow-md'
-      : 'bg-transparent border border-white hover:border-navy hover:text-navy';
+      ? 'bg-teal text-black hover:bg-tealDark hover:shadow-md'
+      : 'bg-transparent border text-white border-white hover:border-primary hover:text-primary';
 
   // Define classes
   $: disabledClass = disabled ? 'bg-gray3 text-white cursor-default pointer-events-none' : '';
-  $: activeClass = active ? (type === 'primary' ? 'bg-navyLight text-teal shadow-md' : 'border-navy text-navy') : '';
+  $: activeClass = active
+    ? type === 'primary'
+      ? 'bg-primary text-teal shadow-md'
+      : 'border-primary text-primary'
+    : '';
 
   // Define button size classes
   $: btnSizeClass =
