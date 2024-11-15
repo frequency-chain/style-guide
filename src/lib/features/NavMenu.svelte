@@ -44,7 +44,7 @@
   });
 </script>
 
-<nav class="hidden items-stretch gap-f40 md:flex">
+<nav class="hidden gap-f32 text-navy md:flex">
   {#each menuItems as item}
     {#if item.isButton}
       <div class="content-center">
