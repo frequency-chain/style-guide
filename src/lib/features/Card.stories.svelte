@@ -27,7 +27,7 @@
 <Story name="Alt Color">
   <Card title="Alternate color card" titleColor="white" bgColor="teal">
     <div slot="content">
-      <h4 class="md font-bold text-navy">Slot content title</h4>
+      <h4 class="md font-bold text-primary">Slot content title</h4>
       <p class="w-fit rounded bg-white px-2 text-error">Slot content: Error text!</p>
       <p class="text-white">Slot content: error message!</p>
     </div>

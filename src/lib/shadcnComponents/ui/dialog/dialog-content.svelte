@@ -27,7 +27,7 @@
   >
     <slot />
     <DialogPrimitive.Close class="absolute right-f24 top-f24 disabled:pointer-events-none">
-      <Exit class="h-4 w-4 text-navy" />
+      <Exit class="h-4 w-4 text-primary" />
       <span class="sr-only">Close</span>
     </DialogPrimitive.Close>
   </DialogPrimitive.Content>

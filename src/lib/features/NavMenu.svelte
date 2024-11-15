@@ -44,12 +44,13 @@
   });
 </script>
 
-<nav class="hidden gap-f32 text-navy md:flex">
+<nav class="hidden gap-f32 text-primary md:flex">
   {#each menuItems as item}
     {#if item.isButton}
       <div class="content-center">
         <Button
           size="auto"
+          class="text-navy"
           active={item.isActive || false}
           href={item.href}
           target={item.isExternal ? '_blank' : '_self'}
@@ -61,7 +62,7 @@
       <a
         href={item.href}
         target={item.isExternal ? '_blank' : '_self'}
-        class={`h6 underline-on-nav-hover border-color hidden content-center px-2 text-navy transition-all duration-1000 after:bg-current lg:block ${item.viewportHighlightId && highlightId === item.viewportHighlightId ? 'underline-on-nav' : ''}`}
+        class={`h6 underline-on-nav-hover border-color hidden content-center px-2 text-primary transition-all duration-1000 after:bg-current lg:block ${item.viewportHighlightId && highlightId === item.viewportHighlightId ? 'underline-on-nav' : ''}`}
       >
         {item.label}
       </a>
