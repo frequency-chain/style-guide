@@ -29,7 +29,7 @@
   // Define button type classes
   $: typeClass =
     type === 'primary'
-      ? 'bg-teal text-black hover:bg-tealDark hover:shadow-md'
+      ? 'bg-teal text-black hover:text-black hover:bg-tealDark hover:shadow-md'
       : 'bg-transparent border text-white border-white hover:border-primary hover:text-primary';
 
   // Define classes
