@@ -1,6 +1,8 @@
 export default {
   //Branding Colors
+  // Navy is usually used for backgrounds, never text
   navy: '#14313F',
+  // Primary is usually used for headers, nav, etc...
   primary: '#18465E',
   teal: '#55B1AB',
   // Neutral Colors
