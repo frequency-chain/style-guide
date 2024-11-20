@@ -20,7 +20,7 @@
   class="z-1 fixed left-0 top-0 z-10 flex h-0 w-[100vw] flex-col justify-between gap-f24 overflow-y-scroll bg-navy px-[12%] transition-[height] duration-[1s] peer-checked:h-[100vh] lg:hidden"
   aria-expanded={isOpen}
 >
-  <nav id="mobile-navigation" aria-label="Main" class="mb-f20 mt-[85px] flex flex-col gap-f24 text-white">
+  <nav id="mobile-navigation" aria-label="Main" class="mb-f48 mt-[85px] flex flex-col gap-f24 text-white">
     {#each menuItems as item}
       {#if item.isButton}
         <Button
