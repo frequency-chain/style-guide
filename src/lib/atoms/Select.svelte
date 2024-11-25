@@ -2,10 +2,10 @@
   import { Root, Trigger, Value, Content, Item, Label } from '../shadcnComponents/ui/select';
 
   export let label: string;
-  export let description: string | undefined;
+  export let description: string | undefined = undefined;
   export let placeholder: string | undefined;
   export let isRequired: boolean = false;
-  export let error: string | undefined;
+  export let error: string | undefined = undefined;
   export let options: { optionLabel: string; value: string }[];
 </script>
 

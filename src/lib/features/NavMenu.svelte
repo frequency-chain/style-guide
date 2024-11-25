@@ -1,7 +1,7 @@
 <script lang="ts">
   // Note: Shows the buttons still in md view, but not the non-buttons
   import { onMount, tick } from 'svelte';
-  import { MenuItem } from '../utils/types.js';
+  import type { MenuItem } from '../utils/types.js';
   import Button from '../atoms/Button.svelte';
 
   export let menuItems: MenuItem[] = [];
@@ -69,7 +69,7 @@
   {/each}
 </nav>
 
-<style>
+<style lang="postcss">
   /* Underline on hover animation */
   .underline-on-nav-hover,
   .underline-on-nav {

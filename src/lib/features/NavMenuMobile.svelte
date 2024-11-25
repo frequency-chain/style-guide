@@ -2,7 +2,7 @@
   // Note: Menu "Buttons" are shown on the nav bar in "md" view
 
   import { OpenClose } from '../assets/index';
-  import { MenuItem } from '$lib/utils/types.js';
+  import type { MenuItem } from '$lib/utils/types.js';
   import Button from '../atoms/Button.svelte';
 
   export let menuItems: MenuItem[] = [];

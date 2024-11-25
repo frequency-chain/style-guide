@@ -2,7 +2,7 @@
   import { FrequencyLogo } from '../assets/index';
   import NavMenu from './NavMenu.svelte';
   import NavMenuMobile from './NavMenuMobile.svelte';
-  import { MenuItem } from '$lib/utils/types.js';
+  import type { MenuItem } from '$lib/utils/types.js';
   import { cn } from '../utils/utils.js';
 
   export let logoLink = '';

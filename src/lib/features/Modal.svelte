@@ -2,7 +2,7 @@
   import { Root, Trigger, Content, Header, Title, Description } from '../shadcnComponents/ui/dialog';
 
   export let title = '';
-  export let description;
+  export let description = '';
 </script>
 
 <Root>
