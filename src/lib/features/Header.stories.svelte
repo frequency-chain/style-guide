@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Meta, Story } from '@storybook/addon-svelte-csf';
   import Header from './Header.svelte';
-  import { MenuItem } from '../utils/types.js';
+  import type { MenuItem } from '../utils/types.js';
 
   const menuItems: MenuItem[] = [
     { label: 'Mission', href: '#mission', viewportHighlightId: 'mission' },

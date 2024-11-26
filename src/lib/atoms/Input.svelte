@@ -10,7 +10,7 @@
   export let error: string | undefined;
 </script>
 
-<FormElement {label} {isRequired} {description} {value} {placeholder} {error}>
+<FormElement {label} {isRequired} {description} {error}>
   <input
     class={cn(
       'border-input aria-[invalid]:border-destructive data-[placeholder]:[&>span]:text-muted-foreground sm flex h-10 w-full max-w-[388px] items-center justify-between rounded-md border bg-white px-3 py-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1',

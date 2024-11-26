@@ -1,4 +1,6 @@
 {
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "types": ["svelte"],
   "compilerOptions": {
     "paths": {
       "$src": [
@@ -30,7 +32,5 @@
     "outDir": "dist",
     "declaration": true
   },
-  "include": [
-    "src/**/*.ts"
-  ]
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"]
 }
