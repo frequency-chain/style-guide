@@ -29,6 +29,7 @@
     "lint:fix": "eslint --fix",
     "format": "npm run prettier && npm run lint:fix",
     "prettier": "prettier --write --plugin prettier-plugin-svelte --plugin prettier-plugin-tailwindcss src",
+    "prettier:check:ci": "npx prettier --check --plugin prettier-plugin-tailwindcss --plugin prettier-plugin-svelte src",
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
