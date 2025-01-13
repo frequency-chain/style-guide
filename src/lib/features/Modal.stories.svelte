@@ -3,7 +3,7 @@
   import Modal from './Modal.svelte';
   import Button from '../atoms/Button.svelte';
   import Select from '../atoms/Select.svelte';
-  import { Close } from '../shadcnComponents/ui/dialog';
+  import Close from '../atoms/Close.svelte';
 
   // select props
   export let label = 'Select Option';

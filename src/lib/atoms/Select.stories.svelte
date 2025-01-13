@@ -52,3 +52,13 @@
 >
   <Select {label} {placeholder} {isRequired} {options} {error} />
 </Story>
+
+<!-- Disabled Example -->
+<Story
+  name="SelectDisabled"
+  args={{
+    label: 'Select Disabled',
+  }}
+>
+  <Select {label} {description} {placeholder} {isRequired} {options} disabled={true} />
+</Story>
