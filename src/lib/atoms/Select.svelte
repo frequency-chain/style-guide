@@ -9,7 +9,7 @@
   export let options: { optionLabel: string; value: string }[];
 </script>
 
-<Root>
+<Root {...$$restProps}>
   <Label {isRequired}>{label}</Label>
   {#if description}
     <span class="form-item-description">{description}</span>

@@ -48,3 +48,13 @@
 >
   <Input {label} {placeholder} {isRequired} {value} {error} />
 </Story>
+
+<!-- Disabled Example -->
+<Story
+  name="Input Disabled"
+  args={{
+    label: 'Input Disabled',
+  }}
+>
+  <Input {label} {placeholder} {isRequired} {value} disabled={true} />
+</Story>

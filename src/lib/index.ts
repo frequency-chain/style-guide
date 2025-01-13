@@ -1,5 +1,6 @@
 // components
 export { default as Button } from './atoms/Button.svelte';
+export { default as Close } from './atoms/Close.svelte';
 export { default as IconButton } from './atoms/IconButton.svelte';
 export { default as Input } from './atoms/Input.svelte';
 export { default as Select } from './atoms/Select.svelte';
