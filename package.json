@@ -21,7 +21,7 @@
     "build:package-json": "node scripts/package.cjs",
     "build:svelte": "svelte-package",
     "build:static": "cp .npmignore README.md LICENSE dist/",
-    "build:tsc": "tsc tailwind.config.ts --outDir dist --declaration",
+    "build:tsc": "tsc tailwind.config.ts src/jsx.d.ts --outDir dist --declaration",
     "build": "rm -rf ./dist && npm run build:svelte && npm run build:static && npm run build:package-json && npm run build:tsc",
     "dry-run": "cd dist && npm pack --dry-run",
     "publish": "cd dist && npm publish",
@@ -33,13 +33,15 @@
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^8.3.3",
-    "@storybook/addon-interactions": "^8.3.3",
-    "@storybook/addon-links": "^8.3.3",
-    "@storybook/addon-svelte-csf": "^4.1.7",
-    "@storybook/blocks": "^8.3.3",
-    "@storybook/svelte": "^8.3.3",
-    "@storybook/svelte-vite": "^8.3.3",
+    "@storybook/addon-docs": "^8.5.0",
+    "@storybook/addon-essentials": "^8.5.0",
+    "@storybook/addon-interactions": "^8.5.0",
+    "@storybook/addon-links": "^8.5.0",
+    "@storybook/addon-svelte-csf": "^4.2.0",
+    "@storybook/blocks": "^8.5.0",
+    "@storybook/manager-api": "^8.5.0",
+    "@storybook/svelte": "^8.5.0",
+    "@storybook/svelte-vite": "^8.5.0",
     "@sveltejs/package": "^2.3.5",
     "@sveltejs/vite-plugin-svelte": "^2.5.3",
     "@tsconfig/svelte": "^5.0.4",
@@ -65,8 +67,7 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
-    "@storybook/addons": "^7.6.17",
-    "bits-ui": "^0.21.16",
+    "bits-ui": "^0.22.0",
     "clsx": "^2.1.1",
     "svelte": "^4.2.19",
     "tailwind-merge": "^2.5.2"

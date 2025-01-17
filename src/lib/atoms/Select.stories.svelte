@@ -12,14 +12,25 @@
     { optionLabel: 'Option 3', value: '3' },
   ];
   export let error = 'Error message.';
+
+  let primarySelected = '';
 </script>
 
 <Meta title="UI Components/Atoms/Select" component={Select} />
 
 <!-- Primary -->
 <Story name="SelectPrimary" args={{ label, description, placeholder, isRequired, options }}>
-  <Select {label} {description} {placeholder} {isRequired} {options} />
-</Story>
+  <Select
+    {label}
+    {description}
+    {placeholder}
+    {isRequired}
+    {options}
+    onSelectedChange={(x) => (primarySelected = x.value)}
+  />
+  <hr class="m-4" />
+  <div>Selected Option: {primarySelected || 'None'}</div></Story
+>
 
 <!-- Required Example -->
 <Story
