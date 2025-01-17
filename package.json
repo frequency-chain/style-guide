@@ -21,7 +21,7 @@
     "build:package-json": "node scripts/package.cjs",
     "build:svelte": "svelte-package",
     "build:static": "cp .npmignore README.md LICENSE dist/",
-    "build:tsc": "tsc tailwind.config.ts --outDir dist --declaration",
+    "build:tsc": "tsc tailwind.config.ts src/jsx.d.ts --outDir dist --declaration",
     "build": "rm -rf ./dist && npm run build:svelte && npm run build:static && npm run build:package-json && npm run build:tsc",
     "dry-run": "cd dist && npm pack --dry-run",
     "publish": "cd dist && npm publish",
@@ -33,6 +33,7 @@
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
+    "@storybook/addon-docs": "^8.5.0",
     "@storybook/addon-essentials": "^8.5.0",
     "@storybook/addon-interactions": "^8.5.0",
     "@storybook/addon-links": "^8.5.0",
