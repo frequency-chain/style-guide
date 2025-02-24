@@ -15,7 +15,7 @@
   <div class={cn('m-auto flex h-[85px] w-full max-w-screen-xl justify-between font-title', innerClass)}>
     <!-- For Desktop -->
     <a href={logoLink} class={`self-center ${logoLink ? '' : 'pointer-events-none'}`}>
-      <FrequencyLogo class="w-[146px] text-teal md:w-[200px]" />
+      <FrequencyLogo class="w-[146px] text-navy md:w-[200px]" />
     </a>
 
     <NavMenu {highlightMarginTop} {menuItems} />
