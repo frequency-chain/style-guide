@@ -33,6 +33,7 @@ rootPackage.style = {
 delete rootPackage['devDependencies'];
 
 // Write it out
+// eslint-disable-next-line no-undef
 fs.writeFileSync(`${path.join(__dirname, '../dist', 'package.json')}`, JSON.stringify(rootPackage, null, 2), (err) => {
   if (err) throw new Error(err);
 });

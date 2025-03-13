@@ -5,7 +5,7 @@ import tseslint from 'typescript-eslint';
 import tsParser from '@typescript-eslint/parser';
 import eslintPluginSvelte from 'eslint-plugin-svelte';
 import svelteParser from 'svelte-eslint-parser';
-import svelteConfig from './svelte.config';
+import svelteConfig from './svelte.config.js';
 import globals from 'globals';
 
 export default tseslint.config(
@@ -15,6 +15,23 @@ export default tseslint.config(
   ...eslintPluginSvelte.configs['flat/recommended'],
   ...eslintPluginSvelte.configs['flat/prettier'],
   {
+    ignores: [
+      '.storybook/',
+      'postcss.config.cjs',
+      '.svelte-kit/',
+      '.DS_Store',
+      'node_modules/',
+      '.env',
+      '.env.*',
+      '!.env.example',
+      'dist',
+      'storybook-static',
+      'pnpm-lock.yaml',
+      'package-lock.json',
+      'yarn.lock',
+    ],
+  },
+  {
     rules: {
       '@typescript-eslint/no-empty-function': 'off',
       '@typescript-eslint/no-inferrable-types': 'off',
@@ -23,9 +40,9 @@ export default tseslint.config(
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
-          argsIgnorePattern: '^_',
-          varsIgnorePattern: '^_',
-          caughtErrorsIgnorePattern: '^_',
+          argsIgnorePattern: '^[_$]',
+          varsIgnorePattern: '^[_$]',
+          caughtErrorsIgnorePattern: '^[_$]',
         },
       ],
       'no-unused-vars': 'off',

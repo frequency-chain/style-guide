@@ -17,8 +17,8 @@
   <Trigger {error}>
     <Value {placeholder} />
   </Trigger>
-  <Content class={'border border-gray3'}>
-    {#each options as option}
+  <Content class="border border-gray3">
+    {#each options as option (option.value)}
       <Item value={option.value}>{option.optionLabel}</Item>
     {/each}
   </Content>

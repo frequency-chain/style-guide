@@ -1,4 +1,4 @@
-export type MenuItem = {
+export interface MenuItem {
   label: string;
   href: string;
   isExternal?: boolean;
@@ -7,4 +7,4 @@ export type MenuItem = {
   isActive?: boolean;
   // Optional id to highlight if in the viewport
   viewportHighlightId?: string;
-};
+}

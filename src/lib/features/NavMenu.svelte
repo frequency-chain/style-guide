@@ -12,7 +12,7 @@
     .map((item) => [item.viewportHighlightId as string, false]);
 
   // Order matters, so we just want the first one
-  $: highlightId = viewportTrackingItems.find(([id, inViewport]) => inViewport === true)?.[0];
+  $: highlightId = viewportTrackingItems.find(([_id, inViewport]) => inViewport === true)?.[0];
 
   onMount(() => {
     // Create intersection observer
@@ -45,7 +45,7 @@
 </script>
 
 <nav class="hidden gap-f32 text-primary md:flex">
-  {#each menuItems as item}
+  {#each menuItems as item (item.href)}
     {#if item.isButton}
       <div class="content-center">
         <Button
