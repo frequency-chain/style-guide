@@ -1,6 +1,6 @@
 <script lang="ts">
   import { cn } from '../utils/utils';
-  import { FrequencyLogo, XLogo, DiscordLogo } from '../assets';
+  import { FrequencyLogo, XLogo, DiscordLogo, BskyLogo } from '../assets';
   import IconButton from '../atoms/IconButton.svelte';
 
   export let privacyHref: string = '/privacy';
@@ -38,6 +38,9 @@
   <div class="flex gap-f16" aria-label="Social Links">
     <IconButton {type} label="X/Twitter" href="https://twitter.com/one_frequency">
       <XLogo />
+    </IconButton>
+    <IconButton {type} label="BlueSky" href="https://bsky.app/profile/frequency.xyz">
+      <BskyLogo />
     </IconButton>
     <IconButton {type} label="Discord" href="https://discord.com/invite/JchmHX5afV">
       <DiscordLogo />
