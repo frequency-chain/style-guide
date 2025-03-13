@@ -21,7 +21,7 @@
   aria-expanded={isOpen}
 >
   <nav id="mobile-navigation" aria-label="Main" class="mb-f48 mt-[85px] flex flex-col gap-f24 text-white">
-    {#each menuItems as item}
+    {#each menuItems as item (item.href)}
       {#if item.isButton}
         <Button
           size="full"

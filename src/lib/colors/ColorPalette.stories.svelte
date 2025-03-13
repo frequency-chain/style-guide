@@ -7,7 +7,7 @@
 
 <Story name="Colors">
   <div class="grid grid-cols-1 gap-f16 p-f16 md:grid-cols-2 lg:grid-cols-4">
-    {#each Object.entries(tailwindColors) as [colorName, color]}
+    {#each Object.entries(tailwindColors) as [colorName, color] (color)}
       <div class="p-f16">
         <h2 class="mb-f8 text-lg font-bold">{colorName}</h2>
         <div class="mb-f4 flex items-center">

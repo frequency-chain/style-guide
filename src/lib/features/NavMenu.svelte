@@ -45,7 +45,7 @@
 </script>
 
 <nav class="hidden gap-f32 text-primary md:flex">
-  {#each menuItems as item}
+  {#each menuItems as item (item.href)}
     {#if item.isButton}
       <div class="content-center">
         <Button
