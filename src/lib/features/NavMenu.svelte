@@ -12,7 +12,7 @@
     .map((item) => [item.viewportHighlightId as string, false]);
 
   // Order matters, so we just want the first one
-  $: highlightId = viewportTrackingItems.find(([id, inViewport]) => inViewport === true)?.[0];
+  $: highlightId = viewportTrackingItems.find(([_id, inViewport]) => inViewport === true)?.[0];
 
   onMount(() => {
     // Create intersection observer

@@ -35,7 +35,7 @@
         <a
           href={item.href}
           target={item.isExternal ? '_blank' : '_self'}
-          class={`h4 underline-on-hover after:bg-current`}
+          class="h4 underline-on-hover after:bg-current"
           on:click={() => (item.isExternal ? null : (isOpen = false))}
         >
           {item.label}
