@@ -23,3 +23,4 @@ export { default as FrequencyLogo } from './logos/FrequencyLogo.svelte';
 export { default as DiscordLogo } from './logos/DiscordLogo.svelte';
 export { default as LinkedInLogo } from './logos/LinkedInLogo.svelte';
 export { default as XLogo } from './logos/XLogo.svelte';
+export { default as BskyLogo } from './logos/BskyLogo.svelte';
