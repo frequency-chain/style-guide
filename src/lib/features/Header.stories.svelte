@@ -17,10 +17,10 @@
 
 <!--Primary-->
 <Story name="Primary" id="primary">
-  <Header {menuItems} class="fixed left-0 top-0 w-full" innerClass="px-4" />
+  <Header {menuItems} class="fixed top-0 left-0 w-full" innerClass="px-4" />
 </Story>
 
 <!--Logo Link-->
 <Story name="LogoLink">
-  <Header {menuItems} class="fixed left-0 top-0 w-full" innerClass="px-4" logoLink="/" />
+  <Header {menuItems} class="fixed top-0 left-0 w-full" innerClass="px-4" logoLink="/" />
 </Story>

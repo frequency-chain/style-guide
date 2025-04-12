@@ -16,6 +16,6 @@
 <DialogPrimitive.Overlay
   {transition}
   {transitionConfig}
-  class={cn('fixed inset-0 z-50 bg-shadow/5 backdrop-blur-sm', className)}
+  class={cn('bg-shadow/5 fixed inset-0 z-50 backdrop-blur-xs', className)}
   {...$$restProps}
 />

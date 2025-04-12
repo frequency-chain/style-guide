@@ -5,7 +5,7 @@
 <Meta title="Design System/Spacing" />
 
 <Story name="Spacing" id="spacing">
-  <div class="flex flex-col gap-f12 whitespace-nowrap">
+  <div class="gap-f12 flex flex-col whitespace-nowrap">
     <div class="w-f4 bg-teal">f4 - 4px</div>
     <div class="w-f8 bg-teal">f8 - 8px</div>
     <div class="w-f12 bg-teal">f12 - 12px</div>

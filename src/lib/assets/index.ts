@@ -1,7 +1,7 @@
 // Icons
 export { default as Arrow } from './icons/Arrow.svelte';
-export { default as CheckFilled } from './icons/CheckFilled.svelte';
 export { default as Check } from './icons/Check.svelte';
+export { default as CheckFilled } from './icons/CheckFilled.svelte';
 export { default as Chevron } from './icons/Chevron.svelte';
 export { default as Copy } from './icons/Copy.svelte';
 export { default as Error } from './icons/Error.svelte';
@@ -20,7 +20,7 @@ export { default as FrequencyIcon } from './logos/FrequencyIcon.svelte';
 export { default as FrequencyIconFilled } from './logos/FrequencyIconFilled.svelte';
 export { default as FrequencyLogo } from './logos/FrequencyLogo.svelte';
 //External Logos
+export { default as BskyLogo } from './logos/BskyLogo.svelte';
 export { default as DiscordLogo } from './logos/DiscordLogo.svelte';
 export { default as LinkedInLogo } from './logos/LinkedInLogo.svelte';
 export { default as XLogo } from './logos/XLogo.svelte';
-export { default as BskyLogo } from './logos/BskyLogo.svelte';

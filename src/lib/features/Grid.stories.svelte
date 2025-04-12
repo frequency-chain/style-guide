@@ -29,5 +29,5 @@ Resize window or activate responsive sizing in the development panel to see grid
       </p>
     {/each}
   </Grid>
-  <p>Source: <a class="text-brightBlue underline hover:text-gray2" href="https://www.lipsum.com/">Lorem Ipsum</a></p>
+  <p>Source: <a class="text-brightBlue hover:text-gray2 underline" href="https://www.lipsum.com/">Lorem Ipsum</a></p>
 </Story>

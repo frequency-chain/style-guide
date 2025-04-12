@@ -13,7 +13,7 @@
 
 <!-- 320px Width -->
 <Story name="Specific Width">
-  <Card title="320px width" class="my-4 w-f320" icon={UserKey} />
+  <Card title="320px width" class="w-f320 my-4" icon={UserKey} />
 </Story>
 
 <!-- Half Width -->
@@ -27,8 +27,8 @@
 <Story name="Alt Color">
   <Card title="Alternate color card" titleColor="white" bgColor="teal">
     <div slot="content">
-      <h4 class="md font-bold text-primary">Slot content title</h4>
-      <p class="w-fit rounded bg-white px-2 text-error">Slot content: Error text!</p>
+      <h4 class="md text-primary font-bold">Slot content title</h4>
+      <p class="text-error w-fit rounded-sm bg-white px-2">Slot content: Error text!</p>
       <p class="text-white">Slot content: error message!</p>
     </div>
   </Card>

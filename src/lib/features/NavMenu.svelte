@@ -44,7 +44,7 @@
   });
 </script>
 
-<nav class="hidden gap-f32 text-primary md:flex">
+<nav class="gap-f32 text-primary hidden md:flex">
   {#each menuItems as item (item.href)}
     {#if item.isButton}
       <div class="content-center">
@@ -61,7 +61,7 @@
       <a
         href={item.href}
         target={item.isExternal ? '_blank' : '_self'}
-        class={`h6 underline-on-nav-hover border-color hidden content-center px-2 text-primary transition-all duration-1000 after:bg-current lg:block ${item.viewportHighlightId && highlightId === item.viewportHighlightId ? 'underline-on-nav' : ''}`}
+        class={`h6 underline-on-nav-hover border-color text-primary hidden content-center px-2 transition-all duration-1000 after:bg-current lg:block ${item.viewportHighlightId && highlightId === item.viewportHighlightId ? 'underline-on-nav' : ''}`}
       >
         {item.label}
       </a>
@@ -78,7 +78,7 @@
 
   .underline-on-nav-hover::after,
   .underline-on-nav::after {
-    @apply absolute bottom-0 left-0 h-[13px] w-full bg-teal opacity-0 transition-opacity content-[''];
+    @apply bg-teal absolute bottom-0 left-0 h-[13px] w-full opacity-0 transition-opacity content-[''];
     transition:
       opacity 300ms,
       transform 300ms;

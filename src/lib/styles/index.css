@@ -1,38 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@layer components {
-  .lg {
-    @apply text-lg leading-lg;
+@config '../../../tailwind.config.ts';
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
   }
+}
 
-  .md {
-    @apply text-md leading-md;
-  }
+@utility lg {
+  @apply leading-lg text-lg;
+}
 
-  .normal {
-    @apply text-normal leading-normal;
-  }
+@utility md {
+  @apply text-md leading-md;
+  @apply text-md leading-md;
+}
 
-  .md {
-    @apply text-md leading-md;
-  }
+@utility normal {
+  @apply text-normal leading-normal;
+}
 
-  .sm {
-    @apply text-sm leading-sm;
-  }
+@utility sm {
+  @apply leading-sm text-sm;
+}
 
-  .xs {
-    @apply text-xs leading-xs;
-  }
+@utility xs {
+  @apply leading-xs text-xs;
+}
 
+@utility underline-on-hover {
   /* Underline on hover animation */
-  .underline-on-hover {
-    @apply relative block cursor-pointer overflow-hidden px-0 py-1;
-  }
+  @apply relative block cursor-pointer overflow-hidden px-0 py-1;
 
-  .underline-on-hover::after {
+  &::after {
     @apply absolute bottom-0 left-0 h-[0.1em] w-full opacity-0 transition-opacity content-[''];
     transition:
       opacity 300ms,
@@ -40,28 +53,32 @@
     transform: translate3d(-100%, 0, 0);
   }
 
-  .underline-on-hover:hover::after,
-  .underline-on-hover:focus::after {
+  &:hover::after {
     @apply opacity-100;
     transform: translate3d(0, 0, 0);
   }
 
+  &:focus::after {
+    @apply opacity-100;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@utility form-item-label {
   /*  Form common styles*/
-  .form-item-label {
-    @apply sm w-full max-w-[388px] py-[5px] font-bold;
-  }
+  @apply sm w-full max-w-[388px] py-[5px] font-bold;
+}
 
-  .form-item-description {
-    @apply sm text-gray2;
-  }
+@utility form-item-description {
+  @apply sm text-gray2;
+}
 
-  .form-error {
-    @apply sm font-bold text-error;
-  }
+@utility form-error {
+  @apply sm text-error font-bold;
+}
 
-  .card-shadow {
-    box-shadow: 4px 4px 10px 0 rgb(0 0 0 / 25%);
-  }
+@utility card-shadow {
+  box-shadow: 4px 4px 10px 0 rgb(0 0 0 / 25%);
 }
 
 @layer base {
