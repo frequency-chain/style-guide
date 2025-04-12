@@ -23,10 +23,7 @@
           if (index > -1) tick().then(() => (viewportTrackingItems[index][1] = e.isIntersecting));
         });
       },
-      {
-        threshold: 0.05,
-        rootMargin: `${highlightMarginTop} 0px 0px 0px`,
-      }
+      { threshold: 0.05, rootMargin: `${highlightMarginTop} 0px 0px 0px` }
     );
 
     // Observe all sections that have corresponding menu items
@@ -61,34 +58,14 @@
       <a
         href={item.href}
         target={item.isExternal ? '_blank' : '_self'}
-        class={`h6 underline-on-nav-hover border-color text-primary hidden content-center px-2 transition-all duration-1000 after:bg-current lg:block ${item.viewportHighlightId && highlightId === item.viewportHighlightId ? 'underline-on-nav' : ''}`}
+        class={`h6 text-primary border-color relative hidden cursor-pointer content-center overflow-hidden px-2 transition-all duration-1000 after:absolute after:bottom-0 after:left-0 after:h-[13px] after:w-full after:transform after:bg-current after:opacity-0 after:transition-opacity after:content-[''] lg:block ${
+          item.viewportHighlightId && highlightId === item.viewportHighlightId
+            ? 'after:translate-y-0 after:opacity-100'
+            : 'after:translate-y-[200%]'
+        }`}
       >
         {item.label}
       </a>
     {/if}
   {/each}
 </nav>
-
-<style lang="postcss">
-  /* Underline on hover animation */
-  .underline-on-nav-hover,
-  .underline-on-nav {
-    @apply relative cursor-pointer overflow-hidden;
-  }
-
-  .underline-on-nav-hover::after,
-  .underline-on-nav::after {
-    @apply bg-teal absolute bottom-0 left-0 h-[13px] w-full opacity-0 transition-opacity content-[''];
-    transition:
-      opacity 300ms,
-      transform 300ms;
-    transform: translate3d(0, 200%, 0);
-  }
-
-  .underline-on-nav-hover:hover::after,
-  .underline-on-nav-hover:focus::after,
-  .underline-on-nav::after {
-    @apply opacity-100;
-    transform: translate3d(0, 0, 0);
-  }
-</style>

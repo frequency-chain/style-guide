@@ -42,14 +42,7 @@
     Wallet,
   };
 
-  const logos = {
-    FrequencyIconFilled,
-    FrequencyIcon,
-    FrequencyLogo,
-    DiscordLogo,
-    LinkedInLogo,
-    XLogo,
-  };
+  const logos = { FrequencyIconFilled, FrequencyIcon, FrequencyLogo, DiscordLogo, LinkedInLogo, XLogo };
 </script>
 
 <Meta title="Design System/Assets" />
