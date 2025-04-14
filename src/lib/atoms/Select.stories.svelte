@@ -1,5 +1,5 @@
 <script module>
-  import { Meta, Story } from '@storybook/addon-svelte-csf';
+  import { defineMeta } from '@storybook/addon-svelte-csf';
   import Select from './Select.svelte';
 
   export let label = 'Favorite Food';
@@ -14,9 +14,9 @@
   export let error = 'Error message.';
 
   let primarySelected = '';
-</script>
 
-<Meta title="UI Components/Atoms/Select" component={Select} />
+  const { Story } = defineMeta({ title: 'UI Components/Atoms/Select', component: Select });
+</script>
 
 <!-- Primary -->
 <Story name="SelectPrimary" args={{ label, description, placeholder, isRequired, options }}>
