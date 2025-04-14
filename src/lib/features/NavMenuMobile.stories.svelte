@@ -1,5 +1,5 @@
-<script>
-  import { Meta, Story } from '@storybook/addon-svelte-csf';
+<script module>
+  import { defineMeta } from '@storybook/addon-svelte-csf';
   import NavMenuMobile from './NavMenuMobile.svelte';
 
   const menuItems = [
@@ -11,11 +11,11 @@
     { label: 'External', href: 'https://www.google.com/', isExternal: true },
     { label: 'Developer Portal', href: '/', isButton: true },
   ];
+
+  const { Story } = defineMeta({ title: 'UI Components/Features/NavMenu', component: NavMenuMobile });
 </script>
 
-<Meta title="UI Components/Features/NavMenuMobile" component={NavMenuMobile} />
-
-<Story name="NavMenuMobile" id="navMenuMobile">
+<Story name="Mobile" id="navMenuMobile">
   <NavMenuMobile {menuItems} isOpen={true} />
   <p class="hidden md:block">*** If you are not seeing the menu, try decreasing the window size.</p>
 </Story>

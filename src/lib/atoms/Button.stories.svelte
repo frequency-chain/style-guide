@@ -1,10 +1,10 @@
-<script>
-  import { Meta, Story } from '@storybook/addon-svelte-csf';
+<script module>
+  import { defineMeta } from '@storybook/addon-svelte-csf';
 
   import Button from './Button.svelte';
-</script>
 
-<Meta title="UI Components/Atoms/Button" component={Button} />
+  const { Story } = defineMeta({ title: 'UI Components/Atoms/Button', component: Button });
+</script>
 
 <!-- Primary Button - Type Button -->
 <Story name="PrimaryButton">

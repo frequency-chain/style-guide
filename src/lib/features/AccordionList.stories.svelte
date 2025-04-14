@@ -1,14 +1,14 @@
-<script>
-  import { Meta, Story } from '@storybook/addon-svelte-csf';
+<script module>
+  import { defineMeta } from '@storybook/addon-svelte-csf';
 
   import AccordionList from './AccordionList.svelte';
   import Accordion from './Accordion.svelte';
+
+  const { Story } = defineMeta({ title: 'UI Components/Features/AccordionList', component: AccordionList });
 </script>
 
-<Meta title="UI Components/Features/AccordionList" component={AccordionList} />
-
 <!-- Primary -->
-<Story name="AccordionList" id="accordionlist">
+<Story name="Primary" id="accordionlist">
   <AccordionList>
     <Accordion trigger="Hello world." content="Hello there." />
   </AccordionList>

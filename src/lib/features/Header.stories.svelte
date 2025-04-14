@@ -1,9 +1,8 @@
-<script lang="ts">
-  import { Meta, Story } from '@storybook/addon-svelte-csf';
+<script module>
+  import { defineMeta } from '@storybook/addon-svelte-csf';
   import Header from './Header.svelte';
-  import type { MenuItem } from '../utils/types.js';
 
-  const menuItems: MenuItem[] = [
+  const menuItems = [
     { label: 'Mission', href: '#mission', viewportHighlightId: 'mission' },
     { label: 'About', href: '#about', viewportHighlightId: 'about' },
     { label: 'User', href: '#user', viewportHighlightId: 'user' },
@@ -11,9 +10,9 @@
     { label: 'Contact', href: '#contact', viewportHighlightId: 'contact' },
     { label: 'Developer Portal', href: '/', isButton: true },
   ];
-</script>
 
-<Meta title="UI Components/Features/Header" component={Header} />
+  const { Story } = defineMeta({ title: 'UI Components/Features/Header', component: Header });
+</script>
 
 <!--Primary-->
 <Story name="Primary" id="primary">

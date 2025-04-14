@@ -1,10 +1,10 @@
-<script>
-  import { Meta, Story } from '@storybook/addon-svelte-csf';
+<script module>
+  import { defineMeta } from '@storybook/addon-svelte-csf';
   import { UserKey, Wallet } from '/src/lib/assets';
   import Card from './Card.svelte';
-</script>
 
-<Meta title="UI Components/Features/Card" component={Card} />
+  const { Story } = defineMeta({ title: 'UI Components/Features/Card', component: Card });
+</script>
 
 <!-- Primary -->
 <Story name="Default Card">

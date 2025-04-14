@@ -1,5 +1,5 @@
-<script lang="ts">
-  import { Meta, Story } from '@storybook/addon-svelte-csf';
+<script module>
+  import { defineMeta } from '@storybook/addon-svelte-csf';
   import {
     Arrow,
     Check,
@@ -43,9 +43,9 @@
   };
 
   const logos = { FrequencyIconFilled, FrequencyIcon, FrequencyLogo, DiscordLogo, LinkedInLogo, XLogo };
-</script>
 
-<Meta title="Design System/Assets" />
+  const { Story } = defineMeta({ title: 'Design System/Assets' });
+</script>
 
 <Story name="Icons">
   <div class="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-4">

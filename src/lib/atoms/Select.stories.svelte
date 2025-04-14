@@ -1,4 +1,4 @@
-<script>
+<script module>
   import { Meta, Story } from '@storybook/addon-svelte-csf';
   import Select from './Select.svelte';
 
@@ -33,43 +33,21 @@
 >
 
 <!-- Required Example -->
-<Story
-  name="SelectRequired"
-  args={{
-    label: 'Required Select',
-    description: 'This is required',
-    isRequired: true,
-  }}
->
+<Story name="SelectRequired" args={{ label: 'Required Select', description: 'This is required', isRequired: true }}>
   <Select {label} {description} {placeholder} isRequired={true} {options} />
 </Story>
 
 <!-- No Description Example -->
-<Story
-  name="SelectNoDescription"
-  args={{
-    label: 'Select without Description',
-  }}
->
+<Story name="SelectNoDescription" args={{ label: 'Select without Description' }}>
   <Select {label} {placeholder} {isRequired} {options} />
 </Story>
 
 <!-- Error Example -->
-<Story
-  name="SelectError"
-  args={{
-    label: 'Select with Error',
-  }}
->
+<Story name="SelectError" args={{ label: 'Select with Error' }}>
   <Select {label} {placeholder} {isRequired} {options} {error} />
 </Story>
 
 <!-- Disabled Example -->
-<Story
-  name="SelectDisabled"
-  args={{
-    label: 'Select Disabled',
-  }}
->
+<Story name="SelectDisabled" args={{ label: 'Select Disabled' }}>
   <Select {label} {description} {placeholder} {isRequired} {options} disabled={true} />
 </Story>

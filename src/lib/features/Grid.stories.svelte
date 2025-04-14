@@ -1,6 +1,6 @@
-<script>
+<script module>
   import Grid from './Grid.svelte';
-  import { Meta, Story } from '@storybook/addon-svelte-csf';
+  import { defineMeta } from '@storybook/addon-svelte-csf';
 
   const content = [
     "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
@@ -16,11 +16,12 @@
     'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. ',
     'Aliquam lobortis nisl mi, et ultrices mi gravida ac.',
   ];
+
+  const { Story } = defineMeta({ title: 'Design System/GridLayout', component: Grid });
 </script>
 
-<Meta title="Design System/Grid" />
 Resize window or activate responsive sizing in the development panel to see grid changes.
-<Story name="Grid" id="grid">
+<Story name="GridLayout" id="grid">
   <Grid class="xs:xs md:sm">
     {#each content as line, i (i)}
       <p>
