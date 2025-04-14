@@ -1,9 +1,9 @@
-<script>
-  import { Meta, Story } from '@storybook/addon-svelte-csf';
+<script module>
+  import { defineMeta } from '@storybook/addon-svelte-csf';
   import Typography from './Typography.svelte';
-</script>
 
-<Meta title="Design System/Typography" component={Typography} />
+  const { Story } = defineMeta({ title: 'Design System/Typography', component: Typography });
+</script>
 
 <Story name="Header">
   <Typography tag="h0">H0</Typography>

@@ -27,13 +27,13 @@
   {outTransitionConfig}
   {sideOffset}
   class={cn(
-    'relative z-50 min-w-[8rem] overflow-hidden rounded-md border bg-white text-black shadow-md outline-none',
+    'relative z-50 min-w-[8rem] overflow-hidden rounded-md border bg-white text-black shadow-md outline-hidden',
     className
   )}
   {...$$restProps}
   on:keydown
 >
-  <div class="w-full p-f4">
+  <div class="p-f4 w-full">
     <slot />
   </div>
 </SelectPrimitive.Content>

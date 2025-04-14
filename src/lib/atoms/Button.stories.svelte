@@ -1,14 +1,14 @@
-<script>
-  import { Meta, Story } from '@storybook/addon-svelte-csf';
+<script module>
+  import { defineMeta } from '@storybook/addon-svelte-csf';
 
   import Button from './Button.svelte';
-</script>
 
-<Meta title="UI Components/Atoms/Button" component={Button} />
+  const { Story } = defineMeta({ title: 'UI Components/Atoms/Button', component: Button });
+</script>
 
 <!-- Primary Button - Type Button -->
 <Story name="PrimaryButton">
-  <div class="flex flex-col gap-f8">
+  <div class="gap-f8 flex flex-col">
     <Button size="xs">P-XS</Button>
     <Button size="xs" active="true">P-XS Active</Button>
     <Button size="sm">Primary SM</Button>
@@ -35,7 +35,7 @@
 
 <!-- Secondary -->
 <Story name="Secondary">
-  <div class="flex flex-col gap-f8">
+  <div class="gap-f8 flex flex-col">
     <Button type="secondary" size="xs">S-XS</Button>
     <Button type="secondary" size="xs" active="true">S-XS Active</Button>
     <Button type="secondary" size="sm">Secondary SM</Button>
@@ -49,7 +49,7 @@
 
 <!-- Disabled -->
 <Story name="Disabled">
-  <div class="flex flex-col gap-f8">
+  <div class="gap-f8 flex flex-col">
     <Button size="xs" disabled={true}>P-XS</Button>
     <Button size="xs" disabled={true} active="true">P-XS</Button>
     <Button size="sm" disabled={true}>Primary SM</Button>

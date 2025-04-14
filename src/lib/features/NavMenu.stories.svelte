@@ -1,5 +1,5 @@
-<script>
-  import { Meta, Story } from '@storybook/addon-svelte-csf';
+<script module>
+  import { defineMeta } from '@storybook/addon-svelte-csf';
   import NavMenu from './NavMenu.svelte';
 
   const menuItems = [
@@ -12,11 +12,11 @@
     { label: 'Developer Portal', href: '/', isButton: true },
     { label: 'Portal Active', href: '/', isButton: true, isActive: true },
   ];
+
+  const { Story } = defineMeta({ title: 'UI Components/Features/NavMenu', component: NavMenu });
 </script>
 
-<Meta title="UI Components/Features/NavMenu" component={NavMenu} />
-
-<Story name="NavMenu" id="navMenu">
+<Story name="Desktop" id="navMenu">
   <div class="sticky top-0 bg-white">
     <NavMenu {menuItems} />
     <p class="block md:hidden">*** If you are not seeing the menu, try increasing the window size.</p>

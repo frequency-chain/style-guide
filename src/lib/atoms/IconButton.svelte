@@ -20,8 +20,8 @@
 <a
   aria-label={label}
   class={cn(
-    'flex h-f32 w-f32 items-center justify-center p-1 transition-colors duration-[0.3s] hover:bg-teal',
-    isRound ? 'rounded-full' : 'rounded',
+    'h-f32 w-f32 hover:bg-teal flex items-center justify-center p-1 transition-colors duration-[0.3s]',
+    isRound ? 'rounded-full' : 'rounded-sm',
     iconBgColor,
     $$restProps.class
   )}

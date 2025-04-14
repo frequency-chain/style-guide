@@ -12,10 +12,10 @@
 </script>
 
 <div class={cn('header-shadow flex', $$restProps.class)}>
-  <div class={cn('m-auto flex h-[85px] w-full max-w-screen-xl justify-between font-title', innerClass)}>
+  <div class={cn('font-title m-auto flex h-[85px] w-full max-w-(--breakpoint-xl) justify-between', innerClass)}>
     <!-- For Desktop -->
     <a href={logoLink} class={`self-center ${logoLink ? '' : 'pointer-events-none'}`}>
-      <FrequencyLogo class="w-[146px] text-navy md:w-[200px]" />
+      <FrequencyLogo class="text-navy w-[146px] md:w-[200px]" />
     </a>
 
     <NavMenu {highlightMarginTop} {menuItems} />

@@ -59,7 +59,7 @@
     <button
       {...$$restProps}
       class={cn(
-        'rounded-full px-f24 py-f8 text-center transition-all',
+        'px-f24 py-f8 rounded-full text-center transition-all',
         typeClass,
         activeClass,
         disabledClass,
@@ -68,7 +68,7 @@
       )}
       {disabled}
     >
-      <Typography bold={true} class="flex items-center justify-center gap-f8 font-sans">
+      <Typography bold={true} class="gap-f8 flex items-center justify-center font-sans">
         <slot />
       </Typography>
     </button>
@@ -78,7 +78,7 @@
     {...$$restProps}
     on:click|preventDefault={onClick}
     class={cn(
-      'rounded-full p-f8 text-center transition-all',
+      'p-f8 rounded-full text-center transition-all',
       typeClass,
       activeClass,
       disabledClass,
@@ -87,7 +87,7 @@
     )}
     {disabled}
   >
-    <Typography bold={true} class="flex items-center justify-center gap-f8 font-sans">
+    <Typography bold={true} class="gap-f8 flex items-center justify-center font-sans">
       <slot />
     </Typography>
   </button>

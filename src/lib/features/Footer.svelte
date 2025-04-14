@@ -18,13 +18,13 @@
 
 <footer
   class={cn(
-    'sm md:md mx-auto my-0 flex max-w-screen-xl flex-col items-center gap-f16 border-t-[2px] border-current py-f48 md:gap-f48',
+    'sm md:md gap-f16 py-f48 md:gap-f48 mx-auto my-0 flex max-w-(--breakpoint-xl) flex-col items-center border-t-[2px] border-current',
     fgColorText,
     $$restProps.class
   )}
 >
   <FrequencyLogo class="w-[146px] md:w-[257px]" />
-  <aside class="flex flex-col items-center space-y-4 text-center leading-none md:flex-row md:space-x-4 md:space-y-0">
+  <aside class="flex flex-col items-center space-y-4 text-center leading-none md:flex-row md:space-y-0 md:space-x-4">
     <div>
       © {new Date().getFullYear()} Frequency Network Foundation <span class="md:hidden">All Rights Reserved</span>
     </div>
@@ -32,10 +32,10 @@
     <div class="hidden md:block">All Rights Reserved</div>
     <div class="hidden w-[2px] self-stretch md:block {fgColorBg}"></div>
     <div>
-      <a href={privacyHref} class="underline transition duration-[0.3s] hover:text-teal">Privacy Policy</a>
+      <a href={privacyHref} class="hover:text-teal underline transition duration-[0.3s]">Privacy Policy</a>
     </div>
   </aside>
-  <div class="flex gap-f16" aria-label="Social Links">
+  <div class="gap-f16 flex" aria-label="Social Links">
     <IconButton {type} label="X/Twitter" href="https://x.com/frequency_xyz">
       <XLogo />
     </IconButton>

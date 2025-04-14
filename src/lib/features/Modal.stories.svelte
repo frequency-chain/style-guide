@@ -1,5 +1,5 @@
-<script lang="ts">
-  import { Meta, Story } from '@storybook/addon-svelte-csf';
+<script module>
+  import { defineMeta } from '@storybook/addon-svelte-csf';
   import Modal from './Modal.svelte';
   import Button from '../atoms/Button.svelte';
   import Select from '../atoms/Select.svelte';
@@ -19,9 +19,9 @@
   // Modal props
   export let title = 'Title';
   export let description = 'This is the description.';
-</script>
 
-<Meta title="UI Components/Features/Modal" component={Modal} />
+  const { Story } = defineMeta({ title: 'UI Components/Features/Modal', component: Modal });
+</script>
 
 <!--Primary-->
 <Story name="Primary Modal" id="modalPrimary">

@@ -10,7 +10,7 @@
   const id = `form-element-${labelNoSpaces}`;
 </script>
 
-<div class="flex flex-col gap-f4">
+<div class="gap-f4 flex flex-col">
   <label class="form-item-label" for={id}>
     {label}
     {#if isRequired}
@@ -22,7 +22,7 @@
     <span class="form-item-description">{description}</span>
   {/if}
 
-  <div class="flex items-center gap-f12" {id}>
+  <div class="gap-f12 flex items-center" {id}>
     <slot />
 
     {#if error}

@@ -1,10 +1,10 @@
-<script lang="ts">
-  import { Meta, Story } from '@storybook/addon-svelte-csf';
+<script module>
+  import { defineMeta } from '@storybook/addon-svelte-csf';
 
   import Footer from './Footer.svelte';
-</script>
 
-<Meta title="UI Components/Features/Footer" component={Footer} />
+  const { Story } = defineMeta({ title: 'UI Components/Features/Footer', component: Footer });
+</script>
 
 <!--Primary-->
 <Story name="Footer - Light Background (Gray example)" id="footerLight">
