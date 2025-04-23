@@ -7,7 +7,7 @@
   interface Props {
     class?: $$Props['class'];
     children?: import('svelte').Snippet;
-    [key: string]: any;
+    [key: string]: unknown;
   }
 
   let { class: className = undefined, children, ...rest }: Props = $props();

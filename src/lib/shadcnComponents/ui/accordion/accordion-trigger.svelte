@@ -10,7 +10,7 @@
     class?: $$Props['class'];
     level?: AccordionPrimitive.HeaderProps['level'];
     children?: import('svelte').Snippet;
-    [key: string]: any;
+    [key: string]: unknown;
   }
 
   let { class: className = undefined, level = 3, children, ...rest }: Props = $props();

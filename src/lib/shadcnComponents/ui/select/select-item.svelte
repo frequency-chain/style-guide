@@ -12,7 +12,7 @@
     label?: $$Props['label'];
     disabled?: $$Props['disabled'];
     children?: import('svelte').Snippet;
-    [key: string]: any;
+    [key: string]: unknown;
   }
 
   let {

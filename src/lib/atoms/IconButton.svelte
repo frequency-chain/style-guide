@@ -7,7 +7,7 @@
     isRound?: boolean;
     type?: 'light' | 'dark';
     children?: import('svelte').Snippet;
-    [key: string]: any;
+    [key: string]: unknown;
   }
 
   let { label = '', href = '', isRound = false, type = 'light', children, ...rest }: Props = $props();

@@ -10,7 +10,7 @@
     transition?: $$Props['transition'];
     transitionConfig?: $$Props['transitionConfig'];
     children?: import('svelte').Snippet;
-    [key: string]: any;
+    [key: string]: unknown;
   }
 
   let {

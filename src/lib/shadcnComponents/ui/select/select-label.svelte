@@ -8,7 +8,7 @@
     isRequired: boolean;
     class?: $$Props['class'];
     children?: import('svelte').Snippet;
-    [key: string]: any;
+    [key: string]: unknown;
   }
 
   let { isRequired, class: className = undefined, children, ...rest }: Props = $props();

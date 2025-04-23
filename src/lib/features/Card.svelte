@@ -7,7 +7,7 @@
     titleColor?: string;
     icon?: any;
     content?: import('svelte').Snippet;
-    [key: string]: any;
+    [key: string]: unknown;
   }
 
   let {

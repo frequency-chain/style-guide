@@ -24,7 +24,7 @@
      */
     active?: boolean;
     children?: import('svelte').Snippet;
-    [key: string]: any;
+    [key: string]: unknown;
   }
 
   let {
