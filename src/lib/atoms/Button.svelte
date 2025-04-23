@@ -5,7 +5,7 @@
   import { cn } from '../utils/utils';
 
   interface Props {
-    onClick?: any;
+    onClick?: () => void;
     href?: string;
     /**
      * Specify the kind of button.

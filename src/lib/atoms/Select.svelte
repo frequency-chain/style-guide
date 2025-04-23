@@ -1,42 +1,42 @@
 <script lang="ts">
-    import {Root, Trigger, Value, Content, Item, Label} from '../shadcnComponents/ui/select';
+  import { Root, Trigger, Value, Content, Item, Label } from '../shadcnComponents/ui/select';
 
-    interface Props {
-        label: string;
-        description?: string | undefined;
-        placeholder: string | undefined;
-        isRequired?: boolean;
-        error?: string | undefined;
-        options: { optionLabel: string; value: string }[];
+  interface Props {
+    label: string;
+    description?: string | undefined;
+    placeholder: string | undefined;
+    isRequired?: boolean;
+    error?: string | undefined;
+    options: { optionLabel: string; value: string }[];
 
-        [key: string]: unknown;
-    }
+    [key: string]: unknown;
+  }
 
-    let {
-        label,
-        description = undefined,
-        placeholder,
-        isRequired = false,
-        error = undefined,
-        options,
-        ...rest
-    }: Props = $props();
+  let {
+    label,
+    description = undefined,
+    placeholder,
+    isRequired = false,
+    error = undefined,
+    options,
+    ...rest
+  }: Props = $props();
 </script>
 
 <Root {...rest}>
-    <Label {isRequired}>{label}</Label>
-    {#if description}
-        <span class="form-item-description">{description}</span>
-    {/if}
-    <Trigger {error}>
-        <Value {placeholder}/>
-    </Trigger>
-    <Content class="border-gray3 border">
-        {#each options as option (option.value)}
-            <Item value={option.value}>{option.optionLabel}</Item>
-        {/each}
-    </Content>
-    {#if error}
-        <span class="form-error">{error}</span>
-    {/if}
+  <Label {isRequired}>{label}</Label>
+  {#if description}
+    <span class="form-item-description">{description}</span>
+  {/if}
+  <Trigger {error}>
+    <Value {placeholder} />
+  </Trigger>
+  <Content class="border-gray3 border">
+    {#each options as option (option.value)}
+      <Item value={option.value}>{option.optionLabel}</Item>
+    {/each}
+  </Content>
+  {#if error}
+    <span class="form-error">{error}</span>
+  {/if}
 </Root>

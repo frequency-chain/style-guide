@@ -5,7 +5,7 @@
     title?: string;
     bgColor?: string;
     titleColor?: string;
-    icon?: any;
+    icon?: import('svelte').SvelteComponent;
     content?: import('svelte').Snippet;
     [key: string]: unknown;
   }
