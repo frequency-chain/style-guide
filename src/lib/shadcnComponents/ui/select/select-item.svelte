@@ -2,17 +2,17 @@
   import { Check } from '../../../assets/index';
   import { Select as SelectPrimitive } from 'bits-ui';
   import { cn } from '../../../utils/utils';
+  import type { SvelteComponent } from 'svelte';
 
   type $$Props = SelectPrimitive.ItemProps;
   type $$Events = SelectPrimitive.ItemEvents;
 
-  interface Props {
+  interface Props extends SvelteComponent {
     class?: $$Props['class'];
     value: $$Props['value'];
     label?: $$Props['label'];
     disabled?: $$Props['disabled'];
     children?: import('svelte').Snippet;
-    [key: string]: unknown;
   }
 
   let {

@@ -1,13 +1,13 @@
 <script lang="ts">
+  import type { HTMLAttributes } from 'svelte/elements';
   import { UserFilled } from '../assets';
 
-  interface Props {
+  interface Props extends HTMLAttributes<HTMLElement> {
     title?: string;
     bgColor?: string;
     titleColor?: string;
-    icon?: import('svelte').SvelteComponent;
+    icon?: import('svelte').Component;
     content?: import('svelte').Snippet;
-    [key: string]: unknown;
   }
 
   let {

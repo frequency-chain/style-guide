@@ -1,8 +1,9 @@
 <script lang="ts">
+  import type { SvelteComponent } from 'svelte';
   import { cn } from '../utils/utils';
   import FormElement from './FormElement.svelte';
 
-  interface Props {
+  interface Props extends SvelteComponent {
     label?: string;
     isRequired?: boolean;
     description?: string;
@@ -10,8 +11,6 @@
     placeholder?: string;
     error: string | undefined;
     disabled: boolean | undefined;
-
-    [key: string]: unknown;
   }
 
   let {

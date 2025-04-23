@@ -3,15 +3,15 @@
   import { Exit } from '../../../assets/index';
   import * as Dialog from './index.js';
   import { cn, flyAndScale } from '../../../utils/utils';
+  import type { SvelteComponent } from 'svelte';
 
   type $$Props = DialogPrimitive.ContentProps;
 
-  interface Props {
+  interface Props extends SvelteComponent {
     class?: $$Props['class'];
     transition?: $$Props['transition'];
     transitionConfig?: $$Props['transitionConfig'];
     children?: import('svelte').Snippet;
-    [key: string]: unknown;
   }
 
   let {

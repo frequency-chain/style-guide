@@ -1,9 +1,9 @@
 <script lang="ts">
-  interface Props {
+  import type { SVGAttributes } from 'svelte/elements';
+
+  interface Props extends SVGAttributes<SVGSVGElement> {
     planetColor?: string;
     ringColor?: string;
-
-    [key: string]: unknown;
   }
 
   let { planetColor = '#55B1AB', ringColor = '#000', ...rest }: Props = $props();

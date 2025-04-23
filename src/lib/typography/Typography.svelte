@@ -1,5 +1,7 @@
 <script lang="ts">
-  interface Props {
+  import type { SvelteComponent, Snippet } from 'svelte';
+
+  interface Props extends SvelteComponent {
     /**
      * Specify the type of svelte element
      */
@@ -8,8 +10,7 @@
      * Specify if the text is bold
      */
     bold?: boolean;
-    children?: import('svelte').Snippet;
-    [key: string]: unknown;
+    children?: Snippet;
   }
 
   let { tag = 'div', bold = false, children, ...rest }: Props = $props();

@@ -2,15 +2,15 @@
   import { Accordion as AccordionPrimitive } from 'bits-ui';
   import { slide } from 'svelte/transition';
   import { cn } from '../../../utils/utils';
+  import type { SvelteComponent } from 'svelte';
 
   type $$Props = AccordionPrimitive.ContentProps;
 
-  interface Props {
+  interface Props extends SvelteComponent {
     class?: $$Props['class'];
     transition?: $$Props['transition'];
     transitionConfig?: $$Props['transitionConfig'];
     children?: import('svelte').Snippet;
-    [key: string]: unknown;
   }
 
   let {

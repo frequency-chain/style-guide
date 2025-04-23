@@ -1,13 +1,13 @@
 <script lang="ts">
+  import type { HTMLAttributes } from 'svelte/elements';
   import { cn } from '../utils/utils';
 
-  interface Props {
+  interface Props extends HTMLAttributes<HTMLElement> {
     label?: string;
     href?: string;
     isRound?: boolean;
     type?: 'light' | 'dark';
     children?: import('svelte').Snippet;
-    [key: string]: unknown;
   }
 
   let { label = '', href = '', isRound = false, type = 'light', children, ...rest }: Props = $props();

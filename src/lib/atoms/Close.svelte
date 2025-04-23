@@ -1,8 +1,9 @@
 <script lang="ts">
+  import type { SvelteComponent } from 'svelte';
   import { Close } from '../shadcnComponents/ui/dialog';
-  interface Props {
+
+  interface Props extends SvelteComponent {
     children?: import('svelte').Snippet;
-    [key: string]: unknown;
   }
 
   let { children, ...rest }: Props = $props();

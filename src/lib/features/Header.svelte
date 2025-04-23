@@ -4,14 +4,13 @@
   import NavMenuMobile from './NavMenuMobile.svelte';
   import type { MenuItem } from '$lib/utils/types.js';
   import { cn } from '../utils/utils.js';
+  import type { HTMLDivAttributes } from 'bits-ui/dist/internal';
 
-  interface Props {
+  interface Props extends HTMLDivAttributes {
     logoLink?: string;
     menuItems?: MenuItem[];
     highlightMarginTop?: string;
     innerClass?: string;
-
-    [key: string]: unknown;
   }
 
   let { logoLink = '', menuItems = [], highlightMarginTop = '90px', innerClass = '', ...rest }: Props = $props();

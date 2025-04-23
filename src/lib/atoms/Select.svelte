@@ -1,15 +1,14 @@
 <script lang="ts">
+  import type { HTMLAttributes } from 'svelte/elements';
   import { Root, Trigger, Value, Content, Item, Label } from '../shadcnComponents/ui/select';
 
-  interface Props {
+  interface Props extends HTMLAttributes<HTMLSelectElement> {
     label: string;
     description?: string | undefined;
     placeholder: string | undefined;
     isRequired?: boolean;
     error?: string | undefined;
     options: { optionLabel: string; value: string }[];
-
-    [key: string]: unknown;
   }
 
   let {

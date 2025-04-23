@@ -1,13 +1,12 @@
 <script lang="ts">
   import { Select as SelectPrimitive } from 'bits-ui';
   import { cn } from '../../../utils/utils';
+  import type { SvelteComponent } from 'svelte';
 
   type $$Props = SelectPrimitive.SeparatorProps;
 
-  interface Props {
+  interface Props extends SvelteComponent {
     class?: $$Props['class'];
-
-    [key: string]: unknown;
   }
 
   let { class: className = undefined, ...rest }: Props = $props();

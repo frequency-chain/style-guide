@@ -1,7 +1,8 @@
 <script lang="ts">
-  interface Props {
+  import type { HTMLDivAttributes } from 'bits-ui/dist/internal';
+
+  interface Props extends HTMLDivAttributes {
     children?: import('svelte').Snippet;
-    [key: string]: unknown;
   }
 
   let { children, ...rest }: Props = $props();

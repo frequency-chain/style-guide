@@ -2,15 +2,15 @@
   import { Accordion as AccordionPrimitive } from 'bits-ui';
   import { Chevron } from '../../../assets';
   import { cn } from '../../../utils/utils';
+  import type { SvelteComponent } from 'svelte';
 
   type $$Props = AccordionPrimitive.TriggerProps;
   type $$Events = AccordionPrimitive.TriggerEvents;
 
-  interface Props {
+  interface Props extends SvelteComponent {
     class?: $$Props['class'];
     level?: AccordionPrimitive.HeaderProps['level'];
     children?: import('svelte').Snippet;
-    [key: string]: unknown;
   }
 
   let { class: className = undefined, level = 3, children, ...rest }: Props = $props();

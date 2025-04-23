@@ -2,12 +2,11 @@
   import { cn } from '../utils/utils';
   import { FrequencyLogo, XLogo, DiscordLogo, BskyLogo } from '../assets';
   import IconButton from '../atoms/IconButton.svelte';
+  import type { HTMLAttributes } from 'svelte/elements';
 
-  interface Props {
+  interface Props extends HTMLAttributes<HTMLElement> {
     privacyHref?: string;
     type?: 'light' | 'dark';
-
-    [key: string]: unknown;
   }
 
   let { privacyHref = '/privacy', type = 'light', ...rest }: Props = $props();

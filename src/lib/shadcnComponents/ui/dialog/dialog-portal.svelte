@@ -1,8 +1,9 @@
 <script lang="ts">
   import { Dialog as DialogPrimitive } from 'bits-ui';
-  interface Props {
+  import type { SvelteComponent } from 'svelte';
+
+  interface Props extends SvelteComponent {
     children?: import('svelte').Snippet;
-    [key: string]: unknown;
   }
 
   let { children, ...rest }: Props = $props();

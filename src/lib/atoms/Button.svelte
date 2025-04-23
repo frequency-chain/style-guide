@@ -1,39 +1,26 @@
 <script lang="ts">
-  import { preventDefault } from 'svelte/legacy';
-
+  import type { HTMLAttributes } from 'svelte/elements';
   import Typography from '../typography/Typography.svelte';
   import { cn } from '../utils/utils';
+  import type { Snippet } from 'svelte';
 
-  interface Props {
-    onClick?: () => void;
+  interface Props extends HTMLAttributes<HTMLElement> {
     href?: string;
-    /**
-     * Specify the kind of button.
-     */
     type?: 'primary' | 'secondary';
-    /**
-     * Specify the size of the component.
-     */
     size?: 'xs' | 'sm' | 'normal' | 'md' | 'lg' | 'auto' | 'full';
-    /**
-     * Specify if the component is disabled.
-     */
     disabled?: boolean;
-    /**
-     * Specify if the component is supposed to be active.
-     */
     active?: boolean;
-    children?: import('svelte').Snippet;
-    [key: string]: unknown;
+    target?: HTMLAnchorElement['target'];
+    children?: Snippet;
   }
 
   let {
-    onClick = () => {},
     href = '',
     type = 'primary',
     size = 'normal',
     disabled = false,
     active = false,
+    target = '',
     children,
     ...rest
   }: Props = $props();
@@ -65,9 +52,8 @@
   );
 </script>
 
-<!--TODO: once we have upgraded to svelte 5, implement snippets for duplicate code.-->
 {#if href.length > 0}
-  <a {...rest} {href} class={disabled ? 'pointer-events-none block' : 'pointer-events-auto block'}>
+  <a {...rest} {href} {target} class={disabled ? 'pointer-events-none block' : 'pointer-events-auto block'}>
     <button
       {...rest}
       class={cn(
@@ -88,7 +74,6 @@
 {:else}
   <button
     {...rest}
-    onclick={preventDefault(onClick)}
     class={cn(
       'p-f8 cursor-pointer rounded-full text-center transition-all',
       typeClass,
