@@ -2,11 +2,11 @@
   import { Dialog as DialogPrimitive } from 'bits-ui';
   import { fade } from 'svelte/transition';
   import { cn } from '../../../utils/utils.js';
-  import type { SvelteComponent } from 'svelte';
+  import type { HTMLAttributes } from 'svelte/elements.js';
 
   type $$Props = DialogPrimitive.OverlayProps;
 
-  interface Props extends SvelteComponent {
+  interface Props extends HTMLAttributes<HTMLElement> {
     class?: $$Props['class'];
     transition?: $$Props['transition'];
     transitionConfig?: $$Props['transitionConfig'];
