@@ -1,21 +1,26 @@
 <script lang="ts">
-  /**
-   * Specify the type of svelte element
-   */
-  export let tag = 'div';
+  interface Props {
+    /**
+     * Specify the type of svelte element
+     */
+    tag?: string;
+    /**
+     * Specify if the text is bold
+     */
+    bold?: boolean;
+    children?: import('svelte').Snippet;
+    [key: string]: any;
+  }
 
-  /**
-   * Specify if the text is bold
-   */
-  export let bold = false;
+  let { tag = 'div', bold = false, children, ...rest }: Props = $props();
 
-  $: isBold = bold ? 'font-bold	' : '';
+  let isBold = $derived(bold ? 'font-bold	' : '');
 </script>
 
 <svelte:element
   this={tag === 'h0' ? 'h1' : tag}
-  {...$$restProps}
-  class={`${tag === 'h0' ? 'h0' : ''} ${isBold} ${$$restProps.class ?? ''}`}
+  {...rest}
+  class={`${tag === 'h0' ? 'h0' : ''} ${isBold} ${rest.class ?? ''}`}
 >
-  <slot />
+  {@render children?.()}
 </svelte:element>

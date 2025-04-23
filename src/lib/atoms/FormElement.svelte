@@ -1,10 +1,15 @@
 <script lang="ts">
   import { Error } from '../assets/index';
 
-  export let label = '';
-  export let isRequired = false;
-  export let description = '';
-  export let error: string | undefined;
+  interface Props {
+    label?: string;
+    isRequired?: boolean;
+    description?: string;
+    error: string | undefined;
+    children?: import('svelte').Snippet;
+  }
+
+  let { label = '', isRequired = false, description = '', error, children }: Props = $props();
 
   const labelNoSpaces = label.split(' ').join('');
   const id = `form-element-${labelNoSpaces}`;
@@ -23,7 +28,7 @@
   {/if}
 
   <div class="gap-f12 flex items-center" {id}>
-    <slot />
+    {@render children?.()}
 
     {#if error}
       <Error />

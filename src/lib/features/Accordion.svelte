@@ -1,8 +1,12 @@
 <script lang="ts">
   import { Root, Item, Trigger, Content } from '../shadcnComponents/ui/accordion';
 
-  export let trigger = '';
-  export let content = '';
+  interface Props {
+    trigger?: string;
+    content?: string;
+  }
+
+  let { trigger = '', content = '' }: Props = $props();
 </script>
 
 <Root>

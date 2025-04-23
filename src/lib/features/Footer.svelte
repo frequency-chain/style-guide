@@ -3,8 +3,13 @@
   import { FrequencyLogo, XLogo, DiscordLogo, BskyLogo } from '../assets';
   import IconButton from '../atoms/IconButton.svelte';
 
-  export let privacyHref: string = '/privacy';
-  export let type: 'light' | 'dark' = 'light';
+  interface Props {
+    privacyHref?: string;
+    type?: 'light' | 'dark';
+    [key: string]: any;
+  }
+
+  let { privacyHref = '/privacy', type = 'light', ...rest }: Props = $props();
 
   let fgColorText = {
     dark: 'text-white',
@@ -20,7 +25,7 @@
   class={cn(
     'sm md:md gap-f16 py-f48 md:gap-f48 mx-auto my-0 flex max-w-(--breakpoint-xl) flex-col items-center border-t-[2px] border-current',
     fgColorText,
-    $$restProps.class
+    rest.class
   )}
 >
   <FrequencyLogo class="w-[146px] md:w-[257px]" />

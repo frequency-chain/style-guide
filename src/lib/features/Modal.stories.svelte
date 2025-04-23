@@ -26,37 +26,49 @@
 <!--Primary-->
 <Story name="Primary Modal" id="modalPrimary">
   <Modal {title} {description}>
-    <Button slot="trigger">Open</Button>
-    <form slot="body">
-      <Select {label} description={selectDescription} {placeholder} {isRequired} {options} />
-      <Close>
-        <Button class="mt-f20">Submit</Button>
-      </Close>
-    </form>
+    {#snippet trigger()}
+      <Button>Open</Button>
+    {/snippet}
+    {#snippet body()}
+      <form>
+        <Select {label} description={selectDescription} {placeholder} {isRequired} {options} />
+        <Close>
+          <Button class="mt-f20">Submit</Button>
+        </Close>
+      </form>
+    {/snippet}
   </Modal>
 </Story>
 
 <!--No Description-->
 <Story name="No Description" id="modalNoDesc">
   <Modal {title}>
-    <Button slot="trigger">Open</Button>
-    <form slot="body">
-      <Select {label} description={selectDescription} {placeholder} {isRequired} {options} />
-      <Close>
-        <Button class="mt-f20">Submit</Button>
-      </Close>
-    </form>
+    {#snippet trigger()}
+      <Button>Open</Button>
+    {/snippet}
+    {#snippet body()}
+      <form>
+        <Select {label} description={selectDescription} {placeholder} {isRequired} {options} />
+        <Close>
+          <Button class="mt-f20">Submit</Button>
+        </Close>
+      </form>
+    {/snippet}
   </Modal>
 </Story>
 
 <!--Text Body-->
 <Story name="Text Body" id="modalText">
   <Modal {title} {description}>
-    <Button slot="trigger">Open</Button>
-    <div slot="body">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad aliquam animi aperiam blanditiis
-      excepturi inventore ipsum iste, labore maiores minus nostrum obcaecati, quasi, ratione reprehenderit rerum
-      suscipit temporibus.
-    </div>
+    {#snippet trigger()}
+      <Button>Open</Button>
+    {/snippet}
+    {#snippet body()}
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium ad aliquam animi aperiam blanditiis
+        excepturi inventore ipsum iste, labore maiores minus nostrum obcaecati, quasi, ratione reprehenderit rerum
+        suscipit temporibus.
+      </div>
+    {/snippet}
   </Modal>
 </Story>

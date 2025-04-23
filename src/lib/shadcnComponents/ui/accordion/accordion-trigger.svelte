@@ -6,9 +6,14 @@
   type $$Props = AccordionPrimitive.TriggerProps;
   type $$Events = AccordionPrimitive.TriggerEvents;
 
-  let className: $$Props['class'] = undefined;
-  export let level: AccordionPrimitive.HeaderProps['level'] = 3;
-  export { className as class };
+  interface Props {
+    class?: $$Props['class'];
+    level?: AccordionPrimitive.HeaderProps['level'];
+    children?: import('svelte').Snippet;
+    [key: string]: any;
+  }
+
+  let { class: className = undefined, level = 3, children, ...rest }: Props = $props();
 </script>
 
 <AccordionPrimitive.Header {level} class="flex">
@@ -17,10 +22,10 @@
       'text-md flex flex-1 items-center justify-between py-4 font-bold transition-all [&[data-state=open]>svg]:rotate-180',
       className
     )}
-    {...$$restProps}
+    {...rest}
     on:click
   >
-    <slot />
+    {@render children?.()}
     <Chevron class="h-5 w-5 bg-black p-1 text-white transition-transform duration-200" />
   </AccordionPrimitive.Trigger>
 </AccordionPrimitive.Header>

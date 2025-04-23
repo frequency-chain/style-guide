@@ -1,6 +1,15 @@
-<div class="m-f16 md:m-f32 lg:m-f120 {$$restProps.class}">
+<script lang="ts">
+  interface Props {
+    children?: import('svelte').Snippet;
+    [key: string]: any;
+  }
+
+  let { children, ...rest }: Props = $props();
+</script>
+
+<div class="m-f16 md:m-f32 lg:m-f120 {rest.class}">
   <div class="gap-f16 lg:gap-f32 grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12">
-    <slot />
+    {@render children?.()}
   </div>
 </div>
 
