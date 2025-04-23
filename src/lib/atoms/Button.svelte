@@ -59,7 +59,7 @@
     <button
       {...$$restProps}
       class={cn(
-        'px-f24 py-f8 rounded-full text-center transition-all',
+        'px-f24 py-f8 cursor-pointer rounded-full text-center transition-all',
         typeClass,
         activeClass,
         disabledClass,
@@ -78,7 +78,7 @@
     {...$$restProps}
     on:click|preventDefault={onClick}
     class={cn(
-      'p-f8 rounded-full text-center transition-all',
+      'p-f8 cursor-pointer rounded-full text-center transition-all',
       typeClass,
       activeClass,
       disabledClass,
