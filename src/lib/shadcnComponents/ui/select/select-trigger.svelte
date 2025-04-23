@@ -2,12 +2,11 @@
   import { Select as SelectPrimitive } from 'bits-ui';
   import { cn } from '../../../utils/utils';
   import { Error, Chevron } from '../../../assets/index';
-  import type { SvelteComponent } from 'svelte';
 
   type $$Props = SelectPrimitive.TriggerProps & { error: string | undefined };
   type $$Events = SelectPrimitive.TriggerEvents;
 
-  interface Props extends SvelteComponent {
+  interface Props extends $$Props {
     error: string | undefined;
     class?: $$Props['class'];
     children?: import('svelte').Snippet;

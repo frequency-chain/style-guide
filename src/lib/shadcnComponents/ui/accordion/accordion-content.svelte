@@ -6,7 +6,7 @@
 
   type $$Props = AccordionPrimitive.ContentProps;
 
-  interface Props extends SvelteComponent {
+  interface Props extends $$Props {
     class?: $$Props['class'];
     transition?: $$Props['transition'];
     transitionConfig?: $$Props['transitionConfig'];

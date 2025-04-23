@@ -1,12 +1,9 @@
 <script lang="ts">
   import type { HTMLAttributes } from 'svelte/elements';
   import { cn } from '../../../utils/utils.js';
-  import type { SvelteComponent } from 'svelte';
 
-  type $$Props = HTMLAttributes<HTMLDivElement>;
-
-  interface Props extends SvelteComponent {
-    class?: $$Props['class'];
+  interface Props extends HTMLAttributes<HTMLElement> {
+    class?: HTMLAttributes<HTMLElement>['class'];
     children?: import('svelte').Snippet;
   }
 

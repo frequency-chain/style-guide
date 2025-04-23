@@ -1,11 +1,11 @@
 <script lang="ts">
   import { Select as SelectPrimitive } from 'bits-ui';
   import { cn } from '../../../utils/utils';
-  import type { SvelteComponent, Snippet } from 'svelte';
+  import type { Snippet } from 'svelte';
 
   type $$Props = SelectPrimitive.LabelProps & { isRequired: boolean };
 
-  interface Props extends SvelteComponent {
+  interface Props extends $$Props {
     isRequired: boolean;
     class?: $$Props['class'];
     children?: Snippet;

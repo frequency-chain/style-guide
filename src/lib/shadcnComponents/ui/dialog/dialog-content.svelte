@@ -3,11 +3,11 @@
   import { Exit } from '../../../assets/index';
   import * as Dialog from './index.js';
   import { cn, flyAndScale } from '../../../utils/utils';
-  import type { SvelteComponent } from 'svelte';
+  import type { HTMLAttributes } from 'svelte/elements';
 
   type $$Props = DialogPrimitive.ContentProps;
 
-  interface Props extends SvelteComponent {
+  interface Props extends HTMLAttributes<HTMLElement> {
     class?: $$Props['class'];
     transition?: $$Props['transition'];
     transitionConfig?: $$Props['transitionConfig'];

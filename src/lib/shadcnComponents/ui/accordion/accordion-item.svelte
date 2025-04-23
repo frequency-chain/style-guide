@@ -1,11 +1,11 @@
 <script lang="ts">
   import { Accordion as AccordionPrimitive } from 'bits-ui';
   import { cn } from '../../../utils/utils';
-  import type { SvelteComponent } from 'svelte';
+  import type { HTMLAttributes } from 'svelte/elements';
 
   type $$Props = AccordionPrimitive.ItemProps;
 
-  interface Props extends SvelteComponent {
+  interface Props extends HTMLAttributes<HTMLElement> {
     class?: $$Props['class'];
     value: $$Props['value'];
     children?: import('svelte').Snippet;

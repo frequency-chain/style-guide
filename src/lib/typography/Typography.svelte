@@ -1,7 +1,8 @@
 <script lang="ts">
-  import type { SvelteComponent, Snippet } from 'svelte';
+  import type { Snippet } from 'svelte';
+  import type { HTMLAttributes } from 'svelte/elements';
 
-  interface Props extends SvelteComponent {
+  interface Props extends HTMLAttributes<HTMLElement> {
     /**
      * Specify the type of svelte element
      */
