@@ -5,11 +5,15 @@
   import type { MenuItem } from '$lib/utils/types.js';
   import Button from '../atoms/Button.svelte';
 
-  export let menuItems: MenuItem[] = [];
-  export let toggleIdentifier: string = 'mobile-menu-toggle';
+  interface Props {
+    menuItems?: MenuItem[];
+    toggleIdentifier?: string;
+  }
+
+  let { menuItems = [], toggleIdentifier = 'mobile-menu-toggle' }: Props = $props();
 
   // isOpen is bound to the checkbox state
-  let isOpen: boolean = false;
+  let isOpen: boolean = $state(false);
 </script>
 
 <input type="checkbox" class="peer hidden" bind:checked={isOpen} id={toggleIdentifier} />
@@ -36,7 +40,7 @@
           href={item.href}
           target={item.isExternal ? '_blank' : '_self'}
           class="h4 underline-on-hover after:bg-current"
-          on:click={() => (item.isExternal ? null : (isOpen = false))}
+          onclick={() => (item.isExternal ? null : (isOpen = false))}
         >
           {item.label}
         </a>

@@ -55,9 +55,9 @@
         {#if Icon === OpenClose}
           <input type="checkbox" class="peer hidden" id="mobile-menu-toggle" />
           <aside>Click it!</aside>
-          <svelte:component this={Icon} class="mb-1 h-8 w-auto stroke-black" isDemo={true} />
+          <Icon class="mb-1 h-8 w-auto stroke-black" isDemo={true} />
         {:else}
-          <svelte:component this={Icon} class="mb-1 h-8 w-auto stroke-black" isDemo={true} />
+          <Icon class="mb-1 h-8 w-auto stroke-black" isDemo={true} />
         {/if}
       </div>
     {/each}
@@ -69,7 +69,7 @@
     {#each Object.entries(logos) as [name, Logo] (name)}
       <div class="flex flex-col items-start justify-start p-4">
         <h2 class="mb-2 text-lg font-semibold">{name}</h2>
-        <svelte:component this={Logo} class="mb-1 h-8 w-auto" />
+        <Logo class="mb-1 h-8 w-auto" />
       </div>
     {/each}
   </div>

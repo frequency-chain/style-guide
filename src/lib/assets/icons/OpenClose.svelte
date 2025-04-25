@@ -1,8 +1,10 @@
 <script lang="ts">
-  export let toggleIdentifier: string = 'mobile-menu-toggle';
-  export let classes: string = '';
+  interface Props {
+    toggleIdentifier?: string;
+    classes?: string; // Thanks to https://play.tailwindcss.com/NT2vsY9Al5 for the group setup
+  }
 
-  // Thanks to https://play.tailwindcss.com/NT2vsY9Al5 for the group setup
+  let { toggleIdentifier = 'mobile-menu-toggle', classes = '' }: Props = $props();
 </script>
 
 <label

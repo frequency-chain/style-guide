@@ -1,4 +1,10 @@
-<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class={`h-f20 w-f20 ${$$restProps.class}`}>
+<script lang="ts">
+  import type { SVGAttributes } from 'svelte/elements';
+
+  let { ...rest }: SVGAttributes<SVGElement> = $props();
+</script>
+
+<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class={`h-f20 w-f20 ${rest.class}`}>
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"

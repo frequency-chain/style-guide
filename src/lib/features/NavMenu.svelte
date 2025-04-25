@@ -4,15 +4,19 @@
   import type { MenuItem } from '../utils/types.js';
   import Button from '../atoms/Button.svelte';
 
-  export let menuItems: MenuItem[] = [];
-  export let highlightMarginTop = '0px';
+  interface Props {
+    menuItems?: MenuItem[];
+    highlightMarginTop?: string;
+  }
 
-  let viewportTrackingItems: [string, boolean][] = menuItems
-    .filter((item) => item.viewportHighlightId)
-    .map((item) => [item.viewportHighlightId as string, false]);
+  let { menuItems = [], highlightMarginTop = '0px' }: Props = $props();
+
+  let viewportTrackingItems: [string, boolean][] = $state(
+    menuItems.filter((item) => item.viewportHighlightId).map((item) => [item.viewportHighlightId as string, false])
+  );
 
   // Order matters, so we just want the first one
-  $: highlightId = viewportTrackingItems.find(([_id, inViewport]) => inViewport === true)?.[0];
+  let highlightId = $derived(viewportTrackingItems.find(([_id, inViewport]) => inViewport === true)?.[0]);
 
   onMount(() => {
     // Create intersection observer
