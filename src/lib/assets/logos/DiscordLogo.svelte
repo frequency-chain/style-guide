@@ -1,10 +1,16 @@
+<script lang="ts">
+  import type { SVGAttributes } from 'svelte/elements';
+
+  let { ...rest }: SVGAttributes<SVGElement> = $props();
+</script>
+
 <svg
   viewBox="0 -28.5 256 256"
   version="1.1"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   preserveAspectRatio="xMidYMid"
-  class={$$restProps.class}
+  class={rest.class}
 >
   <g>
     <path

@@ -4,10 +4,14 @@
 
   type $$Props = DialogPrimitive.TitleProps;
 
-  let className: $$Props['class'] = undefined;
-  export { className as class };
+  interface Props extends $$Props {
+    class?: $$Props['class'];
+    children?: import('svelte').Snippet;
+  }
+
+  let { class: className = undefined, children, ...rest }: Props = $props();
 </script>
 
-<DialogPrimitive.Title class={cn('lg text-primary font-bold', className)} {...$$restProps}>
-  <slot />
+<DialogPrimitive.Title class={cn('lg text-primary font-bold', className)} {...rest}>
+  {@render children?.()}
 </DialogPrimitive.Title>

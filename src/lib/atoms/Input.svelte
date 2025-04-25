@@ -1,22 +1,36 @@
 <script lang="ts">
+  import type { SvelteComponent } from 'svelte';
   import { cn } from '../utils/utils';
   import FormElement from './FormElement.svelte';
 
-  export let label = '';
-  export let isRequired = false;
-  export let description = '';
-  export let value = '';
-  export let placeholder = 'Enter some text...';
-  export let error: string | undefined;
-  export let disabled: boolean | undefined;
+  interface Props extends SvelteComponent {
+    label?: string;
+    isRequired?: boolean;
+    description?: string;
+    value?: string;
+    placeholder?: string;
+    error: string | undefined;
+    disabled: boolean | undefined;
+  }
+
+  let {
+    label = '',
+    isRequired = false,
+    description = '',
+    value = $bindable(''),
+    placeholder = 'Enter some text...',
+    error,
+    disabled,
+    ...rest
+  }: Props = $props();
 </script>
 
-<FormElement {label} {isRequired} {description} {error} {...$$restProps}>
+<FormElement {label} {isRequired} {description} {error} {...rest}>
   <input
     class={cn(
       'border-input aria-[invalid]:border-destructive [&>span]:data-placeholder:text-muted-foreground sm flex h-10 w-full max-w-[388px] items-center justify-between rounded-md border bg-white px-3 py-2 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1',
       error ? 'border-error border-2' : 'border-gray3 border',
-      $$restProps.class
+      rest.class
     )}
     type="text"
     {placeholder}

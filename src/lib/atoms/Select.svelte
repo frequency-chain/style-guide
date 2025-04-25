@@ -1,15 +1,28 @@
 <script lang="ts">
+  import type { HTMLAttributes } from 'svelte/elements';
   import { Root, Trigger, Value, Content, Item, Label } from '../shadcnComponents/ui/select';
 
-  export let label: string;
-  export let description: string | undefined = undefined;
-  export let placeholder: string | undefined;
-  export let isRequired: boolean = false;
-  export let error: string | undefined = undefined;
-  export let options: { optionLabel: string; value: string }[];
+  interface Props extends HTMLAttributes<HTMLSelectElement> {
+    label: string;
+    description?: string | undefined;
+    placeholder: string | undefined;
+    isRequired?: boolean;
+    error?: string | undefined;
+    options: { optionLabel: string; value: string }[];
+  }
+
+  let {
+    label,
+    description = undefined,
+    placeholder,
+    isRequired = false,
+    error = undefined,
+    options,
+    ...rest
+  }: Props = $props();
 </script>
 
-<Root {...$$restProps}>
+<Root {...rest}>
   <Label {isRequired}>{label}</Label>
   {#if description}
     <span class="form-item-description">{description}</span>

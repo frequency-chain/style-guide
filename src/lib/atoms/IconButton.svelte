@@ -1,10 +1,16 @@
 <script lang="ts">
+  import type { HTMLAttributes } from 'svelte/elements';
   import { cn } from '../utils/utils';
 
-  export let label: string = '';
-  export let href: string = '';
-  export let isRound = false;
-  export let type: 'light' | 'dark' = 'light';
+  interface Props extends HTMLAttributes<HTMLElement> {
+    label?: string;
+    href?: string;
+    isRound?: boolean;
+    type?: 'light' | 'dark';
+    children?: import('svelte').Snippet;
+  }
+
+  let { label = '', href = '', isRound = false, type = 'light', children, ...rest }: Props = $props();
 
   let iconBgColor = {
     light: 'bg-navy',
@@ -23,12 +29,12 @@
     'h-f32 w-f32 hover:bg-teal flex items-center justify-center p-1 transition-colors duration-[0.3s]',
     isRound ? 'rounded-full' : 'rounded-sm',
     iconBgColor,
-    $$restProps.class
+    rest.class
   )}
   {href}
   target="_blank"
 >
   <div class="h-auto w-full {iconFgColor}">
-    <slot />
+    {@render children?.()}
   </div>
 </a>

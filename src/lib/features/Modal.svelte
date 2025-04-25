@@ -1,13 +1,19 @@
 <script lang="ts">
   import { Root, Trigger, Content, Header, Title, Description } from '../shadcnComponents/ui/dialog';
 
-  export let title = '';
-  export let description = '';
+  interface Props {
+    title?: string;
+    description?: string;
+    trigger?: import('svelte').Snippet;
+    body?: import('svelte').Snippet;
+  }
+
+  let { title = '', description = '', trigger, body }: Props = $props();
 </script>
 
 <Root>
   <Trigger>
-    <slot name="trigger" />
+    {@render trigger?.()}
   </Trigger>
   <Content>
     <Header>
@@ -16,6 +22,6 @@
         <Description>{description}</Description>
       {/if}
     </Header>
-    <slot name="body" />
+    {@render body?.()}
   </Content>
 </Root>

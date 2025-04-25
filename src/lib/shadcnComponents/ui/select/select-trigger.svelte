@@ -3,13 +3,16 @@
   import { cn } from '../../../utils/utils';
   import { Error, Chevron } from '../../../assets/index';
 
-  export let error: string | undefined;
-
   type $$Props = SelectPrimitive.TriggerProps & { error: string | undefined };
   type $$Events = SelectPrimitive.TriggerEvents;
 
-  let className: $$Props['class'] = undefined;
-  export { className as class };
+  interface Props extends $$Props {
+    error: string | undefined;
+    class?: $$Props['class'];
+    children?: import('svelte').Snippet;
+  }
+
+  let { error, class: className = undefined, children, ...rest }: Props = $props();
 </script>
 
 <div class="gap-f12 flex items-center">
@@ -19,12 +22,9 @@
       error ? 'border-error border-2' : 'border-gray3 border',
       className
     )}
-    {...$$restProps}
-    let:builder
-    on:click
-    on:keydown
+    {...rest}
   >
-    <slot {builder} />
+    {@render children?.()}
     <Chevron class="h-4 w-4" />
   </SelectPrimitive.Trigger>
   {#if error}
