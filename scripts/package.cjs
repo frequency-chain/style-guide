@@ -35,10 +35,12 @@ delete rootPackage['devDependencies'];
 // Update @config import path to match the dist file structure
 const cssPath = './dist/styles/index.css';
 let cssContent = fs.readFileSync(cssPath, 'utf8');
+
 cssContent = cssContent.replace(
   "@config '../../../tailwind.config.ts';",
   "@config '../tailwind.config.js';"
 );
+
 fs.writeFileSync(cssPath, cssContent);
 
 // Write it out
