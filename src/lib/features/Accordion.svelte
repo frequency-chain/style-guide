@@ -8,9 +8,6 @@
   }
 
   let { trigger, content }: Props = $props();
-
-  console.log(content);
-  console.log(typeof content);
 </script>
 
 <Root>
