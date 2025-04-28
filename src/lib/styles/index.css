@@ -20,24 +20,24 @@
   }
 }
 
-@utility lg {
+@utility lgText {
   @apply leading-lg text-lg;
 }
 
-@utility md {
+@utility mdText {
   @apply text-md leading-md;
   @apply text-md leading-md;
 }
 
-@utility normal {
+@utility normalText {
   @apply text-normal leading-normal;
 }
 
-@utility sm {
+@utility smText {
   @apply leading-sm text-sm;
 }
 
-@utility xs {
+@utility xsText {
   @apply leading-xs text-xs;
 }
 
@@ -66,15 +66,15 @@
 
 @utility form-item-label {
   /*  Form common styles*/
-  @apply sm w-full max-w-[388px] py-[5px] font-bold;
+  @apply smText w-full max-w-[388px] py-[5px] font-bold;
 }
 
 @utility form-item-description {
-  @apply sm text-gray2;
+  @apply smText text-gray2;
 }
 
 @utility form-error {
-  @apply sm text-error font-bold;
+  @apply smText text-error font-bold;
 }
 
 @utility card-shadow {

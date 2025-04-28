@@ -12,6 +12,6 @@
   let { class: className = undefined, children, ...rest }: Props = $props();
 </script>
 
-<DialogPrimitive.Title class={cn('lg text-primary font-bold', className)} {...rest}>
+<DialogPrimitive.Title class={cn('lgText text-primary font-bold', className)} {...rest}>
   {@render children?.()}
 </DialogPrimitive.Title>
