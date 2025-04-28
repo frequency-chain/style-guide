@@ -17,7 +17,7 @@
 </script>
 
 <div class={cn('header-shadow flex', rest.class)}>
-  <div class={cn('font-title m-auto flex h-[85px] w-full max-w-(--breakpoint-xl) justify-between', innerClass)}>
+  <div class={cn('m-auto flex h-[85px] w-full max-w-(--breakpoint-xl) justify-between', innerClass)}>
     <!-- For Desktop -->
     <a href={logoLink} class={`self-center ${logoLink ? '' : 'pointer-events-none'}`}>
       <FrequencyLogo class="text-navy w-[146px] md:w-[200px]" />
