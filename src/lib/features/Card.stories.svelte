@@ -30,7 +30,7 @@
   <Card title="Alternate color card" titleColor="white" bgColor="teal">
     {#snippet content()}
       <div>
-        <h4 class="md text-primary font-bold">Slot content title</h4>
+        <h4 class="mdText text-primary font-bold">Slot content title</h4>
         <p class="text-error w-fit rounded-sm bg-white px-2">Slot content: Error text!</p>
         <p class="text-white">Slot content: error message!</p>
       </div>

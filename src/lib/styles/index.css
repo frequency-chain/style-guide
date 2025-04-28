@@ -10,6 +10,19 @@
   If we ever want to remove these styles, we need to add an explicit border
   color utility to any element that depends on these defaults.
 */
+
+@theme {
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 320px;
+  --breakpoint-md: 744px;
+  --breakpoint-lg: 1300px;
+  --breakpoint-xl: 1700px;
+  --breakpoint-vertical-lg: (max-height: 700px) and (min-width: 1300px);
+  --breakpoint-vertical-md: (max-height: 700px) and (min-width: 900px);
+  --breakpoint-vertical: (max-height: 700px) or (min-width: 0px);
+  --breakpoint-horizontal: (min-height: 700px) and (min-width: 1300px);
+}
+
 @layer base {
   *,
   ::after,
@@ -20,24 +33,24 @@
   }
 }
 
-@utility lg {
+@utility lgText {
   @apply leading-lg text-lg;
 }
 
-@utility md {
+@utility mdText {
   @apply text-md leading-md;
   @apply text-md leading-md;
 }
 
-@utility normal {
+@utility normalText {
   @apply text-normal leading-normal;
 }
 
-@utility sm {
+@utility smText {
   @apply leading-sm text-sm;
 }
 
-@utility xs {
+@utility xsText {
   @apply leading-xs text-xs;
 }
 
@@ -66,15 +79,15 @@
 
 @utility form-item-label {
   /*  Form common styles*/
-  @apply sm w-full max-w-[388px] py-[5px] font-bold;
+  @apply smText w-full max-w-[388px] py-[5px] font-bold;
 }
 
 @utility form-item-description {
-  @apply sm text-gray2;
+  @apply smText text-gray2;
 }
 
 @utility form-error {
-  @apply sm text-error font-bold;
+  @apply smText text-error font-bold;
 }
 
 @utility card-shadow {

@@ -22,7 +22,7 @@
 
 Resize window or activate responsive sizing in the development panel to see grid changes.
 <Story name="GridLayout" id="grid">
-  <Grid class="xs:xs md:sm">
+  <Grid class="xs:xsText md:smText">
     {#each content as line, i (i)}
       <p>
         <b>Paragraph {i + 1}: </b>
