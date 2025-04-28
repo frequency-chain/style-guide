@@ -1,17 +1,24 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
   import { Root, Item, Trigger, Content } from '../shadcnComponents/ui/accordion';
 
   interface Props {
-    trigger?: string;
-    content?: string;
+    trigger: string;
+    content: string | Snippet;
   }
 
-  let { trigger = '', content = '' }: Props = $props();
+  let { trigger, content }: Props = $props();
 </script>
 
 <Root>
   <Item value="item-1">
     <Trigger>{trigger}</Trigger>
-    <Content>{content}</Content>
+    <Content
+      >{#if typeof content === 'function'}
+        {@render content()}
+      {:else}
+        {content}
+      {/if}</Content
+    >
   </Item>
 </Root>
