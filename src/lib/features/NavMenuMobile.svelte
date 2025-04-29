@@ -18,7 +18,7 @@
 
 <input type="checkbox" class="peer hidden" bind:checked={isOpen} id={toggleIdentifier} />
 <OpenClose
-  classes="cursor-pointer text-primary peer-checked:text-white hover:peer-checked:text-teal hover:text-teal xs:flex self-center lg:hidden"
+  class="text-primary hover:peer-checked:text-teal hover:text-teal xs:flex cursor-pointer self-center peer-checked:text-white lg:hidden"
 />
 <div
   class="gap-f24 bg-navy xs:flex fixed top-0 left-0 z-1 h-0 w-[100vw] flex-col justify-between overflow-y-scroll px-[12%] transition-[height] duration-[1s] peer-checked:h-[100vh] lg:hidden"
