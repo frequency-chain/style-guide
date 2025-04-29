@@ -45,7 +45,7 @@
   });
 </script>
 
-<nav class="gap-f32 text-primary font-title hidden md:flex">
+<nav class="gap-f32 text-primary font-title xs:hidden md:flex">
   {#each menuItems as item, index (index)}
     {#if item.isButton}
       <div class="content-center">
@@ -62,7 +62,7 @@
       <a
         href={item.href}
         target={item.isExternal ? '_blank' : '_self'}
-        class={`h6 text-primary border-color relative hidden cursor-pointer content-center overflow-hidden px-2 transition-all duration-1000 after:absolute after:bottom-0 after:left-0 after:h-[13px] after:w-full after:transform after:bg-current after:opacity-0 after:transition-opacity after:content-[''] lg:block ${
+        class={`h6 text-primary border-color xs:hidden relative cursor-pointer content-center overflow-hidden px-2 transition-all duration-1000 after:absolute after:bottom-0 after:left-0 after:h-[13px] after:w-full after:transform after:bg-current after:opacity-0 after:transition-opacity after:content-[''] lg:block ${
           item.viewportHighlightId && highlightId === item.viewportHighlightId
             ? 'after:translate-y-0 after:opacity-100'
             : 'after:translate-y-[200%]'

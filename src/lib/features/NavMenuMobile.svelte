@@ -18,13 +18,13 @@
 
 <input type="checkbox" class="peer hidden" bind:checked={isOpen} id={toggleIdentifier} />
 <OpenClose
-  classes="cursor-pointer text-primary peer-checked:text-white hover:peer-checked:text-teal hover:text-teal flex self-center lg:hidden"
+  classes="cursor-pointer text-primary peer-checked:text-white hover:peer-checked:text-teal hover:text-teal xs:flex self-center lg:hidden"
 />
 <div
-  class="gap-f24 bg-navy fixed top-0 left-0 z-1 flex h-0 w-[100vw] flex-col justify-between overflow-y-scroll px-[12%] transition-[height] duration-[1s] peer-checked:h-[100vh] lg:hidden"
+  class="gap-f24 bg-navy xs:flex fixed top-0 left-0 z-1 h-0 w-[100vw] flex-col justify-between overflow-y-scroll px-[12%] transition-[height] duration-[1s] peer-checked:h-[100vh] lg:hidden"
   aria-expanded={isOpen}
 >
-  <nav id="mobile-navigation" aria-label="Main" class="mb-f48 gap-f24 mt-[85px] flex flex-col text-white">
+  <nav id="mobile-navigation" aria-label="Main" class="mb-f48 gap-f24 xs:flex mt-[85px] flex-col text-white">
     {#each menuItems as item (item.href)}
       {#if item.isButton}
         <Button

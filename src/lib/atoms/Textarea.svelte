@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { SvelteComponent } from 'svelte';
   import { cn } from '../utils/utils';
   import FormElement from './FormElement.svelte';
+  import type { HTMLAttributes } from 'svelte/elements';
 
-  interface Props extends SvelteComponent {
+  interface Props extends HTMLAttributes<HTMLElement> {
     label?: string;
     isRequired?: boolean;
     description?: string;
