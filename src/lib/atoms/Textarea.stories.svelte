@@ -8,7 +8,6 @@
   export let isRequired = false;
   export let value = '';
   export let error = 'Error message.';
-  let comment = $state('');
 
   const { Story } = defineMeta({ title: 'UI Components/Atoms/Textarea', component: Textarea });
 </script>
@@ -40,12 +39,3 @@
 <Story name="Textarea + Class" args={{ label: 'Textarea with extra classes' }}>
   <Textarea {label} {placeholder} {value} class="h-f160"></Textarea>
 </Story>
-
-<Textarea
-  label="Comment"
-  placeholder="Write us a message"
-  bind:value={comment}
-  class="required h-[160px] text-black"
-  isRequired={true}
-  {error}
-/>
