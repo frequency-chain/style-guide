@@ -45,6 +45,8 @@
   const logos = { FrequencyIconFilled, FrequencyIcon, FrequencyLogo, DiscordLogo, LinkedInLogo, XLogo };
 
   const { Story } = defineMeta({ title: 'Design System/Assets' });
+
+  let isOpen = $state(false);
 </script>
 
 <Story name="Icons">
@@ -53,9 +55,9 @@
       <div class="flex flex-col items-start justify-start p-4">
         <h2 class="mb-2 text-lg font-semibold">{name}</h2>
         {#if Icon === OpenClose}
-          <input type="checkbox" class="peer hidden" id="mobile-menu-toggle" />
+          <input type="checkbox" id="mobile-menu-toggle" class="peer hidden" bind:checked={isOpen} />
           <aside>Click it!</aside>
-          <Icon class="mb-1 h-8 w-auto stroke-black" isDemo={true} />
+          <Icon toggleIdentifier="mobile-menu-toggle" class="mb-1 h-8 w-auto stroke-black" bind:isOpen isDemo={true} />
         {:else}
           <Icon class="mb-1 h-8 w-auto stroke-black" isDemo={true} />
         {/if}

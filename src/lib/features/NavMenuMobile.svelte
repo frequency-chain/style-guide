@@ -18,6 +18,8 @@
 
 <input type="checkbox" class="peer hidden" bind:checked={isOpen} id={toggleIdentifier} />
 <OpenClose
+  {toggleIdentifier}
+  bind:isOpen
   class="text-primary hover:peer-checked:text-teal hover:text-teal xs:flex cursor-pointer self-center peer-checked:text-white lg:hidden"
 />
 <div
