@@ -25,6 +25,8 @@
     ...rest
   }: Props = $props();
 
+  let generalStyles = cn('cursor-pointer rounded-full text-center transition-all');
+
   // Define button type classes
   let typeClass = $derived(
     type === 'primary'
@@ -52,40 +54,28 @@
   );
 </script>
 
+{#snippet Content()}
+  <Typography bold={true} class="gap-f8 text-normal flex items-center justify-center font-sans"
+    >{@render children?.()}</Typography
+  >
+{/snippet}
+
 {#if href.length > 0}
   <a {...rest} {href} {target} class={disabled ? 'pointer-events-none block' : 'pointer-events-auto block'}>
     <button
       {...rest}
-      class={cn(
-        'px-f24 py-f8 cursor-pointer rounded-full text-center transition-all',
-        typeClass,
-        activeClass,
-        disabledClass,
-        btnSizeClass,
-        rest.class
-      )}
+      class={cn('px-f24 py-f8 ', generalStyles, typeClass, activeClass, disabledClass, btnSizeClass, rest.class)}
       {disabled}
     >
-      <Typography bold={true} class="gap-f8 flex items-center justify-center font-sans">
-        {@render children?.()}
-      </Typography>
+      {@render Content()}
     </button>
   </a>
 {:else}
   <button
     {...rest}
-    class={cn(
-      'p-f8 cursor-pointer rounded-full text-center transition-all',
-      typeClass,
-      activeClass,
-      disabledClass,
-      btnSizeClass,
-      rest.class
-    )}
+    class={cn('p-f8', generalStyles, typeClass, activeClass, disabledClass, btnSizeClass, rest.class)}
     {disabled}
   >
-    <Typography bold={true} class="gap-f8 flex items-center justify-center font-sans">
-      {@render children?.()}
-    </Typography>
+    {@render Content()}
   </button>
 {/if}
