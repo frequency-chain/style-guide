@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { SvelteComponent } from 'svelte';
+  import type { HTMLAttributes } from 'svelte/elements';
   import { Close } from '../shadcnComponents/ui/dialog';
 
-  interface Props extends SvelteComponent {
+  interface Props extends HTMLAttributes<HTMLElement> {
     children?: import('svelte').Snippet;
   }
 

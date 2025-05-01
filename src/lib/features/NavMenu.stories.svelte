@@ -19,7 +19,7 @@
 <Story name="Desktop" id="navMenu">
   <div class="sticky top-0 bg-white">
     <NavMenu {menuItems} />
-    <p class="block md:hidden">*** If you are not seeing the menu, try increasing the window size.</p>
+    <p class="xs:block lg:hidden">*** If you are not seeing the menu, try increasing the window size.</p>
   </div>
 
   <p class="block">You may need to have a shorter browser to test the highlight moving</p>
