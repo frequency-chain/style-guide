@@ -35,7 +35,7 @@
 
 <!-- Secondary -->
 <Story name="Secondary">
-  <div class="gap-f8 flex flex-col">
+  <div class="gap-f8 bg-gray3 p-f16 flex flex-col">
     <Button type="secondary" size="xs">S-XS</Button>
     <Button type="secondary" size="xs" active="true">S-XS Active</Button>
     <Button type="secondary" size="sm">Secondary SM</Button>
