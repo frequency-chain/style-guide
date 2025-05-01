@@ -3,7 +3,7 @@
   import FormElement from './FormElement.svelte';
   import type { HTMLAttributes } from 'svelte/elements';
 
-  interface Props extends HTMLAttributes<HTMLElement> {
+  interface Props extends HTMLAttributes<HTMLInputElement> {
     label?: string;
     isRequired?: boolean;
     description?: string;
@@ -25,7 +25,7 @@
   }: Props = $props();
 </script>
 
-<FormElement {label} {isRequired} {description} {error} {...rest}>
+<FormElement {label} {isRequired} {description} {error}>
   <input
     class={cn(
       'border-input aria-[invalid]:border-destructive [&>span]:data-placeholder:text-muted-foreground smText flex h-10 w-full max-w-[388px] items-center justify-between rounded-md border bg-white px-3 py-2 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1',
@@ -36,5 +36,6 @@
     {placeholder}
     {disabled}
     bind:value
+    {...rest}
   />
 </FormElement>
