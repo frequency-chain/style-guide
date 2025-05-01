@@ -45,8 +45,8 @@
   });
 </script>
 
-<nav class="gap-f32 text-primary hidden md:flex">
-  {#each menuItems as item (item.href)}
+<nav class="gap-f32 text-primary font-title hidden md:flex">
+  {#each menuItems as item, index (index)}
     {#if item.isButton}
       <div class="content-center">
         <Button

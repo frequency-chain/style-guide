@@ -23,14 +23,14 @@
 </Story>
 
 <Story name="Body">
-  <Typography class="lg">Body Lg</Typography>
-  <Typography class="lg" bold={true}>Body Lg Bold</Typography>
-  <Typography class="md">Body Md</Typography>
-  <Typography class="md" bold={true}>Body Md Bold</Typography>
+  <Typography class="lgText">Body Lg</Typography>
+  <Typography class="lgText" bold={true}>Body Lg Bold</Typography>
+  <Typography class="mdText">Body Md</Typography>
+  <Typography class="mdText" bold={true}>Body Md Bold</Typography>
   <Typography>Body Normal</Typography>
   <Typography bold={true}>Body Normal Bold</Typography>
-  <Typography class="sm">Body Sm</Typography>
-  <Typography class="sm" bold={true}>Body Sm Bold</Typography>
-  <Typography class="xs">Body Xs</Typography>
-  <Typography class="xs" bold={true}>Body Xs Bold</Typography>
+  <Typography class="smText">Body Sm</Typography>
+  <Typography class="smText" bold={true}>Body Sm Bold</Typography>
+  <Typography class="xsText">Body Xs</Typography>
+  <Typography class="xsText" bold={true}>Body Xs Bold</Typography>
 </Story>
