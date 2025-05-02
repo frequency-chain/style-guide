@@ -2,7 +2,7 @@
   import type { HTMLAttributes } from 'svelte/elements';
   import { cn } from '../utils/utils';
 
-  interface Props extends HTMLAttributes<HTMLElement> {
+  interface Props extends HTMLAttributes<HTMLAnchorElement> {
     label?: string;
     href?: string;
     isRound?: boolean;
