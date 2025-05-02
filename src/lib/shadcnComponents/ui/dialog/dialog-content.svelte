@@ -3,19 +3,16 @@
   import { Exit } from '../../../assets/index';
   import * as Dialog from './index.js';
   import { cn, flyAndScale } from '../../../utils/utils';
-  import type { HTMLAttributes } from 'svelte/elements';
 
   type $$Props = DialogPrimitive.ContentProps;
 
-  interface Props extends HTMLAttributes<HTMLElement> {
-    class?: $$Props['class'];
+  interface Props extends $$Props {
     transition?: $$Props['transition'];
     transitionConfig?: $$Props['transitionConfig'];
     children?: import('svelte').Snippet;
   }
 
   let {
-    class: className = undefined,
     transition = flyAndScale,
     transitionConfig = {
       duration: 200,
@@ -28,13 +25,13 @@
 <Dialog.Portal>
   <Dialog.Overlay />
   <DialogPrimitive.Content
+    {...rest}
     {transition}
     {transitionConfig}
     class={cn(
       'normal gap-f24 p-f48 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[500px] translate-x-[-50%] translate-y-[-50%] rounded-lg bg-white shadow-lg md:w-full',
-      className
+      rest.class
     )}
-    {...rest}
   >
     {@render children?.()}
     <DialogPrimitive.Close class="right-f24 top-f24 absolute disabled:pointer-events-none">

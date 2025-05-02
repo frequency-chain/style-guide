@@ -2,7 +2,7 @@
   import type { HTMLAttributes } from 'svelte/elements';
   import { UserFilled } from '../assets';
 
-  interface Props extends HTMLAttributes<HTMLElement> {
+  interface Props extends HTMLAttributes<HTMLDivElement> {
     title?: string;
     bgColor?: string;
     titleColor?: string;
@@ -22,7 +22,7 @@
   const SvelteComponent = $derived(icon);
 </script>
 
-<div class="card-shadow rounded-xl p-6 bg-{bgColor} {rest.class}">
+<div {...rest} class="card-shadow rounded-xl p-6 bg-{bgColor} {rest.class}">
   <div class="flex justify-between pb-6">
     <h5 class="font-bold text-{titleColor} inline">{title}</h5>
     <SvelteComponent class="h-f48 w-f48" />

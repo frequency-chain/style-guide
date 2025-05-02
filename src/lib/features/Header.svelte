@@ -4,9 +4,9 @@
   import NavMenuMobile from './NavMenuMobile.svelte';
   import type { MenuItem } from '$lib/utils/types.js';
   import { cn } from '../utils/utils.js';
-  import type { HTMLDivAttributes } from 'bits-ui/dist/internal';
+  import type { HTMLAttributes } from 'svelte/elements';
 
-  interface Props extends HTMLDivAttributes {
+  interface Props extends HTMLAttributes<HTMLDivElement> {
     logoLink?: string;
     menuItems?: MenuItem[];
     highlightMarginTop?: string;
@@ -16,7 +16,7 @@
   let { logoLink = '', menuItems = [], highlightMarginTop = '90px', innerClass = '', ...rest }: Props = $props();
 </script>
 
-<div class={cn('header-shadow flex', rest.class)}>
+<div {...rest} class={cn('header-shadow flex', rest.class)}>
   <div class={cn('m-auto flex h-[85px] w-full max-w-(--breakpoint-xl) justify-between', innerClass)}>
     <!-- For Desktop -->
     <a href={logoLink} class={`self-center ${logoLink ? '' : 'pointer-events-none'}`}>

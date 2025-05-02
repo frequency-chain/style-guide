@@ -2,18 +2,15 @@
   import { Dialog as DialogPrimitive } from 'bits-ui';
   import { fade } from 'svelte/transition';
   import { cn } from '../../../utils/utils.js';
-  import type { HTMLAttributes } from 'svelte/elements.js';
 
   type $$Props = DialogPrimitive.OverlayProps;
 
-  interface Props extends HTMLAttributes<HTMLElement> {
-    class?: $$Props['class'];
+  interface Props extends $$Props {
     transition?: $$Props['transition'];
     transitionConfig?: $$Props['transitionConfig'];
   }
 
   let {
-    class: className = undefined,
     transition = fade,
     transitionConfig = {
       duration: 150,
@@ -23,8 +20,8 @@
 </script>
 
 <DialogPrimitive.Overlay
+  {...rest}
   {transition}
   {transitionConfig}
-  class={cn('bg-shadow/5 fixed inset-0 z-50 backdrop-blur-xs', className)}
-  {...rest}
+  class={cn('bg-shadow/5 fixed inset-0 z-50 backdrop-blur-xs', rest.class)}
 />

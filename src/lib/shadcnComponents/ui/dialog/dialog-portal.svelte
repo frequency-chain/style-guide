@@ -1,8 +1,9 @@
 <script lang="ts">
   import { Dialog as DialogPrimitive } from 'bits-ui';
-  import type { HTMLAttributes } from 'svelte/elements';
 
-  interface Props extends HTMLAttributes<HTMLElement> {
+  type $$Props = DialogPrimitive.PortalProps;
+
+  interface Props extends $$Props {
     children?: import('svelte').Snippet;
   }
 

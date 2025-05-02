@@ -24,6 +24,7 @@
 </script>
 
 <a
+  {...rest}
   aria-label={label}
   class={cn(
     'h-f32 w-f32 hover:bg-teal flex items-center justify-center p-1 transition-colors duration-[0.3s]',

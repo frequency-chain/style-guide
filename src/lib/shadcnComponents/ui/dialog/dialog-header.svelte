@@ -2,14 +2,13 @@
   import type { HTMLAttributes } from 'svelte/elements';
   import { cn } from '../../../utils/utils.js';
 
-  interface Props extends HTMLAttributes<HTMLElement> {
-    class?: HTMLAttributes<HTMLElement>['class'];
+  interface Props extends HTMLAttributes<HTMLDivElement> {
     children?: import('svelte').Snippet;
   }
 
-  let { class: className = undefined, children, ...rest }: Props = $props();
+  let { children, ...rest }: Props = $props();
 </script>
 
-<div class={cn('space-y-f4 flex flex-col', className)} {...rest}>
+<div {...rest} class={cn('space-y-f4 flex flex-col', rest.class)}>
   {@render children?.()}
 </div>

@@ -7,32 +7,24 @@
   type $$Events = SelectPrimitive.ItemEvents;
 
   interface Props extends $$Props {
-    class?: $$Props['class'];
     value: $$Props['value'];
     label?: $$Props['label'];
     disabled?: $$Props['disabled'];
     children?: import('svelte').Snippet;
   }
 
-  let {
-    class: className = undefined,
-    value,
-    label = undefined,
-    disabled = undefined,
-    children,
-    ...rest
-  }: Props = $props();
+  let { value, label = undefined, disabled = undefined, children, ...rest }: Props = $props();
 </script>
 
 <SelectPrimitive.Item
+  {...rest}
   {value}
   {disabled}
   {label}
   class={cn(
     'sm data-highlighted:bg-gray3 relative flex w-full cursor-pointer items-center rounded-xs py-2 pr-8 pl-2 outline-hidden transition select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-highlighted:text-black',
-    className
+    rest.class
   )}
-  {...rest}
   on:click
   on:keydown
   on:focusin
