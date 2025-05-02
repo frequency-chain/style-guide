@@ -9,7 +9,15 @@
   let { fillColor = '#55B1AB', letterColor = '#fff', ...rest }: Props = $props();
 </script>
 
-<svg width="53" height="54" viewBox="0 0 53 54" fill="none" xmlns="http://www.w3.org/2000/svg" class={rest.class}>
+<svg
+  {...rest}
+  width="53"
+  height="54"
+  viewBox="0 0 53 54"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  class={rest.class}
+>
   <g clip-path="url(#clip0_2477_34007)">
     <path
       d="M26.5 53.5C41.1355 53.5 53 41.6355 53 27C53 12.3645 41.1355 0.5 26.5 0.5C11.8645 0.5 0 12.3645 0 27C0 41.6355 11.8645 53.5 26.5 53.5Z"

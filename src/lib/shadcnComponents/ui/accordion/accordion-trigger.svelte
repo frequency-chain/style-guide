@@ -7,21 +7,20 @@
   type $$Events = AccordionPrimitive.TriggerEvents;
 
   interface Props extends $$Props {
-    class?: $$Props['class'];
     level?: AccordionPrimitive.HeaderProps['level'];
     children?: import('svelte').Snippet;
   }
 
-  let { class: className = undefined, level = 3, children, ...rest }: Props = $props();
+  let { level = 3, children, ...rest }: Props = $props();
 </script>
 
 <AccordionPrimitive.Header {level} class="flex">
   <AccordionPrimitive.Trigger
+    {...rest}
     class={cn(
       'text-md flex flex-1 items-center justify-between py-4 font-bold transition-all [&[data-state=open]>svg]:rotate-180',
-      className
+      rest.class
     )}
-    {...rest}
     on:click
   >
     {@render children?.()}

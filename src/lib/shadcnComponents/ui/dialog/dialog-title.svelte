@@ -9,9 +9,9 @@
     children?: import('svelte').Snippet;
   }
 
-  let { class: className = undefined, children, ...rest }: Props = $props();
+  let { children, ...rest }: Props = $props();
 </script>
 
-<DialogPrimitive.Title class={cn('lgText text-primary font-bold', className)} {...rest}>
+<DialogPrimitive.Title {...rest} class={cn('lgText text-primary font-bold', rest.class)}>
   {@render children?.()}
 </DialogPrimitive.Title>

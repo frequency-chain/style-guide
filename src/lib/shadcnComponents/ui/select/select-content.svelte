@@ -12,7 +12,6 @@
     inTransitionConfig?: $$Props['inTransitionConfig'];
     outTransition?: $$Props['outTransition'];
     outTransitionConfig?: $$Props['outTransitionConfig'];
-    class?: $$Props['class'];
     children?: import('svelte').Snippet;
   }
 
@@ -26,13 +25,13 @@
       opacity: 0,
       duration: 50,
     },
-    class: className = undefined,
     children,
     ...rest
   }: Props = $props();
 </script>
 
 <SelectPrimitive.Content
+  {...rest}
   {inTransition}
   {inTransitionConfig}
   {outTransition}
@@ -40,9 +39,8 @@
   {sideOffset}
   class={cn(
     'relative z-50 min-w-[8rem] overflow-hidden rounded-md border bg-white text-black shadow-md outline-hidden',
-    className
+    rest.class
   )}
-  {...rest}
   on:keydown
 >
   <div class="p-f4 w-full">

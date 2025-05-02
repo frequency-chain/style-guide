@@ -3,18 +3,17 @@
   import { cn } from '../../../utils/utils';
   import type { Snippet } from 'svelte';
 
-  type $$Props = SelectPrimitive.LabelProps & { isRequired: boolean };
+  type $$Props = SelectPrimitive.LabelProps;
 
   interface Props extends $$Props {
     isRequired: boolean;
-    class?: $$Props['class'];
     children?: Snippet;
   }
 
-  let { isRequired, class: className = undefined, children, ...rest }: Props = $props();
+  let { isRequired, children, ...rest }: Props = $props();
 </script>
 
-<SelectPrimitive.Label class={cn('form-item-label', className)} {...rest}>
+<SelectPrimitive.Label {...rest} class={cn('form-item-label', rest.class)}>
   {@render children?.()}
   {#if isRequired}
     <span class="text-error">*</span>

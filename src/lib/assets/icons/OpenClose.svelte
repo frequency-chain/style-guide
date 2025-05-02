@@ -11,6 +11,7 @@
 </script>
 
 <label
+  {...rest}
   for={toggleIdentifier}
   aria-label="Open main navigation"
   aria-controls="mobile-navigation"

@@ -6,14 +6,12 @@
   type $$Props = AccordionPrimitive.ContentProps;
 
   interface Props extends $$Props {
-    class?: $$Props['class'];
     transition?: $$Props['transition'];
     transitionConfig?: $$Props['transitionConfig'];
     children?: import('svelte').Snippet;
   }
 
   let {
-    class: className = undefined,
     transition = slide,
     transitionConfig = {
       duration: 200,
@@ -24,10 +22,10 @@
 </script>
 
 <AccordionPrimitive.Content
-  class={cn('sm overflow-hidden transition-all', className)}
+  {...rest}
+  class={cn('sm overflow-hidden transition-all', rest.class)}
   {transition}
   {transitionConfig}
-  {...rest}
 >
   <div class="text-normal pt-0 pb-4">
     {@render children?.()}

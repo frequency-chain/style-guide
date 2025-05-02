@@ -22,6 +22,7 @@
 </script>
 
 <footer
+  {...rest}
   class={cn(
     'smText md:mdText gap-f16 py-f48 md:gap-f48 mx-auto my-0 flex max-w-(--breakpoint-xl) flex-col items-center border-t-[2px] border-current',
     fgColorText,
