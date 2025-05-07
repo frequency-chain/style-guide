@@ -1,6 +1,7 @@
 <script module>
   import { defineMeta } from '@storybook/addon-svelte-csf';
   import Textarea from './Textarea.svelte';
+  import Input from './Input.svelte';
 
   export let label = 'Tell me about your favorite food.';
   export let description = 'Please provide a paragraph about your choice.';
