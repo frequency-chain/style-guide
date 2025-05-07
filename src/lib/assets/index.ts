@@ -17,7 +17,6 @@ export { default as Wallet } from './icons/Wallet.svelte';
 
 //Logos
 export { default as FrequencyIcon } from './logos/FrequencyIcon.svelte';
-export { default as FrequencyIconFilled } from './logos/FrequencyIconFilled.svelte';
 export { default as FrequencyLogo } from './logos/FrequencyLogo.svelte';
 //External Logos
 export { default as BskyLogo } from './logos/BskyLogo.svelte';
