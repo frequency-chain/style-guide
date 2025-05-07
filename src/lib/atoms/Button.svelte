@@ -6,7 +6,7 @@
 
   interface Props extends HTMLAttributes<HTMLElement> {
     href?: string;
-    type?: 'primary' | 'secondary';
+    variant?: 'primary' | 'secondary';
     size?: 'xs' | 'sm' | 'normal' | 'md' | 'lg' | 'auto' | 'full';
     disabled?: boolean;
     active?: boolean;
@@ -16,7 +16,7 @@
 
   let {
     href = '',
-    type = 'primary',
+    variant = 'primary',
     size = 'normal',
     disabled = false,
     active = false,
@@ -25,19 +25,27 @@
     ...rest
   }: Props = $props();
 
-  let generalStyles = cn('cursor-pointer rounded-full text-center transition-all');
+  let generalStyles = cn('cursor-pointer rounded-full text-center transition-all text-nowrap');
 
   // Define button type classes
   let typeClass = $derived(
-    type === 'primary'
-      ? 'bg-teal text-black hover:text-black hover:bg-tealDark hover:shadow-md'
-      : 'bg-transparent border text-white border-white hover:border-primary hover:text-primary'
+    cn(
+      variant === 'primary'
+        ? 'bg-teal hover:bg-teal-dark text-black hover:text-black hover:shadow-md'
+        : 'bg-transparent border text-white border-white hover:border-primary hover:text-primary'
+    )
   );
 
   // Define classes
   let disabledClass = $derived(disabled ? 'bg-gray3 text-white cursor-default pointer-events-none' : '');
   let activeClass = $derived(
-    active ? (type === 'primary' ? 'bg-primary text-teal shadow-md' : 'border-primary text-primary') : ''
+    cn(
+      active
+        ? variant === 'primary'
+          ? 'bg-primary text-teal hover:text-teal hover:bg-primary shadow-md'
+          : 'border-primary text-primary'
+        : ''
+    )
   );
 
   // Define button size classes

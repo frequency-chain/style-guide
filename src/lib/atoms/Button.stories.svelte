@@ -36,14 +36,14 @@
 <!-- Secondary -->
 <Story name="Secondary">
   <div class="gap-f8 p-f24 bg-gray3 flex flex-col">
-    <Button type="secondary" size="xs">S-XS</Button>
-    <Button type="secondary" size="xs" active="true">S-XS Active</Button>
-    <Button type="secondary" size="sm">Secondary SM</Button>
-    <Button type="secondary" size="normal">Secondary Normal</Button>
-    <Button type="secondary" size="md">Secondary MD</Button>
-    <Button type="secondary" size="lg">Secondary LG</Button>
-    <Button type="secondary" size="auto">Secondary Auto</Button>
-    <Button type="secondary" size="full">Secondary Full</Button>
+    <Button variant="secondary" size="xs">S-XS</Button>
+    <Button variant="secondary" size="xs" active="true">S-XS Active</Button>
+    <Button variant="secondary" size="sm">Secondary SM</Button>
+    <Button variant="secondary" size="normal">Secondary Normal</Button>
+    <Button variant="secondary" size="md">Secondary MD</Button>
+    <Button variant="secondary" size="lg">Secondary LG</Button>
+    <Button variant="secondary" size="auto">Secondary Auto</Button>
+    <Button variant="secondary" size="full">Secondary Full</Button>
   </div>
 </Story>
 

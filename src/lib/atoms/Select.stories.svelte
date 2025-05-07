@@ -13,7 +13,7 @@
   ];
   export let error = 'Error message.';
 
-  let primarySelected = '';
+  let primarySelected = $state('');
 
   const { Story } = defineMeta({ title: 'UI Components/Atoms/Select', component: Select });
 </script>
