@@ -29,19 +29,23 @@
 
   // Define button type classes
   let typeClass = $derived(
-    variant === 'primary'
-      ? 'bg-teal text-black hover:text-black hover:bg-tealDark hover:shadow-md'
-      : 'bg-transparent border text-white border-white hover:border-primary hover:text-primary'
+    cn(
+      variant === 'primary'
+        ? 'bg-teal hover:bg-teal-dark text-black hover:text-black hover:shadow-md'
+        : 'bg-transparent border text-white border-white hover:border-primary hover:text-primary'
+    )
   );
 
   // Define classes
   let disabledClass = $derived(disabled ? 'bg-gray3 text-white cursor-default pointer-events-none' : '');
   let activeClass = $derived(
-    active
-      ? variant === 'primary'
-        ? 'bg-primary text-teal hover:text-teal shadow-md'
-        : 'border-primary text-primary'
-      : ''
+    cn(
+      active
+        ? variant === 'primary'
+          ? 'bg-primary text-teal hover:text-teal hover:bg-primary shadow-md'
+          : 'border-primary text-primary'
+        : ''
+    )
   );
 
   // Define button size classes

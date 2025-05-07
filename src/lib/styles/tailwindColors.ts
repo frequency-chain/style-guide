@@ -13,9 +13,9 @@ export default {
   white: '#FFFFFF',
   shadow: '#00000040',
   // Supporting Colors
-  tealDark: '#339B94',
-  brightBlue: '#5E69FF',
-  dustyRose: '#A06B87',
+  'teal-dark': '#349B93',
+  'bright-blue': '#5E69FF',
+  'dusty-rose': '#A06B87',
   orange: '#F77C47',
   yellow: '#FFD647',
   // State tailwindColors

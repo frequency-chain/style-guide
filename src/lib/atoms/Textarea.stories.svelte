@@ -36,6 +36,6 @@
 </Story>
 
 <!-- Extra classes Example -->
-<Story name="Textarea + Class" args={{ label: 'Textarea with extra classes' }}>
-  <Textarea {label} {placeholder} {value} class="h-f160"></Textarea>
+<Story name="Textarea + Class" args={{ label: 'Textarea with extra classes and rows' }}>
+  <Textarea {label} {placeholder} {value} rows={5} class="max-w-[800px]"></Textarea>
 </Story>
