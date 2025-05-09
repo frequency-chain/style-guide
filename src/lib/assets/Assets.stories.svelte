@@ -16,8 +16,8 @@
     UserLock,
     UserOutlined,
     Wallet,
-    FrequencyIconFilled,
     FrequencyIcon,
+    FrequencyIconSquare,
     FrequencyLogo,
     DiscordLogo,
     LinkedInLogo,
@@ -42,7 +42,7 @@
     Wallet,
   };
 
-  const logos = { FrequencyIconFilled, FrequencyIcon, FrequencyLogo, DiscordLogo, LinkedInLogo, XLogo };
+  const logos = { FrequencyIcon, FrequencyIconSquare, FrequencyLogo, DiscordLogo, LinkedInLogo, XLogo };
 
   const { Story } = defineMeta({ title: 'Design System/Assets' });
 
