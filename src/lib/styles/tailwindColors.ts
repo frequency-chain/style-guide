@@ -1,4 +1,4 @@
-// Used for storybook. 
+// Used for storybook.
 
 export default {
   //Branding Colors
