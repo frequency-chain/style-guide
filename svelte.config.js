@@ -1,5 +1,5 @@
-import preprocess from 'svelte-preprocess';
 import { resolve } from 'path';
+import preprocess from 'svelte-preprocess';
 
 export default {
   // Preprocess your Svelte files (e.g., support for TailwindCSS and other preprocessors)
@@ -14,7 +14,6 @@ export default {
       $styles: resolve('./src/styles'),
       $atoms: resolve('./src/lib/atoms'),
       $typography: resolve('./src/lib/typography'),
-      $colors: resolve('./src/lib/tailwindColors'),
       $assets: resolve('./src/assets'),
     },
   },
