@@ -18,14 +18,12 @@ rootPackage.exports = {
   '.': {
     types: './index.d.ts',
     svelte: './index.js',
-    style: "./styles/index.css"
+    style: './styles/index.css',
   },
   './styles': './styles/index.css',
 };
 
-rootPackage.style = {
-  './styles': './styles/index.css',
-};
+rootPackage.style = './styles/index.css';
 
 // Don't keep dev dependencies
 delete rootPackage['devDependencies'];
