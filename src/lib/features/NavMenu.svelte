@@ -62,11 +62,14 @@
       <a
         href={item.href}
         target={item.isExternal ? '_blank' : '_self'}
-        class={`h6 text-navy border-color xs:hidden after:bg-teal relative cursor-pointer content-center overflow-hidden px-2 transition-all duration-1000 after:absolute after:bottom-0 after:left-0 after:h-[13px] after:w-full after:transform after:opacity-0 after:transition-opacity after:content-[''] lg:block ${
-          item.viewportHighlightId && highlightId === item.viewportHighlightId
-            ? 'after:translate-y-0 after:opacity-100'
-            : 'after:translate-y-[200%]'
-        }`}
+        class={`h6 text-navy border-color xs:hidden after:bg-teal relative cursor-pointer content-center overflow-hidden px-2 transition-all duration-1000
+          after:absolute after:bottom-0 after:left-0 after:h-[13px] after:w-full after:transform after:transition after:duration-300 after:content-[''] lg:block
+          ${
+            item.viewportHighlightId && highlightId === item.viewportHighlightId
+              ? 'after:translate-y-0 after:opacity-100'
+              : 'after:translate-y-[200%] after:opacity-0'
+          }
+          hover:after:translate-y-0 hover:after:opacity-100 focus:after:translate-y-0 focus:after:opacity-100`}
       >
         {item.label}
       </a>
