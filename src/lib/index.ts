@@ -18,8 +18,5 @@ export { default as Typography } from './typography/Typography.svelte';
 // icons & logos
 export * as Assets from './assets/index';
 
-// colors
-export { default as tailwindColors } from '$lib/styles/tailwindColors';
-
 // css styles
 import './styles/index.css';

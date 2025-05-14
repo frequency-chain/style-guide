@@ -1,17 +1,90 @@
 @import 'tailwindcss';
 
-@config '../../../tailwind.config.ts';
-
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-
 @theme {
+  /* Colors */
+  /* NOTE: if updated, also update tailwindColors.ts */
+  --color-navy: #14313f;
+  --color-primary: #18465e;
+  --color-teal: #55b1ab;
+
+  --color-black: #000000;
+  --color-gray1: #4f4f4f;
+  --color-gray2: #828282;
+  --color-gray3: #c8cdd0;
+  --color-white: #ffffff;
+  --color-shadow: #00000040;
+
+  --color-teal-dark: #349b93;
+  --color-bright-blue: #5e69ff;
+  --color-dusty-rose: #a06b87;
+  --color-orange: #f77c47;
+  --color-yellow: #ffd647;
+
+  --color-error: #eb5757;
+  --color-warning: #f99a2a;
+  --color-success: #27ae60;
+  --color-info: #2f80ed;
+
+  /* Fonts */
+  --font-title: 'Newake', 'Arial Black', 'Arial Bold', sans-serif;
+  --font-sans: 'Poppins', sans-serif;
+
+  /* Font Sizes */
+  --text-default: 16px;
+  --text-h0: 70px;
+  --text-h1: 56px;
+  --text-h2: 48px;
+  --text-h3: 40px;
+  --text-h4: 32px;
+  --text-h5: 24px;
+  --text-h6: 20px;
+  --text-lg: 24px;
+  --text-md: 18px;
+  --text-normal: 16px;
+  --text-sm: 12px;
+  --text-xs: 10px;
+
+  /* Line Heights */
+  --spacing-default: 22px;
+  --spacing-h0: 70px;
+  --spacing-h1: 61px;
+  --spacing-h2: 52px;
+  --spacing-h3: 44px;
+  --spacing-h4: 35px;
+  --spacing-h5: 26px;
+  --spacing-h6: 22px;
+  --spacing-lg: 30px;
+  --spacing-md: 25px;
+  --spacing-normal: 22px;
+  --spacing-sm: 16px;
+  --spacing-xs: 14px;
+
+  /* Spacing */
+  --spacing-f4: 4px;
+  --spacing-f8: 8px;
+  --spacing-f12: 12px;
+  --spacing-f16: 16px;
+  --spacing-f20: 20px;
+  --spacing-f24: 24px;
+  --spacing-f32: 32px;
+  --spacing-f40: 40px;
+  --spacing-f48: 48px;
+  --spacing-f64: 64px;
+  --spacing-f80: 80px;
+  --spacing-f96: 96px;
+  --spacing-f120: 120px;
+  --spacing-f128: 128px;
+  --spacing-f160: 160px;
+  --spacing-f192: 192px;
+  --spacing-f224: 224px;
+  --spacing-f256: 256px;
+  --spacing-f320: 320px;
+
+  /* Shadows */
+  --shadow-md: 0px 4px 7px #00000040;
+  --shadow-lg: 0px 4px 10px 0px #00000040;
+
+  /* Breakpoints */
   --breakpoint-xs: 0;
   --breakpoint-sm: 320px;
   --breakpoint-md: 744px;
@@ -23,6 +96,14 @@
   --breakpoint-horizontal: (min-height: 700px) and (min-width: 1300px);
 }
 
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
 @layer base {
   *,
   ::after,

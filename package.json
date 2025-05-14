@@ -9,10 +9,9 @@
     ".": {
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js",
-      "default": "./dist/index.js"
+      "style": "./dist/styles/index.css"
     },
-    "./tailwind.config": "./dist/tailwind.config.js",
-    "./styles/index.css": "./dist/styles/index.css"
+    "./styles": "./dist/styles/index.css"
   },
   "style": "./src/lib/styles/index.css",
   "scripts": {
@@ -21,7 +20,7 @@
     "build:package-json": "node scripts/package.cjs",
     "build:svelte": "svelte-package",
     "build:static": "cp .npmignore README.md LICENSE dist/",
-    "build:tsc": "tsc --lib es2015 tailwind.config.ts src/jsx.d.ts --outDir dist --declaration",
+    "build:tsc": "tsc --lib es2015 src/jsx.d.ts --outDir dist --declaration",
     "build": "rm -rf ./dist && npm run build:svelte && npm run build:static && npm run build:package-json && npm run build:tsc",
     "dry-run": "cd dist && npm pack --dry-run",
     "publish": "cd dist && npm publish",
