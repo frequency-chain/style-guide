@@ -3,27 +3,32 @@
 @theme {
   /* Colors */
   /* NOTE: if updated, also update tailwindColors.ts */
-  --color-navy: #14313f;
-  --color-primary: #18465e;
-  --color-teal: #55b1ab;
 
-  --color-black: #000000;
-  --color-gray1: #4f4f4f;
-  --color-gray2: #828282;
-  --color-gray3: #c8cdd0;
-  --color-white: #ffffff;
-  --color-shadow: #00000040;
+  /* Brand Colors */
+  --color-primary: #790e70;
+  --color-purple25: #9a4a94;
+  --color-purple50: #bc86b7;
+  --color-purple75: #ddc3db;
+  --color-darkPurple: #331e49;
+  --color-secondary: #ff9a02;
 
-  --color-teal-dark: #349b93;
-  --color-bright-blue: #5e69ff;
-  --color-dusty-rose: #a06b87;
-  --color-orange: #f77c47;
-  --color-yellow: #ffd647;
-
+  /* State Colors */
   --color-error: #eb5757;
   --color-warning: #f99a2a;
   --color-success: #27ae60;
   --color-info: #2f80ed;
+
+  /* Neutrals */
+  --color-black: #242527;
+  --color-gray1: #717171;
+  --color-gray2: #8b8b8b;
+  --color-gray3: #dbdbdb;
+  --color-white: #ffffff;
+  --color-cream: #fcf3e4;
+
+  /* Gradients */
+  --gradient-primary: -90deg, #311e48 0%, #790e70 50%, #aa40a1 100%;
+  --gradient-secondary: -90deg, #ff5b2f 0%, #ff9a02 50%, #ffcf2c 100%;
 
   /* Fonts */
   --font-title: 'Newake', 'Arial Black', 'Arial Bold', sans-serif;

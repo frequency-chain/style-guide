@@ -6,7 +6,8 @@
   const { Story } = defineMeta({ title: 'UI Components/Features/Accordion', component: Accordion });
 </script>
 
-<!-- Primary -->
-<Story name="Primary" id="accordion">
-  <Accordion trigger="Hello world." content="Hello there." />
+<Story name="Accordion" args={{ trigger: 'Hello world.', content: 'Hello there.' }}>
+  {#snippet children(args)}
+    <Accordion {...args} />
+  {/snippet}
 </Story>

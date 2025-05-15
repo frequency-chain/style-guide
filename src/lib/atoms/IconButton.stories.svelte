@@ -3,28 +3,13 @@
   import { Arrow } from '../assets';
   import IconButton from './IconButton.svelte';
 
-  const { Story } = defineMeta({ title: 'UI Components/Atoms/IconButton', component: IconButton });
+  const { Story } = defineMeta({ title: 'UI Components/Atoms', component: IconButton });
 </script>
 
-<!--Primary-->
-<Story name="Primary">
-  <IconButton>
-    <Arrow />
-  </IconButton>
-</Story>
-
-<!-- Secondary - Dark Mode -->
-<Story name="DarkMode">
-  <div class="p-f20 h-[500px] bg-black">
-    <IconButton type="dark">
+<Story name="Default Icon Button" args={{ label, href, isRound, type, children }}>
+  {#snippet children(args)}
+    <IconButton {...args}>
       <Arrow />
     </IconButton>
-  </div>
-</Story>
-
-<!-- Round -->
-<Story name="Round">
-  <IconButton isRound="true">
-    <Arrow />
-  </IconButton>
+  {/snippet}
 </Story>

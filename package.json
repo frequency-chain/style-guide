@@ -69,6 +69,7 @@
   "dependencies": {
     "bits-ui": "^0.22.0",
     "clsx": "^2.1.1",
+    "eslint-plugin-tailwindcss": "^3.18.0",
     "svelte": "^5.0.0",
     "tailwind-merge": "^3.0.2"
   }

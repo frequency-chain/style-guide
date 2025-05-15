@@ -1,28 +1,25 @@
 // Used for storybook.
 
 export default {
-  //Branding Colors
-  // Navy is usually used for backgrounds, never text
-  navy: '#14313F',
-  // Primary is usually used for headers, nav, etc...
-  primary: '#18465E',
-  teal: '#55B1AB',
+  // Branding Colors
+  primary: '#790e70',
+  purple25: '#9a4a94',
+  purple50: '#bc86b7',
+  purple75: '#ddc3db',
+  darkPurple: '#331e49',
+  secondary: '#ff9a02',
+
+  // State Colors
+  error: '#eb5757',
+  warning: '#f99a2a',
+  success: '#27ae60',
+  info: '#2f80ed',
+
   // Neutral Colors
-  black: '#000000',
-  gray1: '#4F4F4F',
-  gray2: '#828282',
-  gray3: '#C8CDD0',
-  white: '#FFFFFF',
-  shadow: '#00000040',
-  // Supporting Colors
-  'teal-dark': '#349B93',
-  'bright-blue': '#5E69FF',
-  'dusty-rose': '#A06B87',
-  orange: '#F77C47',
-  yellow: '#FFD647',
-  // State tailwindColors
-  error: '#EB5757',
-  warning: '#F99A2A',
-  success: '#27AE60',
-  info: '#2F80ED',
+  black: '#242527',
+  gray1: '#717171',
+  gray2: '#8b8b8b',
+  gray3: '#dbdbdb',
+  white: '#ffffff',
+  cream: '#fcf3e4',
 };

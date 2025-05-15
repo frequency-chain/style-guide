@@ -11,43 +11,19 @@
     { optionLabel: 'Option 2', value: '2' },
     { optionLabel: 'Option 3', value: '3' },
   ];
-  export let error = 'Error message.';
+  export let error = '';
+  export let onSelectedChange = (x) => (primarySelected = x.value);
 
   let primarySelected = $state('');
 
-  const { Story } = defineMeta({ title: 'UI Components/Atoms/Select', component: Select });
+  const { Story } = defineMeta({ title: 'UI Components/Atoms', component: Select });
 </script>
 
-<!-- Primary -->
-<Story name="SelectPrimary" args={{ label, description, placeholder, isRequired, options }}>
-  <Select
-    {label}
-    {description}
-    {placeholder}
-    {isRequired}
-    {options}
-    onSelectedChange={(x) => (primarySelected = x.value)}
-  />
-  <hr class="m-4" />
-  <div>Selected Option: {primarySelected || 'None'}</div></Story
->
-
-<!-- Required Example -->
-<Story name="SelectRequired" args={{ label: 'Required Select', description: 'This is required', isRequired: true }}>
-  <Select {label} {description} {placeholder} isRequired={true} {options} />
+<Story name="Default Select" args={{ label, description, placeholder, isRequired, options, error, onSelectedChange }}>
+  {#snippet children(args)}
+    <Select {...args} />
+  {/snippet}
 </Story>
 
-<!-- No Description Example -->
-<Story name="SelectNoDescription" args={{ label: 'Select without Description' }}>
-  <Select {label} {placeholder} {isRequired} {options} />
-</Story>
-
-<!-- Error Example -->
-<Story name="SelectError" args={{ label: 'Select with Error' }}>
-  <Select {label} {placeholder} {isRequired} {options} {error} />
-</Story>
-
-<!-- Disabled Example -->
-<Story name="SelectDisabled" args={{ label: 'Select Disabled' }}>
-  <Select {label} {description} {placeholder} {isRequired} {options} disabled={true} />
-</Story>
+<hr class="m-4" />
+<div>Selected Option: {primarySelected || 'None'}</div>

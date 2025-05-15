@@ -62,7 +62,7 @@
       <a
         href={item.href}
         target={item.isExternal ? '_blank' : '_self'}
-        class={`h6 text-navy border-color xs:hidden after:bg-teal relative cursor-pointer content-center overflow-hidden px-2 transition-all duration-1000
+        class={`h6 text-primary border-color xs:hidden after:bg-primaryrelative cursor-pointer content-center overflow-hidden px-2 transition-all duration-1000
           after:absolute after:bottom-0 after:left-0 after:h-[13px] after:w-full after:transform after:transition after:duration-300 after:content-[''] lg:block
           ${
             item.viewportHighlightId && highlightId === item.viewportHighlightId

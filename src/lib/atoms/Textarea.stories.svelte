@@ -7,35 +7,13 @@
   export let placeholder = 'Enter your response...';
   export let isRequired = false;
   export let value = '';
-  export let error = 'Error message.';
+  export let error = '';
 
-  const { Story } = defineMeta({ title: 'UI Components/Atoms/Textarea', component: Textarea });
+  const { Story } = defineMeta({ title: 'UI Components/Atoms', component: Textarea });
 </script>
 
-<!-- Primary -->
-<Story name="Textarea Primary" args={{ label, description, placeholder, isRequired, value }}>
-  <Textarea {label} {description} {placeholder} {isRequired} {value} />
-</Story>
-
-<!-- Required Example -->
-<Story
-  name="Textarea Required"
-  args={{ label: 'Required Textarea', description: 'This is required', isRequired: true }}
->
-  <Textarea {label} {description} {placeholder} isRequired={true} {value} />
-</Story>
-
-<!-- No Description Example -->
-<Story name="SelectNoDescription" args={{ label: 'Select without Description' }}>
-  <Textarea {label} {placeholder} {isRequired} {value} />
-</Story>
-
-<!-- Error Example -->
-<Story name="Textarea Error" args={{ label: 'Textarea with Error' }}>
-  <Textarea {label} {placeholder} {isRequired} {value} {error} />
-</Story>
-
-<!-- Extra classes Example -->
-<Story name="Textarea + Class" args={{ label: 'Textarea with extra classes and rows' }}>
-  <Textarea {label} {placeholder} {value} rows={5} class="max-w-[800px]"></Textarea>
+<Story name="Default Textarea" args={{ label, description, placeholder, isRequired, value, error }}>
+  {#snippet children(args)}
+    <Textarea {label} {description} {placeholder} {isRequired} {value} />
+  {/snippet}
 </Story>

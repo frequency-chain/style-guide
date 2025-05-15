@@ -13,7 +13,7 @@
   let { label = '', href = '', isRound = false, type = 'light', children, ...rest }: Props = $props();
 
   let iconBgColor = {
-    light: 'bg-navy',
+    light: 'bg-black',
     dark: 'bg-white',
   }[type];
 
@@ -27,7 +27,7 @@
   {...rest}
   aria-label={label}
   class={cn(
-    'h-f32 w-f32 hover:bg-teal flex items-center justify-center p-1 transition-colors duration-[0.3s]',
+    'h-f32 w-f32 hover:bg-primary flex items-center justify-center p-1 transition-colors duration-[0.3s]',
     isRound ? 'rounded-full' : 'rounded-sm',
     iconBgColor,
     rest.class
