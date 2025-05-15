@@ -8,7 +8,7 @@
 </script>
 
 {#snippet htmlContent1()}
-  <div class="bg-teal">
+  <div class="bg-primary">
     <h2>Hello there.</h2>
     <b>Nice to see ya!!</b>
   </div>

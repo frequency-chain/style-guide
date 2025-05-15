@@ -31,18 +31,18 @@
   let typeClass = $derived(
     cn(
       variant === 'primary'
-        ? 'bg-teal hover:bg-teal-dark text-black hover:text-black hover:shadow-md'
-        : 'bg-transparent border text-white border-white hover:border-primary hover:text-primary'
+        ? 'bg-black hover:bg-primary text-white hover:text-white hover:shadow-md'
+        : 'bg-transparent border text-black border-black hover:shadow-md'
     )
   );
 
   // Define classes
-  let disabledClass = $derived(disabled ? 'bg-gray3 text-white cursor-default pointer-events-none' : '');
+  let disabledClass = $derived(disabled ? 'bg-gray2 text-white cursor-default pointer-events-none' : '');
   let activeClass = $derived(
     cn(
       active
         ? variant === 'primary'
-          ? 'bg-primary text-teal hover:text-teal hover:bg-primary shadow-md'
+          ? 'bg-primary text-primary hover:text-white hover:bg-primary shadow-md'
           : 'border-primary text-primary'
         : ''
     )

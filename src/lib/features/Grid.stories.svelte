@@ -21,7 +21,8 @@
 </script>
 
 Resize window or activate responsive sizing in the development panel to see grid changes.
-<Story name="GridLayout" id="grid">
+
+<Story name="GridLayout">
   <Grid class="xs:xsText md:smText">
     {#each content as line, i (i)}
       <p>
@@ -30,5 +31,6 @@ Resize window or activate responsive sizing in the development panel to see grid
       </p>
     {/each}
   </Grid>
-  <p>Source: <a class="text-brightBlue hover:text-gray2 underline" href="https://www.lipsum.com/">Lorem Ipsum</a></p>
 </Story>
+
+<p>Source: <a class="text-brightBlue hover:text-gray2 underline" href="https://www.lipsum.com/">Lorem Ipsum</a></p>

@@ -13,7 +13,7 @@
   let {
     title = 'Default Card Header',
     bgColor = 'white',
-    titleColor = 'navy',
+    titleColor = 'darkPurple',
     icon = UserFilled,
     content,
     ...rest
