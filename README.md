@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-This package is designed to work specifically with **Svelte + Tailwind** projects.
+This package is designed to work specifically with **Svelte v5 + Tailwind v4** projects.
 
 ## Installation
 
@@ -18,24 +18,19 @@ npm i @frequency-chain/style-guide
 
 2. [Install and configure Tailwind](https://tailwindcss.com/docs/guides/sveltekit).
 
+- **Skip the step where you add `@import "tailwindcss";`** to your css file as it has already been imported in the
+  library.
 
-3. Edit your `tailwind.config` file to contain the style guide config as a preset. See the example below.
+3. Edit your `app.css` file to import the style guide and set the source.
 
-```js
-import frequencyConfig from "@frequency-chain/style-guide/tailwind.config";
+```css
+@import '@frequency-chain/style-guide';
 
-/** @type {import('tailwindcss').Config} */
-export default {
-    content: ['./src/**/*.{html,js,svelte,ts}'],
-    theme: {
-        // ... custom theme config
-    },
-    presets: [frequencyConfig]
-};
+@source '../../node_modules/@frequency-chain/style-guide/**/*.{svelte,js,ts}';
 ```
 
-4. You should now be able to access the Frequency Style Guide Tailwind theme and custom css classes in your Svelte
-   components!
+You should now be able to access the Frequency Style Guide Tailwind theme and custom css classes in your Svelte
+components!
 
 ---
 
@@ -67,9 +62,9 @@ npm pack
 ```
 
 3. Install local package into a new project.
-    - Navigate to a new Svelte project.
-    - Follow the [installation steps](#installation).
-    - When installing the package, remember to **use the local version you just created**!
+   - Navigate to a new Svelte project.
+   - Follow the [installation steps](#installation).
+   - When installing the package, remember to **use the local version you just created**!
 
 ### Dev Notes
 
