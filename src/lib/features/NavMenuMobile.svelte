@@ -23,13 +23,14 @@
   class="hover:peer-checked:text-purple50 hover:text-primary xs:flex cursor-pointer self-center text-black peer-checked:text-white lg:hidden"
 />
 <div
-  class="gap-f24 bg-darkPurple xs:flex fixed top-0 left-0 z-1 h-0 w-[100vw] flex-col justify-between overflow-y-scroll px-[12%] transition-[height] duration-[1s] peer-checked:h-[100vh] lg:hidden"
+  class="gap-f24 xs:flex fixed top-0 left-0 z-1 h-0 w-[100vw] flex-col justify-between overflow-y-scroll bg-black px-[12%] transition-[height] duration-[1s] peer-checked:h-[100vh] lg:hidden"
   aria-expanded={isOpen}
 >
   <nav id="mobile-navigation" aria-label="Main" class="mb-f48 gap-f24 xs:flex mt-[85px] flex-col text-white">
     {#each menuItems as item (item.href)}
       {#if item.isButton}
         <Button
+          intent="filled-light"
           size="full"
           class="mt-f24 max-w-[360px] md:hidden"
           href={item.href}

@@ -34,8 +34,8 @@
     )}
   >
     {@render children?.()}
-    <DialogPrimitive.Close class="right-f24 top-f24 absolute disabled:pointer-events-none">
-      <Exit class="text-primary h-4 w-4" />
+    <DialogPrimitive.Close class="right-f24 top-f24 absolute cursor-pointer disabled:pointer-events-none">
+      <Exit class="h-4 w-4 text-black" />
       <span class="sr-only">Close</span>
     </DialogPrimitive.Close>
   </DialogPrimitive.Content>

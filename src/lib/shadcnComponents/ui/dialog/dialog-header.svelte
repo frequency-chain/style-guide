@@ -9,6 +9,6 @@
   let { children, ...rest }: Props = $props();
 </script>
 
-<div {...rest} class={cn('space-y-f4 flex flex-col', rest.class)}>
+<div {...rest} class={cn('space-y-f4 flex flex-col text-center', rest.class)}>
   {@render children?.()}
 </div>
