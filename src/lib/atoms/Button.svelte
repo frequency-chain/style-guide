@@ -67,6 +67,8 @@
     ...rest
   }: Props = $props();
 
+  //TODO: the active class is commented out as it is not yet defined in the Figma.
+
   // Define classes
   // let activeClass = $derived(
   //   cn(
