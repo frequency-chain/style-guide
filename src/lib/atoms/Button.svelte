@@ -50,7 +50,9 @@
     }
   );
 
-  interface Props extends HTMLAttributes<HTMLButtonElement | HTMLAnchorElement>, VariantProps<typeof button> {
+  type ButtonVariants = Omit<VariantProps<typeof button>, 'defaultVariants'>;
+
+  interface Props extends HTMLAttributes<HTMLButtonElement | HTMLAnchorElement>, ButtonVariants {
     href?: string;
     target?: HTMLAnchorElement['target'];
     children?: Snippet;
