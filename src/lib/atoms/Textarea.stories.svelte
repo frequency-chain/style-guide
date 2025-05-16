@@ -10,6 +10,6 @@
 
 <Story name="Default Textarea" args={{ ...Textarea.props, label, description }}>
   {#snippet children(args)}
-    <Textarea {label} {description} {placeholder} {isRequired} {value} />
+    <Textarea {...args} />
   {/snippet}
 </Story>

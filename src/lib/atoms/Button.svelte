@@ -6,14 +6,23 @@
   import { cva, type VariantProps } from 'class-variance-authority';
 
   const button = cva(
-    ['cursor-pointer', 'rounded-full', 'text-center', 'transition-all', 'text-nowrap', 'hover:shadow-md'],
+    [
+      'h-[46px]',
+      'px-f24',
+      'cursor-pointer',
+      'rounded-full',
+      'text-center',
+      'transition-all',
+      'text-nowrap',
+      'hover:shadow-md',
+    ],
     {
       variants: {
         intent: {
-          'filled-dark': ['bg-black', 'hover:bg-primary', 'text-white', 'hover:text-white'],
-          'filled-light': ['bg-white', 'hover:bg-purple75', 'text-black', 'hover:text-black'],
+          'filled-dark': ['bg-black', 'hover:bg-primary', 'text-white'],
+          'filled-light': ['bg-white', 'text-black'],
           'outlined-dark': ['bg-transparent', 'border-2', 'text-black', 'border-black'],
-          'outlined-light': ['text-white', 'border-2', 'border-white', 'hover:text-purple75', 'hover:border-purple75'],
+          'outlined-light': ['text-white', 'border-2', 'border-white'],
         },
         size: {
           xs: ['w-[115px]'],
@@ -78,12 +87,12 @@
 
 {#if href.length > 0}
   <a {...rest} {href} {target} class={disabled ? 'pointer-events-none block' : 'pointer-events-auto block'}>
-    <button {...rest} class={cn('px-f24 py-f8', button({ intent, size, disabled, active }))} {disabled}>
+    <button {...rest} class={cn(button({ intent, size, disabled, active }))} {disabled}>
       {@render content()}
     </button>
   </a>
 {:else}
-  <button {...rest} class={cn('p-f8', cn(button({ intent, size, disabled, active })))} {disabled}>
+  <button {...rest} class={cn(button({ intent, size, disabled, active }))} {disabled}>
     {@render content()}
   </button>
 {/if}
