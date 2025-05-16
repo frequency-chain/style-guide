@@ -17,20 +17,18 @@
     'Aliquam lobortis nisl mi, et ultrices mi gravida ac.',
   ];
 
-  const { Story } = defineMeta({ title: 'Design System/GridLayout', component: Grid });
+  const { Story } = defineMeta({ title: 'Design System/GridLayout', component: Grid, argTypes: { ...Grid.props } });
 </script>
 
 Resize window or activate responsive sizing in the development panel to see grid changes.
 
 <Story name="GridLayout">
-  <Grid class="xs:xsText md:smText">
-    {#each content as line, i (i)}
-      <p>
-        <b>Paragraph {i + 1}: </b>
-        {line}
-      </p>
-    {/each}
-  </Grid>
+  {#each content as line, i (i)}
+    <p>
+      <b>Paragraph {i + 1}: </b>
+      {line}
+    </p>
+  {/each}
 </Story>
 
 <p>Source: <a class="text-brightBlue hover:text-gray2 underline" href="https://www.lipsum.com/">Lorem Ipsum</a></p>

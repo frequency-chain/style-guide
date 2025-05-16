@@ -8,8 +8,8 @@
 </script>
 
 {#snippet htmlContent1()}
-  <div class="bg-primary">
-    <h2>Hello there.</h2>
+  <div>
+    <h2 class="font-bold">Hello there.</h2>
     <b>Nice to see ya!!</b>
   </div>
 {/snippet}
