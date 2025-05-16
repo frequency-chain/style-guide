@@ -3,10 +3,10 @@
 
   import Footer from './Footer.svelte';
 
-  const { Story } = defineMeta({ title: 'UI Components/Features/Footer', component: Footer });
+  const { Story } = defineMeta({ title: 'UI Components/Features', component: Footer });
 </script>
 
-<Story name="Footer" args={{ privacyHref, type }}>
+<Story name="Default Footer" args={Footer.props}>
   {#snippet children(args)}
     <Footer {...args} />
   {/snippet}

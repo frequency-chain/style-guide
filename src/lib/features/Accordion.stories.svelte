@@ -3,10 +3,10 @@
 
   import Accordion from './Accordion.svelte';
 
-  const { Story } = defineMeta({ title: 'UI Components/Features/Accordion', component: Accordion });
+  const { Story } = defineMeta({ title: 'UI Components/Features', component: Accordion });
 </script>
 
-<Story name="Accordion" args={{ trigger: 'Hello world.', content: 'Hello there.' }}>
+<Story name="Default Accordion" args={{ ...Accordion.props, trigger: 'Hello world.', content: 'Hello there.' }}>
   {#snippet children(args)}
     <Accordion {...args} />
   {/snippet}

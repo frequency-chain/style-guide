@@ -3,10 +3,10 @@
   import { UserKey, Wallet } from '/src/lib/assets';
   import Card from './Card.svelte';
 
-  const { Story } = defineMeta({ title: 'UI Components/Features/Card', component: Card });
+  const { Story } = defineMeta({ title: 'UI Components/Features', component: Card });
 </script>
 
-<Story name="Card" args={{ title, bgColor, titleColor, icon, content }}>
+<Story name="Default Card" args={{ ...Card.props }}>
   {#snippet children(args)}
     <Card {...args} />
   {/snippet}

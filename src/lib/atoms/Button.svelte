@@ -3,20 +3,53 @@
   import Typography from '../typography/Typography.svelte';
   import { cn } from '../utils/utils';
   import type { Snippet } from 'svelte';
+  import { cva, type VariantProps } from 'class-variance-authority';
 
-  interface Props extends HTMLAttributes<HTMLElement> {
+  const button = cva(
+    ['cursor-pointer', 'rounded-full', 'text-center', 'transition-all', 'text-nowrap', 'hover:shadow-md'],
+    {
+      variants: {
+        intent: {
+          'filled-dark': ['bg-black', 'hover:bg-primary', 'text-white', 'hover:text-white'],
+          'filled-light': ['bg-white', 'hover:bg-purple75', 'text-black', 'hover:text-black'],
+          'outlined-dark': ['bg-transparent', 'border-2', 'text-black', 'border-black'],
+          'outlined-light': ['text-white', 'border-2', 'border-white', 'hover:text-purple75', 'hover:border-purple75'],
+        },
+        size: {
+          xs: ['w-[115px]'],
+          sm: ['w-[197px]'],
+          normal: ['w-[263px]'],
+          md: ['w-[339px]'],
+          lg: ['w-[388px]'],
+          auto: ['w-auto'],
+          full: ['w-full'],
+        },
+        active: {
+          true: '',
+          false: '',
+        },
+        disabled: {
+          false: null,
+          true: ['bg-gray3', 'text-gray2', 'cursor-default', 'pointer-events-none'],
+        },
+        defaultVariants: {
+          intent: 'filled-dark',
+          size: 'normal',
+          disabled: false,
+        },
+      },
+    }
+  );
+
+  interface Props extends HTMLAttributes<HTMLButtonElement | HTMLAnchorElement>, VariantProps<typeof button> {
     href?: string;
-    variant?: 'primary' | 'secondary';
-    size?: 'xs' | 'sm' | 'normal' | 'md' | 'lg' | 'auto' | 'full';
-    disabled?: boolean;
-    active?: boolean;
     target?: HTMLAnchorElement['target'];
     children?: Snippet;
   }
 
   let {
     href = '',
-    variant = 'primary',
+    intent = 'filled-dark',
     size = 'normal',
     disabled = false,
     active = false,
@@ -25,44 +58,19 @@
     ...rest
   }: Props = $props();
 
-  let generalStyles = cn('cursor-pointer rounded-full text-center transition-all text-nowrap');
-
-  // Define button type classes
-  let typeClass = $derived(
-    cn(
-      variant === 'primary'
-        ? 'bg-black hover:bg-primary text-white hover:text-white hover:shadow-md'
-        : 'bg-transparent border text-black border-black hover:shadow-md'
-    )
-  );
-
   // Define classes
-  let disabledClass = $derived(disabled ? 'bg-gray2 text-white cursor-default pointer-events-none' : '');
-  let activeClass = $derived(
-    cn(
-      active
-        ? variant === 'primary'
-          ? 'bg-primary text-primary hover:text-white hover:bg-primary shadow-md'
-          : 'border-primary text-primary'
-        : ''
-    )
-  );
-
-  // Define button size classes
-  let btnSizeClass = $derived(
-    {
-      xs: 'w-[115px]',
-      sm: 'w-[197px]',
-      md: 'w-[339px]',
-      lg: 'w-[388px]',
-      normal: 'w-[263px]',
-      auto: 'w-auto',
-      full: 'w-full',
-    }[size] || 'w-[263px]'
-  );
+  // let activeClass = $derived(
+  //   cn(
+  //     active
+  //       ? variant === 'primary'
+  //         ? 'bg-primary text-white hover:text-white hover:bg-primary shadow-md'
+  //         : 'border-primary text-primary'
+  //       : ''
+  //   )
+  // );
 </script>
 
-{#snippet Content()}
+{#snippet content()}
   <Typography bold={true} class="gap-f8 text-normal flex items-center justify-center font-sans"
     >{@render children?.()}</Typography
   >
@@ -70,20 +78,12 @@
 
 {#if href.length > 0}
   <a {...rest} {href} {target} class={disabled ? 'pointer-events-none block' : 'pointer-events-auto block'}>
-    <button
-      {...rest}
-      class={cn('px-f24 py-f8 ', generalStyles, typeClass, activeClass, disabledClass, btnSizeClass, rest.class)}
-      {disabled}
-    >
-      {@render Content()}
+    <button {...rest} class={cn('px-f24 py-f8', button({ intent, size, disabled, active }))} {disabled}>
+      {@render content()}
     </button>
   </a>
 {:else}
-  <button
-    {...rest}
-    class={cn('p-f8', generalStyles, typeClass, activeClass, disabledClass, btnSizeClass, rest.class)}
-    {disabled}
-  >
-    {@render Content()}
+  <button {...rest} class={cn('p-f8', cn(button({ intent, size, disabled, active })))} {disabled}>
+    {@render content()}
   </button>
 {/if}

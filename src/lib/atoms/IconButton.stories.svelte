@@ -6,7 +6,7 @@
   const { Story } = defineMeta({ title: 'UI Components/Atoms', component: IconButton });
 </script>
 
-<Story name="Default Icon Button" args={{ label, href, isRound, type, children }}>
+<Story name="Default Icon Button" args={IconButton.props}>
   {#snippet children(args)}
     <IconButton {...args}>
       <Arrow />
