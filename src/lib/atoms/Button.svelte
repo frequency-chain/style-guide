@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { HTMLAttributes } from 'svelte/elements';
-  import Typography from '../typography/Typography.svelte';
+  import Typography from '../design-system/Typography.svelte';
   import { cn } from '../utils/utils';
   import type { Snippet } from 'svelte';
   import { cva, type VariantProps } from 'class-variance-authority';

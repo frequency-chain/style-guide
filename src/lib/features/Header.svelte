@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { FrequencyLogo } from '../assets/index';
+  import { FrequencyLogo } from '../design-system/assets/index';
   import NavMenu from './NavMenu.svelte';
   import NavMenuMobile from './NavMenuMobile.svelte';
   import type { MenuItem } from '$lib/utils/types.js';

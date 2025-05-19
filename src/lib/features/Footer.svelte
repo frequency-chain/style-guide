@@ -1,6 +1,6 @@
 <script lang="ts">
   import { cn } from '../utils/utils';
-  import { FrequencyLogo, XLogo, DiscordLogo, BskyLogo } from '../assets';
+  import { FrequencyLogo, XLogo, DiscordLogo, BskyLogo } from '../design-system/assets';
   import IconButton from '../atoms/IconButton.svelte';
   import type { HTMLAttributes } from 'svelte/elements';
 

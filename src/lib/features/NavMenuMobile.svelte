@@ -1,7 +1,7 @@
 <script lang="ts">
   // Note: Menu "Buttons" are shown on the nav bar in "md" view
 
-  import { OpenClose } from '../assets/index';
+  import { OpenClose } from '../design-system/assets/index';
   import type { MenuItem } from '$lib/utils/types.js';
   import Button from '../atoms/Button.svelte';
 

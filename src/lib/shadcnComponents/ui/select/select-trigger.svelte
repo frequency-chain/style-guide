@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Select as SelectPrimitive } from 'bits-ui';
   import { cn } from '../../../utils/utils';
-  import { Error, Chevron } from '../../../assets/index';
+  import { Error, Chevron } from '../../../design-system/assets/index';
 
   type $$Props = SelectPrimitive.TriggerProps;
   type $$Events = SelectPrimitive.TriggerEvents;

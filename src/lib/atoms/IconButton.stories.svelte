@@ -1,15 +1,15 @@
 <script module>
   import { defineMeta } from '@storybook/addon-svelte-csf';
-  import { Arrow } from '../assets';
   import IconButton from './IconButton.svelte';
+  import { Arrow } from '../design-system/assets';
 
-  const { Story } = defineMeta({ title: 'UI Components/Atoms', component: IconButton });
+  const { Story } = defineMeta({
+    title: 'UI Components/Atoms',
+    component: IconButton,
+    argTypes: { ...IconButton.props },
+  });
 </script>
 
-<Story name="Default Icon Button" args={IconButton.props}>
-  {#snippet children(args)}
-    <IconButton {...args}>
-      <Arrow />
-    </IconButton>
-  {/snippet}
+<Story name="Default Icon Button">
+  <Arrow />
 </Story>

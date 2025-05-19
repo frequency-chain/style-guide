@@ -1,5 +1,5 @@
 <script module>
-  import Grid from './Grid.svelte';
+  import Grid from '../design-system/Grid.svelte';
   import { defineMeta } from '@storybook/addon-svelte-csf';
 
   const content = [
