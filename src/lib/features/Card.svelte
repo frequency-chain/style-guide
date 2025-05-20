@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { HTMLAttributes } from 'svelte/elements';
-  import { UserFilled } from '../assets';
+  import { UserFilled } from '../design-system/assets';
 
   interface Props extends HTMLAttributes<HTMLDivElement> {
     title?: string;
@@ -13,7 +13,7 @@
   let {
     title = 'Default Card Header',
     bgColor = 'white',
-    titleColor = 'navy',
+    titleColor = 'darkPurple',
     icon = UserFilled,
     content,
     ...rest

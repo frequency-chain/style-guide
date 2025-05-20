@@ -1,7 +1,8 @@
 <script lang="ts">
   import { Select as SelectPrimitive } from 'bits-ui';
   import { cn } from '../../../utils/utils';
-  import { Error, Chevron } from '../../../assets/index';
+  import { Error, Chevron } from '../../../design-system/assets/index';
+  import { formItem } from '../../../styles/formItemStyles';
 
   type $$Props = SelectPrimitive.TriggerProps;
   type $$Events = SelectPrimitive.TriggerEvents;
@@ -18,11 +19,15 @@
 <div class="gap-f12 flex items-center">
   <SelectPrimitive.Trigger
     {...rest}
-    class={cn(
-      'border-input ring-offset-background focus-visible:ring-ring aria-[invalid]:border-destructive [&>span]:data-placeholder:text-muted-foreground smText flex h-10 w-full max-w-[388px] items-center justify-between rounded-md border bg-white px-3 py-2 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1',
-      error ? 'border-error border-2' : 'border-gray3 border',
-      rest.class
-    )}
+    class={formItem({
+      error: !!error,
+      height: 'sm',
+      class: cn(
+        'aria-expanded:border-primary cursor-pointer aria-expanded:border-2',
+        'ring-offset-background focus-visible:ring-offset-2',
+        rest.class
+      ),
+    })}
   >
     {@render children?.()}
     <Chevron class="h-4 w-4" />

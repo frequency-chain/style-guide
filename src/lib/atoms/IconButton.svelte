@@ -1,41 +1,41 @@
 <script lang="ts">
   import type { HTMLAttributes } from 'svelte/elements';
   import { cn } from '../utils/utils';
+  import { cva, type VariantProps } from 'class-variance-authority';
+  import type { Snippet } from 'svelte';
 
-  interface Props extends HTMLAttributes<HTMLAnchorElement> {
-    label?: string;
+  const button = cva(
+    ['h-f32', 'w-f32', 'flex', 'items-center', 'justify-center', 'p-1', 'transition-colors', 'duration-[0.3s]'],
+    {
+      variants: {
+        intent: {
+          light: ['bg-white', 'text-black'],
+          dark: ['bg-black', 'text-white', 'hover:bg-primary'],
+        },
+        isRound: {
+          true: 'rounded-full',
+          false: 'rounded-sm',
+        },
+        defaultVariants: {
+          intent: 'light',
+          isRound: false,
+        },
+      },
+    }
+  );
+
+  type ButtonVariants = Omit<VariantProps<typeof button>, 'defaultVariants'>;
+
+  interface Props extends HTMLAttributes<HTMLAnchorElement>, ButtonVariants {
+    label: string;
     href?: string;
-    isRound?: boolean;
-    type?: 'light' | 'dark';
-    children?: import('svelte').Snippet;
+    target?: HTMLAnchorElement['target'];
+    children?: Snippet;
   }
 
-  let { label = '', href = '', isRound = false, type = 'light', children, ...rest }: Props = $props();
-
-  let iconBgColor = {
-    light: 'bg-navy',
-    dark: 'bg-white',
-  }[type];
-
-  let iconFgColor = {
-    light: 'text-white',
-    dark: 'text-black',
-  }[type];
+  let { intent = 'light', isRound = false, label = '', href = '', children, ...rest }: Props = $props();
 </script>
 
-<a
-  {...rest}
-  aria-label={label}
-  class={cn(
-    'h-f32 w-f32 hover:bg-teal flex items-center justify-center p-1 transition-colors duration-[0.3s]',
-    isRound ? 'rounded-full' : 'rounded-sm',
-    iconBgColor,
-    rest.class
-  )}
-  {href}
-  target="_blank"
->
-  <div class="h-auto w-full {iconFgColor}">
-    {@render children?.()}
-  </div>
+<a {...rest} aria-label={label} class={cn(button({ intent, isRound }), rest.class)} {href} target="_blank">
+  {@render children?.()}
 </a>

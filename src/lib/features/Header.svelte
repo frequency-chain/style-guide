@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { FrequencyLogo } from '../assets/index';
+  import { FrequencyLogo } from '../design-system/assets/index';
   import NavMenu from './NavMenu.svelte';
   import NavMenuMobile from './NavMenuMobile.svelte';
   import type { MenuItem } from '$lib/utils/types.js';
@@ -17,10 +17,15 @@
 </script>
 
 <div {...rest} class={cn('header-shadow flex', rest.class)}>
-  <div class={cn('m-auto flex h-[85px] w-full max-w-(--breakpoint-xl) justify-between', innerClass)}>
+  <div
+    class={cn(
+      'xs:flex-row-reverse m-auto flex h-[85px] w-full max-w-(--breakpoint-xl) justify-between md:flex-row',
+      innerClass
+    )}
+  >
     <!-- For Desktop -->
     <a href={logoLink} class={`self-center ${logoLink ? '' : 'pointer-events-none'}`}>
-      <FrequencyLogo class="text-navy w-[146px] md:w-[200px]" />
+      <FrequencyLogo class="w-[146px] text-black md:w-[200px]" />
     </a>
 
     <NavMenu {highlightMarginTop} {menuItems} />

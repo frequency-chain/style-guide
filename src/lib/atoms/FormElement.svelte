@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Error } from '../assets/index';
+  import { Error } from '../design-system/assets/index';
 
   interface Props {
     label?: string;

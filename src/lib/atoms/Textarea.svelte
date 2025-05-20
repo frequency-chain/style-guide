@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { cn } from '../utils/utils';
   import FormElement from './FormElement.svelte';
   import type { HTMLAttributes } from 'svelte/elements';
+  import { formItem } from '../styles/formItemStyles';
 
   interface Props extends HTMLAttributes<HTMLTextAreaElement> {
     label?: string;
@@ -20,7 +20,7 @@
     value = $bindable(''),
     placeholder = 'Enter some text...',
     error,
-    rows,
+    rows = 5,
     ...rest
   }: Props = $props();
 </script>
@@ -28,12 +28,11 @@
 <FormElement {label} {isRequired} {description} {error}>
   <textarea
     {...rest}
-    class={cn(
-      'border-input aria-[invalid]:border-destructive [&>span]:data-placeholder:text-muted-foreground smText flex w-full max-w-[388px] items-center justify-between rounded-md border bg-white px-3 py-2 leading-[25px] focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1',
-      !rows && 'h-10 min-h-10',
-      error ? 'border-error border-2' : 'border-gray3 border',
-      rest.class
-    )}
+    class={formItem({
+      error: !!error,
+      height: rows ? 'auto' : 'sm',
+      class: rest.class,
+    })}
     {rows}
     {placeholder}
     bind:value

@@ -15,7 +15,10 @@
   const { Story } = defineMeta({ title: 'UI Components/Features/NavMenu', component: NavMenuMobile });
 </script>
 
-<Story name="Mobile" id="navMenuMobile">
-  <NavMenuMobile {menuItems} isOpen={true} />
-  <p class="hidden lg:block">*** If you are not seeing the menu, try decreasing the window size.</p>
+<p class="hidden lg:block">*** If you are not seeing the menu, try decreasing the window size.</p>
+
+<Story name="Mobile" id="navMenuMobile" args={{ ...NavMenuMobile.props, menuItems, isOpen: true }}>
+  {#snippet children(args)}
+    <NavMenuMobile {...args} />
+  {/snippet}
 </Story>

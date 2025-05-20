@@ -7,7 +7,7 @@ const config = {
     '@storybook/addon-interactions',
     '@storybook/addon-svelte-csf',
   ],
-  framework: { name: '@storybook/svelte-vite', options: {} },
+  framework: '@storybook/svelte-vite',
   docs: { autodocs: 'tag' },
 };
 export default config;

@@ -3,7 +3,7 @@ import '../src/lib/styles/index.css';
 export const parameters = {
   backgrounds: {
     values: [
-      { name: 'Navy', value: '#18465E' },
+      { name: 'DarkPurple', value: '#331e49' },
       { name: 'White', value: '#FFFFFF' },
     ],
     default: 'White',

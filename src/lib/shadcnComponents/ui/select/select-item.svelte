@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Check } from '../../../assets/index';
+  import { Check } from '../../../design-system/assets/index';
   import { Select as SelectPrimitive } from 'bits-ui';
   import { cn } from '../../../utils/utils';
 

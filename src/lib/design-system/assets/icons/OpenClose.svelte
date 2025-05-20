@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { HTMLAttributes } from 'svelte/elements';
-  import { cn } from '../../utils/utils';
+  import { cn } from '../../../utils/utils';
 
   interface Props extends HTMLAttributes<HTMLLabelElement> {
     toggleIdentifier: string;
