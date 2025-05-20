@@ -33,8 +33,8 @@
     {
       variants: {
         intent: {
-          light: ['text-black', 'bg-transparent'],
-          dark: ['text-white', 'bg-black'],
+          light: ['text-black'],
+          dark: ['text-white'],
         },
         defaultVariants: {
           intent: 'light',
