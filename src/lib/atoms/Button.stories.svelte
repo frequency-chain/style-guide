@@ -1,8 +1,25 @@
 <script module>
   import { defineMeta } from '@storybook/addon-svelte-csf';
   import Button from './Button.svelte';
+  import tailwindColors from '../styles/tailwindColors';
 
-  const { Story } = defineMeta({ title: 'UI Components/Atoms', component: Button, argTypes: { ...Button.props } });
+  const { Story } = defineMeta({
+    title: 'UI Components/Atoms',
+    component: Button,
+    argTypes: { ...Button.props },
+    parameters: {
+      backgrounds: {
+        default: 'gray3',
+        values: [
+          { name: 'white', value: tailwindColors.white },
+          { name: 'gray3', value: tailwindColors.gray3 },
+          { name: 'black', value: tailwindColors.black },
+          { name: 'dark purple', value: tailwindColors.darkPurple },
+        ],
+      },
+    },
+  });
 </script>
 
+<!-- Apply the background conditionally using an inline style -->
 <Story name="Default Button">Click Here</Story>

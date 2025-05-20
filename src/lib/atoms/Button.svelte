@@ -41,11 +41,18 @@
           false: null,
           true: ['bg-gray3', 'text-gray2', 'cursor-default', 'pointer-events-none'],
         },
-        defaultVariants: {
+      },
+      compoundVariants: [
+        {
           intent: 'filled-dark',
-          size: 'normal',
-          disabled: false,
+          active: true,
+          class: ['bg-primary', 'text-white', 'hover:text-white', 'hover:bg-primary', 'shadow-md'],
         },
+      ],
+      defaultVariants: {
+        intent: 'filled-dark',
+        size: 'normal',
+        disabled: false,
       },
     }
   );
@@ -68,19 +75,6 @@
     children,
     ...rest
   }: Props = $props();
-
-  //TODO: the active class is commented out as it is not yet defined in the Figma.
-
-  // Define classes
-  // let activeClass = $derived(
-  //   cn(
-  //     active
-  //       ? variant === 'primary'
-  //         ? 'bg-primary text-white hover:text-white hover:bg-primary shadow-md'
-  //         : 'border-primary text-primary'
-  //       : ''
-  //   )
-  // );
 </script>
 
 {#snippet content()}
