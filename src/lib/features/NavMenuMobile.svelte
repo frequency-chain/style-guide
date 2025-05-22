@@ -36,7 +36,7 @@
   )}
   aria-expanded={isOpen}
 >
-  <nav id="mobile-navigation" aria-label="Main" class="mb-f48 gap-f24 xs:flex mt-[85px] flex-col text-white">
+  <nav id="mobile-navigation" aria-label="Main" class="mb-f48 gap-f24 xs:flex text-cream mt-[85px] flex-col">
     {#each menuItems as item (item.href)}
       {#if item.isButton}
         <Button
