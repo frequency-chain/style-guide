@@ -7,17 +7,6 @@
   const { Story } = defineMeta({
     title: 'UI Components/Features',
     component: Accordion,
-    parameters: {
-      backgrounds: {
-        default: 'gray3',
-        values: [
-          { name: 'white', value: tailwindColors.white },
-          { name: 'gray3', value: tailwindColors.gray3 },
-          { name: 'black', value: tailwindColors.black },
-          { name: 'dark purple', value: tailwindColors.darkPurple },
-        ],
-      },
-    },
   });
 </script>
 

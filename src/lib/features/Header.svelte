@@ -3,7 +3,7 @@
   import NavMenu from './NavMenu.svelte';
   import NavMenuMobile from './NavMenuMobile.svelte';
   import type { Intent, MenuItem } from '$lib/utils/types.js';
-  import { cn } from '../utils/utils.js';
+  import { cn, flipIntent } from '../utils/utils.js';
   import type { HTMLAttributes } from 'svelte/elements';
 
   interface Props extends HTMLAttributes<HTMLDivElement> {
@@ -22,6 +22,8 @@
     innerClass = '',
     ...rest
   }: Props = $props();
+
+  const navIntent = $derived(flipIntent(intent));
 </script>
 
 <div {...rest} class={cn('header-shadow flex', intent === 'light' ? 'bg-white' : 'bg-black', rest.class)}>
@@ -31,9 +33,9 @@
       <FrequencyLogo class={cn('w-[146px]  md:w-[200px]', intent === 'light' ? 'text-black' : 'text-cream')} />
     </a>
 
-    <NavMenu {highlightMarginTop} {menuItems} intent={intent === 'light' ? 'dark' : 'light'} />
+    <NavMenu {highlightMarginTop} {menuItems} intent={navIntent} />
     <!-- For Mobile -->
-    <NavMenuMobile {menuItems} intent={intent === 'light' ? 'dark' : 'light'} />
+    <NavMenuMobile {menuItems} intent={navIntent} />
   </div>
 </div>
 
