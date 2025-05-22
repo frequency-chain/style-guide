@@ -4,13 +4,15 @@
   import { OpenClose } from '../design-system/assets/index';
   import type { MenuItem } from '$lib/utils/types.js';
   import Button from '../atoms/Button.svelte';
+  import { cn } from '../utils/utils';
 
   interface Props {
+    intent?: 'light' | 'dark';
     menuItems?: MenuItem[];
     toggleIdentifier?: string;
   }
 
-  let { menuItems = [], toggleIdentifier = 'mobile-menu-toggle' }: Props = $props();
+  let { intent = 'dark', menuItems = [], toggleIdentifier = 'mobile-menu-toggle' }: Props = $props();
 
   // isOpen is bound to the checkbox state
   let isOpen: boolean = $state(false);
@@ -20,17 +22,25 @@
 <OpenClose
   {toggleIdentifier}
   bind:isOpen
-  class="hover:peer-checked:text-purple50 hover:text-primary xs:flex cursor-pointer self-center text-black peer-checked:text-white lg:hidden"
+  class={cn(
+    ' xs:flex cursor-pointer self-center lg:hidden',
+    intent === 'dark'
+      ? 'hover:peer-checked:text-purple50 hover:text-primary peer-checked:text-cream text-black'
+      : 'hover:peer-checked:text-primary hover:text-purple50 text-cream peer-checked:text-black'
+  )}
 />
 <div
-  class="gap-f24 xs:flex fixed top-0 left-0 z-1 h-0 w-[100vw] flex-col justify-between overflow-y-scroll bg-black px-[12%] transition-[height] duration-[1s] peer-checked:h-[100vh] lg:hidden"
+  class={cn(
+    'gap-f24 xs:flex fixed top-0 left-0 z-1 h-0 w-[100vw] flex-col justify-between overflow-y-scroll  px-[12%] transition-[height] duration-[1s] peer-checked:h-[100vh] lg:hidden',
+    intent === 'dark' ? 'bg-black' : 'bg-white'
+  )}
   aria-expanded={isOpen}
 >
   <nav id="mobile-navigation" aria-label="Main" class="mb-f48 gap-f24 xs:flex mt-[85px] flex-col text-white">
     {#each menuItems as item (item.href)}
       {#if item.isButton}
         <Button
-          intent="filled-light"
+          intent={intent === 'dark' ? 'filled-light' : 'filled-dark'}
           size="full"
           class="mt-f24 max-w-[360px] md:hidden"
           href={item.href}
@@ -42,10 +52,13 @@
         <a
           href={item.href}
           target={item.isExternal ? '_blank' : '_self'}
-          class="h4 underline-on-hover after:bg-current"
+          class={cn(
+            'h4 underline-on-hover font-bold uppercase after:bg-current',
+            intent === 'dark' ? 'text-white' : 'text-black'
+          )}
           onclick={() => (item.isExternal ? null : (isOpen = false))}
         >
-          {item.label}
+          {item.label}.
         </a>
       {/if}
     {/each}

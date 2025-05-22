@@ -34,7 +34,7 @@
       variants: {
         intent: {
           light: ['text-black'],
-          dark: ['text-white'],
+          dark: ['text-cream'],
         },
         defaultVariants: {
           intent: 'light',
@@ -47,7 +47,7 @@
     variants: {
       intent: {
         light: ['bg-black'],
-        dark: ['bg-white'],
+        dark: ['bg-cream'],
       },
       defaultVariants: {
         intent: 'light',
@@ -72,9 +72,13 @@
     <div class={cn(seperator({ intent }))}></div>
     <div class="hidden md:block">All Rights Reserved</div>
     <div class={cn(seperator({ intent }))}></div>
-    <div>
-      <a href={privacyHref} class="hover:text-primary underline transition duration-[0.3s]">Privacy Policy</a>
-    </div>
+    <a
+      href={privacyHref}
+      class={cn(
+        'underline transition duration-[0.3s]',
+        intent === 'light' ? 'hover:text-primary' : 'hover:text-purple50 '
+      )}>Privacy Policy</a
+    >
   </aside>
   <div class="gap-f16 flex" aria-label="Social Links">
     <IconButton intent={buttonIntent} label="X/Twitter" href="https://x.com/frequency_xyz">

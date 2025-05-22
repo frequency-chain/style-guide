@@ -22,7 +22,7 @@
   {disabled}
   {label}
   class={cn(
-    'sm data-highlighted:bg-gray3 relative flex w-full cursor-pointer items-center rounded-xs py-2 pr-8 pl-2 outline-hidden transition select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-highlighted:text-black',
+    'smText data-highlighted:bg-gray3 relative flex w-full cursor-pointer items-center rounded-xs py-2 pr-8 pl-2 outline-hidden transition select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-highlighted:text-black',
     rest.class
   )}
   on:click

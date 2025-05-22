@@ -5,12 +5,22 @@
   import type { Snippet } from 'svelte';
 
   const button = cva(
-    ['h-f32', 'w-f32', 'flex', 'items-center', 'justify-center', 'p-1', 'transition-colors', 'duration-[0.3s]'],
+    [
+      'h-f32',
+      'w-f32',
+      'flex',
+      'items-center',
+      'justify-center',
+      'p-1',
+      'transition-colors',
+      'duration-[0.3s]',
+      'hover:bg-primary',
+    ],
     {
       variants: {
         intent: {
-          light: ['bg-white', 'text-black'],
-          dark: ['bg-black', 'text-white', 'hover:bg-primary'],
+          light: ['bg-cream', 'text-black', 'hover:shadow-md-gray3', 'hover:text-white'],
+          dark: ['bg-black', 'text-white', 'hover:shadow-md'],
         },
         isRound: {
           true: 'rounded-full',

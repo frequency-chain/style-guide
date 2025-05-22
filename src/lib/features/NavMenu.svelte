@@ -3,13 +3,15 @@
   import { onMount, tick } from 'svelte';
   import type { MenuItem } from '../utils/types.js';
   import Button from '../atoms/Button.svelte';
+  import { cn } from '../utils/utils.js';
 
   interface Props {
+    intent?: 'light' | 'dark';
     menuItems?: MenuItem[];
     highlightMarginTop?: string;
   }
 
-  let { menuItems = [], highlightMarginTop = '0px' }: Props = $props();
+  let { intent = 'dark', menuItems = [], highlightMarginTop = '0px' }: Props = $props();
 
   let viewportTrackingItems: [string, boolean][] = $state(
     menuItems.filter((item) => item.viewportHighlightId).map((item) => [item.viewportHighlightId as string, false])
@@ -45,12 +47,13 @@
   });
 </script>
 
-<nav class="gap-f32 font-title xs:hidden text-black md:flex">
+<nav class={cn('gap-f32 xs:hidden md:flex', intent === 'dark' ? 'text-black' : 'text-cream')}>
   {#each menuItems as item, index (index)}
     {#if item.isButton}
       <div class="content-center">
         <Button
-          size="auto"
+          size="normal"
+          intent={intent === 'dark' ? 'filled-dark' : 'filled-light'}
           active={item.isActive || false}
           href={item.href}
           target={item.isExternal ? '_blank' : '_self'}
@@ -62,14 +65,15 @@
       <a
         href={item.href}
         target={item.isExternal ? '_blank' : '_self'}
-        class={`h6 border-color xs:hidden after:bg-primary relative cursor-pointer content-center overflow-hidden px-2 text-black transition-all duration-1000
-          after:absolute after:bottom-0 after:left-0 after:h-[13px] after:w-full after:transform after:transition after:duration-300 after:content-[''] lg:block
-          ${
-            item.viewportHighlightId && highlightId === item.viewportHighlightId
-              ? 'after:translate-y-0 after:opacity-100'
-              : 'after:translate-y-[200%] after:opacity-0'
-          }
-          hover:after:translate-y-0 hover:after:opacity-100 focus:after:translate-y-0 focus:after:opacity-100`}
+        class={cn(
+          'h6 xs:hidden after:bg-primary relative cursor-pointer content-center overflow-hidden px-2 font-bold transition-all duration-1000 lg:block',
+          intent === 'dark' ? 'text-black' : 'text-cream',
+          "after:absolute after:bottom-0 after:left-0 after:h-[13px] after:w-full after:transform after:transition after:duration-300 after:content-['']",
+          item.viewportHighlightId && highlightId === item.viewportHighlightId
+            ? 'after:translate-y-0 after:opacity-100'
+            : 'after:translate-y-[200%] after:opacity-0',
+          'hover:after:translate-y-0 hover:after:opacity-100 focus:after:translate-y-0 focus:after:opacity-100'
+        )}
       >
         {item.label}
       </a>

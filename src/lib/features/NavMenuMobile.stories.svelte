@@ -17,7 +17,7 @@
 
 <p class="hidden lg:block">*** If you are not seeing the menu, try decreasing the window size.</p>
 
-<Story name="Mobile" id="navMenuMobile" args={{ ...NavMenuMobile.props, menuItems, isOpen: true }}>
+<Story name="Mobile" id="navMenuMobile" args={{ ...NavMenuMobile.props, intent: 'dark', menuItems }}>
   {#snippet children(args)}
     <NavMenuMobile {...args} />
   {/snippet}

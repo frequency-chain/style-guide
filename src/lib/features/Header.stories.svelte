@@ -14,7 +14,7 @@
   const { Story } = defineMeta({ title: 'UI Components/Features', component: Header });
 </script>
 
-<Story name="Default Header" args={{ ...Header.props, menuItems }}>
+<Story name="Default Header" args={{ ...Header.props, intent: 'light', menuItems }}>
   {#snippet children(args)}
     <Header {...args} class="fixed top-0 left-0 w-full" />
   {/snippet}
