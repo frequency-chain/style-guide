@@ -19,7 +19,7 @@
   <AccordionPrimitive.Trigger
     {...rest}
     class={cn(
-      'mdText flex flex-1 items-center justify-between py-4 font-bold transition-all [&[data-state=open]>svg]:rotate-360',
+      'mdText flex flex-1 cursor-pointer items-center justify-between py-4 font-bold transition-all [&[data-state=open]>svg]:rotate-360',
       rest.class
     )}
     on:click
