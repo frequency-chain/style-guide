@@ -2,12 +2,12 @@
   // Note: Menu "Buttons" are shown on the nav bar in "md" view
 
   import { OpenClose } from '../design-system/assets/index';
-  import type { MenuItem } from '$lib/utils/types.js';
+  import type { Intent, MenuItem } from '$lib/utils/types.js';
   import Button from '../atoms/Button.svelte';
   import { cn } from '../utils/utils';
 
   interface Props {
-    intent?: 'light' | 'dark';
+    intent?: Intent;
     menuItems?: MenuItem[];
     toggleIdentifier?: string;
   }

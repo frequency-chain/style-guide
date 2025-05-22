@@ -2,12 +2,12 @@
   import { FrequencyLogo } from '../design-system/assets/index';
   import NavMenu from './NavMenu.svelte';
   import NavMenuMobile from './NavMenuMobile.svelte';
-  import type { MenuItem } from '$lib/utils/types.js';
+  import type { Intent, MenuItem } from '$lib/utils/types.js';
   import { cn } from '../utils/utils.js';
   import type { HTMLAttributes } from 'svelte/elements';
 
   interface Props extends HTMLAttributes<HTMLDivElement> {
-    intent?: 'light' | 'dark';
+    intent?: Intent;
     logoLink?: string;
     menuItems?: MenuItem[];
     highlightMarginTop?: string;

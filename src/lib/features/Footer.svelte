@@ -4,8 +4,7 @@
   import IconButton from '../atoms/IconButton.svelte';
   import type { HTMLAttributes } from 'svelte/elements';
   import { cva } from 'class-variance-authority';
-
-  type Intent = 'light' | 'dark';
+  import type { Intent } from '../utils/types';
 
   interface Props extends HTMLAttributes<HTMLElement> {
     privacyHref?: string;

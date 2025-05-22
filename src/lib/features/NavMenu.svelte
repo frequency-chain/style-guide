@@ -1,12 +1,12 @@
 <script lang="ts">
   // Note: Shows the buttons still in md view, but not the non-buttons
   import { onMount, tick } from 'svelte';
-  import type { MenuItem } from '../utils/types.js';
+  import type { Intent, MenuItem } from '../utils/types.js';
   import Button from '../atoms/Button.svelte';
   import { cn } from '../utils/utils.js';
 
   interface Props {
-    intent?: 'light' | 'dark';
+    intent?: Intent;
     menuItems?: MenuItem[];
     highlightMarginTop?: string;
   }

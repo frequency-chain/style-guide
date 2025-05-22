@@ -1,11 +1,12 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
   import { Root, Item, Trigger, Content } from '../shadcnComponents/ui/accordion';
+  import type { Intent } from '../utils/types';
 
   interface Props {
     trigger: string;
     content: string | Snippet;
-    intent?: 'light' | 'dark';
+    intent?: Intent;
   }
 
   let { trigger, content, intent = 'dark' }: Props = $props();
