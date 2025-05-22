@@ -54,7 +54,7 @@
           target={item.isExternal ? '_blank' : '_self'}
           class={cn(
             'h4 underline-on-hover font-bold uppercase after:bg-current',
-            intent === 'dark' ? 'text-white' : 'text-black'
+            intent === 'dark' ? 'text-cream' : 'text-black'
           )}
           onclick={() => (item.isExternal ? null : (isOpen = false))}
         >
