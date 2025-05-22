@@ -31,7 +31,7 @@
   --gradient-secondary: -90deg, #ff5b2f 0%, #ff9a02 50%, #ffcf2c 100%;
 
   /* Fonts */
-  --font-title: 'Newake', 'Arial Black', 'Arial Bold', sans-serif;
+  --font-title: 'Poppins', sans-serif;
   --font-sans: 'Poppins', sans-serif;
 
   /* Font Sizes */
@@ -48,6 +48,22 @@
   --text-normal: 16px;
   --text-sm: 12px;
   --text-xs: 10px;
+
+  /* --text-default: 16px;
+  --text-display1: 70px;
+  --text-display2: 50px;
+  --text-display3: 30px;
+  --text-heading1: 56px;
+  --text-heading2: 48px;
+  --text-heading3: 40px;
+  --text-heading4: 32px;
+  --text-heading5: 24px;
+  --text-heading6: 20px;
+  --text-bodyLg: 16px;
+  --text-bodyMd: 16px;
+  --text-bodyNormal: 16px;
+  --text-bodySm: 12px;
+  --text-bodyXs: 10px; */
 
   /* Line Heights */
   --spacing-default: 22px;
@@ -86,8 +102,10 @@
   --spacing-f320: 320px;
 
   /* Shadows */
-  --shadow-md: 0px 4px 7px #00000040;
-  --shadow-lg: 0px 4px 10px 0px #00000040;
+  --shadow-md: 0px 4px 7px #00000080;
+  --shadow-lg: 2px 4px 10px 0px #00000080;
+  --shadow-md-gray3: 0px 4px 7px 0px #dbdbdb80;
+  --shadow-lg-gray3: 2px 4px 10px 0px #dbdbdb80;
 
   /* Breakpoints */
   --breakpoint-xs: 0;

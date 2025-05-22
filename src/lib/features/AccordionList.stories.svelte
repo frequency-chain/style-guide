@@ -25,20 +25,20 @@
 
 <!-- Primary -->
 <Story name="Primary" id="accordionlist">
-  <AccordionList>
-    <Accordion trigger="Hello world." content="Hello there." />
-  </AccordionList>
-  <AccordionList>
-    <Accordion trigger="Are you there?" content="Yes I am!" />
-  </AccordionList>
+  {#snippet children(args)}
+    <AccordionList {...args}>
+      <Accordion trigger="Hello world." content="Hello there." />
+      <Accordion trigger="Are you there?" content="Yes I am!" />
+    </AccordionList>
+  {/snippet}
 </Story>
 
 <!-- With HTML Content -->
 <Story name="HTMLContent" id="accordionlistHtmlContent">
-  <AccordionList>
-    <Accordion trigger="Hello world." content={htmlContent1} />
-  </AccordionList>
-  <AccordionList>
-    <Accordion trigger="Are you there?" content={htmlContent2} />
-  </AccordionList>
+  {#snippet children(args)}
+    <AccordionList {...args}>
+      <Accordion trigger="Hello world." content={htmlContent1} />
+      <Accordion trigger="Are you there?" content={htmlContent2} />
+    </AccordionList>
+  {/snippet}
 </Story>

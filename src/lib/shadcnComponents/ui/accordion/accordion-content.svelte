@@ -23,11 +23,11 @@
 
 <AccordionPrimitive.Content
   {...rest}
-  class={cn('sm overflow-hidden transition-all', rest.class)}
+  class={cn('normalText overflow-hidden transition-all', rest.class)}
   {transition}
   {transitionConfig}
 >
-  <div class="text-normal pt-0 pb-4">
+  <div class="normalText pt-0 pb-4">
     {@render children?.()}
   </div>
 </AccordionPrimitive.Content>

@@ -6,23 +6,28 @@
   import { cva, type VariantProps } from 'class-variance-authority';
 
   const button = cva(
-    [
-      'h-[46px]',
-      'px-f24',
-      'cursor-pointer',
-      'rounded-full',
-      'text-center',
-      'transition-all',
-      'text-nowrap',
-      'hover:shadow-md',
-    ],
+    ['h-[46px]', 'px-f24', 'cursor-pointer', 'rounded-full', 'text-center', 'transition-all', 'text-nowrap'],
     {
       variants: {
         intent: {
-          'filled-dark': ['bg-black', 'hover:bg-primary', 'text-white'],
-          'filled-light': ['bg-white', 'text-black'],
-          'outlined-dark': ['bg-transparent', 'border-2', 'text-black', 'border-black'],
-          'outlined-light': ['text-white', 'border-2', 'border-white'],
+          'filled-dark': ['bg-black', 'text-white', 'hover:bg-primary', 'hover:shadow-lg'],
+          'filled-light': ['bg-cream', 'text-black', 'hover:bg-primary', 'hover:text-white', 'hover:shadow-lg-gray3'],
+          'outlined-dark': [
+            'bg-transparent',
+            'border-2',
+            'text-black',
+            'border-black',
+            'hover:text-purple50',
+            'hover:border-purple50',
+          ],
+          'outlined-light': [
+            'text-white',
+            'border-2',
+            'border-white',
+            'bg-transparent',
+            'hover:text-primary',
+            'hover:border-primary',
+          ],
         },
         size: {
           xs: ['w-[115px]'],
@@ -78,19 +83,23 @@
 </script>
 
 {#snippet content()}
-  <Typography bold={true} class="gap-f8 text-normal flex items-center justify-center font-sans"
-    >{@render children?.()}</Typography
+  <Typography bold={true} class="gap-f8 text-normal flex items-center justify-center">{@render children?.()}</Typography
   >
 {/snippet}
 
 {#if href.length > 0}
-  <a {...rest} {href} {target} class={disabled ? 'pointer-events-none block' : 'pointer-events-auto block'}>
+  <a
+    {...rest}
+    {href}
+    {target}
+    class={cn(disabled ? 'pointer-events-none block' : 'pointer-events-auto block', rest.class)}
+  >
     <button {...rest} class={cn(button({ intent, size, disabled, active }))} {disabled}>
       {@render content()}
     </button>
   </a>
 {:else}
-  <button {...rest} class={cn(button({ intent, size, disabled, active }))} {disabled}>
+  <button {...rest} class={cn(button({ intent, size, disabled, active }), rest.class)} {disabled}>
     {@render content()}
   </button>
 {/if}

@@ -9,7 +9,7 @@
     component: Footer,
     parameters: {
       backgrounds: {
-        default: 'gray3',
+        default: 'black',
         values: [
           { name: 'white', value: tailwindColors.white },
           { name: 'gray3', value: tailwindColors.gray3 },

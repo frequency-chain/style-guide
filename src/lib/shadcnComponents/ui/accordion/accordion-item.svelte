@@ -12,6 +12,6 @@
   let { value, children, ...rest }: Props = $props();
 </script>
 
-<AccordionPrimitive.Item {...rest} {value} class={cn('border-b', rest.class)}>
+<AccordionPrimitive.Item {...rest} {value} class={cn('border-gray3 border-b', rest.class)}>
   {@render children?.()}
 </AccordionPrimitive.Item>
