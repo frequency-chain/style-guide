@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { HTMLAttributes } from 'svelte/elements';
+  import { Dialog as DialogPrimitive } from 'bits-ui';
   import { Close } from '../shadcnComponents/ui/dialog';
 
-  interface Props extends HTMLAttributes<HTMLElement> {
+  interface Props extends DialogPrimitive.Close {
     children?: import('svelte').Snippet;
   }
 
