@@ -36,7 +36,7 @@
   )}
   aria-expanded={isOpen}
 >
-  <nav id="mobile-navigation" aria-label="Main" class="mb-f48 gap-f24 xs:flex mt-[85px] flex-col text-white">
+  <nav id="mobile-navigation" aria-label="Main" class="mb-f48 gap-f24 xs:flex text-cream mt-[85px] flex-col">
     {#each menuItems as item (item.href)}
       {#if item.isButton}
         <Button
@@ -54,7 +54,7 @@
           target={item.isExternal ? '_blank' : '_self'}
           class={cn(
             'h4 underline-on-hover font-bold uppercase after:bg-current',
-            intent === 'dark' ? 'text-white' : 'text-black'
+            intent === 'dark' ? 'text-cream' : 'text-black'
           )}
           onclick={() => (item.isExternal ? null : (isOpen = false))}
         >
