@@ -3,7 +3,7 @@
   import { cn } from '../../../utils/utils.js';
   import Check from '../../../design-system/assets/icons/Check.svelte';
 
-  interface Props extends CheckboxPrimitive.RootProps {
+  interface Props extends CheckboxPrimitive.Props {
     checked: boolean;
   }
 
