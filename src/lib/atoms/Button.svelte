@@ -10,8 +10,8 @@
     {
       variants: {
         intent: {
-          'filled-dark': ['bg-black', 'text-white', 'hover:bg-primary', 'hover:shadow-lg'],
-          'filled-light': ['bg-cream', 'text-black', 'hover:bg-primary', 'hover:text-white', 'hover:shadow-lg-gray3'],
+          'filled-dark': ['bg-black', 'text-white', 'hover:bg-primary'],
+          'filled-light': ['bg-cream', 'text-black', 'hover:bg-purple50', 'hover:text-white'],
           'outlined-dark': [
             'bg-transparent',
             'border-2',
