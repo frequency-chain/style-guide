@@ -16,6 +16,8 @@ rootPackage.main = 'index.js';
 rootPackage.module = 'index.js';
 rootPackage.exports = {
   '.': {
+    import: './index.js',
+    require: './index.js',
     types: './index.d.ts',
     svelte: './index.js',
     style: './styles/index.css',
