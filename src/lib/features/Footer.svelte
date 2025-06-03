@@ -11,13 +11,13 @@
     intent?: Intent;
   }
 
-  let { privacyHref = '/privacy', intent = 'dark', ...rest }: Props = $props();
+  let { privacyHref = '/privacy', intent = 'light', ...rest }: Props = $props();
 
   const footer = cva(
     [
       'smText',
       'md:mdText',
-      'gap-f16',
+      'gap-f24',
       'py-f48',
       'md:gap-f48',
       'mx-auto',
@@ -42,7 +42,7 @@
     }
   );
 
-  const seperator = cva(['hidden', 'w-[2px]', 'self-stretch', 'md:block'], {
+  const seperator = cva(['w-[2px]', 'self-stretch', 'md:block', 'xs:hidden'], {
     variants: {
       intent: {
         light: ['bg-black'],
@@ -63,13 +63,17 @@
 </script>
 
 <footer {...rest} class={cn(footer({ intent }), rest.class)}>
-  <FrequencyLogo class="w-[146px] md:w-[257px]" />
-  <aside class="flex flex-col items-center space-y-4 text-center leading-none md:flex-row md:space-y-0 md:space-x-4">
+  <FrequencyLogo class="w-[150px] md:w-[250px]" />
+  <aside
+    class="xs:space-y-f8 md:space-x-f16 flex flex-col items-center text-center leading-none md:flex-row md:space-y-0"
+  >
     <div>
-      © {new Date().getFullYear()} Frequency Network Foundation <span class="md:hidden">All Rights Reserved</span>
+      © {new Date().getFullYear()} Frequency Network Foundation<span class="xs:inline-block md:hidden"
+        >. All Rights Reserved</span
+      >
     </div>
     <div class={cn(seperator({ intent }))}></div>
-    <div class="hidden md:block">All Rights Reserved</div>
+    <div class="xs:hidden md:block">All Rights Reserved</div>
     <div class={cn(seperator({ intent }))}></div>
     <a
       href={privacyHref}
