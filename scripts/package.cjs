@@ -16,14 +16,13 @@ rootPackage.main = 'index.js';
 rootPackage.module = 'index.js';
 rootPackage.exports = {
   '.': {
+    import: './index.js',
+    require: './index.js',
     types: './index.d.ts',
     svelte: './index.js',
-    style: './styles/index.css',
   },
   './styles': './styles/index.css',
 };
-
-rootPackage.style = './styles/index.css';
 
 // Don't keep dev dependencies
 delete rootPackage['devDependencies'];

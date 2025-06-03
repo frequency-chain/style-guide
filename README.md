@@ -24,13 +24,13 @@ npm i @frequency-chain/style-guide
 3. Edit your `app.css` file to import the style guide and set the source.
 
 ```css
-@import '@frequency-chain/style-guide';
+@import '@frequency-chain/style-guide/styles';
 
 @source '../../node_modules/@frequency-chain/style-guide/**/*.{svelte,js,ts}';
 ```
 
 You should now be able to access the Frequency Style Guide Tailwind theme and custom css classes in your Svelte
-components!
+components! (Make sure you update the path to the `node_modules` if it is different than above.)
 
 ---
 
