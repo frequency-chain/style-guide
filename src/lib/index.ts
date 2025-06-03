@@ -18,6 +18,3 @@ export { default as NavMenuMobile } from './features/NavMenuMobile.svelte';
 
 // icons & logos
 export * as Assets from './design-system/assets/index';
-
-// css styles
-import './styles/index.css';
