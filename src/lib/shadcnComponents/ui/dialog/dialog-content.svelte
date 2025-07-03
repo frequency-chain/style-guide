@@ -7,6 +7,7 @@
   type $$Props = DialogPrimitive.ContentProps;
 
   interface Props extends $$Props {
+    
     transition?: $$Props['transition'];
     transitionConfig?: $$Props['transitionConfig'];
     children?: import('svelte').Snippet;

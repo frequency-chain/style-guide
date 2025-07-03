@@ -8,7 +8,8 @@
     placeholder: string | undefined;
     isRequired?: boolean;
     error?: string | undefined;
-    options: { optionLabel: string; value: string }[];
+    options: { optionLabel: string; value: unknown }[];
+    value?: unknown;
   }
 
   let {
@@ -18,11 +19,12 @@
     isRequired = false,
     error = undefined,
     options,
+    value,
     ...rest
   }: Props = $props();
 </script>
 
-<Root {...rest}>
+<Root {...rest} bind:value>
   <Label {isRequired}>{label}</Label>
   {#if description}
     <span class="form-item-description">{description}</span>

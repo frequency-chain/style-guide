@@ -9,18 +9,17 @@
     { optionLabel: 'Option 2', value: '2' },
     { optionLabel: 'Option 3', value: '3' },
   ];
-  let onSelectedChange = (x) => (primarySelected = x.value);
 
-  let primarySelected = $state('');
+  let curOption = $state(null);
 
   const { Story } = defineMeta({ title: 'UI Components/Atoms', component: Select });
 </script>
 
-<Story name="Default Select" args={{ ...Select.props, label, description, options, onSelectedChange }}>
+<Story name="Default Select" args={{ ...Select.props, label, description, options }}>
   {#snippet children(args)}
-    <Select {...args} />
+    <Select {...args} bind:value={curOption} />
   {/snippet}
 </Story>
 
 <hr class="m-4" />
-<div>Selected Option: {primarySelected || 'None'}</div>
+<div>Selected Option: {`${curOption.label}- ${curOption.value}` || 'None'}</div>

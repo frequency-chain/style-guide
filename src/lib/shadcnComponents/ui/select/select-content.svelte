@@ -7,6 +7,7 @@
   type $$Events = SelectPrimitive.ContentEvents;
 
   interface Props extends $$Props {
+    ref?: unknown | null;
     sideOffset?: $$Props['sideOffset'];
     inTransition?: $$Props['inTransition'];
     inTransitionConfig?: $$Props['inTransitionConfig'];
@@ -16,6 +17,7 @@
   }
 
   let {
+    ref = $bindable(null),
     sideOffset = 4,
     inTransition = flyAndScale,
     inTransitionConfig = undefined,
@@ -32,6 +34,7 @@
 
 <SelectPrimitive.Content
   {...rest}
+  bind:ref
   {inTransition}
   {inTransitionConfig}
   {outTransition}

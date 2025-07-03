@@ -7,6 +7,7 @@ export interface MenuItem {
   isActive?: boolean;
   // Optional id to highlight if in the viewport
   viewportHighlightId?: string;
+  onclick?: () => void;
 }
 
 export type Intent = 'light' | 'dark';

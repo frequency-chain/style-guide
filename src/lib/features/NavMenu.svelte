@@ -52,6 +52,7 @@
     {#if item.isButton}
       <div class="content-center">
         <Button
+          onclick={item.onclick}
           size="normal"
           intent={intent === 'dark' ? 'filled-dark' : 'filled-light'}
           active={item.isActive || false}
@@ -63,6 +64,7 @@
       </div>
     {:else}
       <a
+        onclick={item.onclick}
         href={item.href}
         target={item.isExternal ? '_blank' : '_self'}
         class={cn(

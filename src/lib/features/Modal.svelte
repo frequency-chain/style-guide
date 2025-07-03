@@ -1,4 +1,5 @@
 <script lang="ts">
+  import type { Dialog } from 'bits-ui';
   import { Root, Trigger, Content, Header, Title, Description } from '../shadcnComponents/ui/dialog';
 
   interface Props {
@@ -6,12 +7,13 @@
     description?: string;
     trigger?: import('svelte').Snippet;
     body?: import('svelte').Snippet;
+    rootProps?: Dialog.Root['props'];
   }
 
-  let { title = '', description = '', trigger, body }: Props = $props();
+  let { title = '', description = '', trigger, body, rootProps }: Props = $props();
 </script>
 
-<Root>
+<Root {...rootProps}>
   <Trigger>
     {@render trigger?.()}
   </Trigger>
