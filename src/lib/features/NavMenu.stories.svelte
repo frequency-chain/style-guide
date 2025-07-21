@@ -11,6 +11,34 @@
     { label: 'External', href: 'https://www.google.com/', isExternal: true },
     { label: 'Developer Portal', href: '/', isButton: true },
     { label: 'Portal Active', href: '/', isButton: true, isActive: true },
+    {
+      label: 'Logout',
+      href: '/',
+      isButton: true,
+      onclick: () => {
+        console.log('onclick executed');
+      },
+    },
+    {
+      label: 'Logout No Href',
+      isButton: true,
+      onclick: () => {
+        console.log('onclick no href executed');
+      },
+    },
+    {
+      label: 'Logout not button',
+      href: '/',
+      onclick: () => {
+        console.log('onclick not button executed');
+      },
+    },
+    {
+      label: 'Logout No Href not button',
+      onclick: () => {
+        console.log('onclick no href not button executed');
+      },
+    },
   ];
 
   const { Story } = defineMeta({ title: 'UI Components/Features/NavMenu', component: NavMenu });
