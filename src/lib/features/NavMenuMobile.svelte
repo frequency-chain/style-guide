@@ -58,8 +58,12 @@
             intent === 'dark' ? 'text-cream' : 'text-black'
           )}
           onclick={(e) => {
-            item.isExternal ? null : (isOpen = false);
-            item?.onclick && item.onclick(e);
+            if (!item.isExternal) {
+              isOpen = false;
+            }
+            if (item?.onclick) {
+              item.onclick(e);
+            }
           }}
         >
           {item.label}.
