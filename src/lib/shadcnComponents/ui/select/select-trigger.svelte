@@ -3,17 +3,19 @@
   import { cn } from '../../../utils/utils';
   import { Error, Chevron } from '../../../design-system/assets/index';
   import { formItem } from '../../../styles/formItemStyles';
+  import LoadingIcon from '../../../design-system/assets/icons/LoadingIcon.svelte';
 
   type $$Props = SelectPrimitive.TriggerProps;
   type $$Events = SelectPrimitive.TriggerEvents;
 
   interface Props extends $$Props {
     error: string | undefined;
+    isLoading?: boolean;
     class?: $$Props['class'];
     children?: import('svelte').Snippet;
   }
 
-  let { error, children, ...rest }: Props = $props();
+  let { error, isLoading = false, children, ...rest }: Props = $props();
 </script>
 
 <div class="gap-f12 flex items-center">
@@ -34,5 +36,7 @@
   </SelectPrimitive.Trigger>
   {#if error}
     <Error />
+  {:else if isLoading}
+    <LoadingIcon />
   {/if}
 </div>

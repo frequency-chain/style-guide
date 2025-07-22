@@ -23,6 +23,7 @@
     LinkedInLogo,
     XLogo,
   } from './index';
+  import LoadingIcon from './icons/LoadingIcon.svelte';
 
   const icons = {
     Arrow,
@@ -33,6 +34,7 @@
     Error,
     Exit,
     HamburgerMenu,
+    LoadingIcon,
     OpenClose,
     Planet,
     UserFilled,
@@ -57,9 +59,9 @@
         {#if Icon === OpenClose}
           <input type="checkbox" id="mobile-menu-toggle" class="peer hidden" bind:checked={isOpen} />
           <aside>Click it!</aside>
-          <Icon toggleIdentifier="mobile-menu-toggle" class="mb-1 h-8 w-auto stroke-black" bind:isOpen isDemo={true} />
+          <Icon toggleIdentifier="mobile-menu-toggle" class="mb-1 h-8 w-auto" bind:isOpen isDemo={true} />
         {:else}
-          <Icon class="mb-1 h-8 w-auto stroke-black" isDemo={true} />
+          <Icon class="mb-1 h-8 w-auto" isDemo={true} />
         {/if}
       </div>
     {/each}

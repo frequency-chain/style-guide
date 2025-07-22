@@ -8,6 +8,7 @@
     placeholder: string | undefined;
     isRequired?: boolean;
     error?: string | undefined;
+    isLoading?: boolean;
     options: { optionLabel: string; value: string }[];
   }
 
@@ -17,6 +18,7 @@
     placeholder,
     isRequired = false,
     error = undefined,
+    isLoading = false,
     options,
     ...rest
   }: Props = $props();
@@ -27,7 +29,7 @@
   {#if description}
     <span class="form-item-description">{description}</span>
   {/if}
-  <Trigger {error}>
+  <Trigger {error} {isLoading}>
     <Value {placeholder} />
   </Trigger>
   <Content class="border-gray3 border">
