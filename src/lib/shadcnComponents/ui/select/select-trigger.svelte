@@ -10,12 +10,12 @@
 
   interface Props extends $$Props {
     error: string | undefined;
-    isLoading?: boolean;
+    isLoading: boolean;
     class?: $$Props['class'];
     children?: import('svelte').Snippet;
   }
 
-  let { error, isLoading = false, children, ...rest }: Props = $props();
+  let { error, isLoading, children, ...rest }: Props = $props();
 </script>
 
 <div class="gap-f12 flex items-center">
@@ -25,7 +25,7 @@
       error: !!error,
       height: 'sm',
       class: cn(
-        'aria-expanded:border-primary cursor-pointer aria-expanded:border-2',
+        'aria-expanded:border-primary cursor-pointer text-left aria-expanded:border-2',
         'ring-offset-background focus-visible:ring-offset-2',
         rest.class
       ),

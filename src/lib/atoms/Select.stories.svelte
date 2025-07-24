@@ -9,14 +9,49 @@
     { optionLabel: 'Option 2', value: '2' },
     { optionLabel: 'Option 3', value: '3' },
   ];
-  let onSelectedChange = (x) => (primarySelected = x.value);
 
   let primarySelected = $state('');
+
+  let onSelectedChange = (x) => (primarySelected = x.value);
+
+  let isLoading = $state(false);
+  let error = $state();
+
+  let onSelectedChangeAsync = async (x) => {
+    isLoading = true;
+    console.log('hello world', isLoading);
+    primarySelected = x.value;
+
+    setTimeout(() => {
+      isLoading = false;
+      console.log('inside', isLoading);
+    }, 2000);
+  };
+
+  let onSelectedChangeError = (x) => {
+    error = 'error!!!';
+    primarySelected = x.value;
+  };
 
   const { Story } = defineMeta({ title: 'UI Components/Atoms', component: Select });
 </script>
 
 <Story name="Default Select" args={{ ...Select.props, label, description, options, onSelectedChange }}>
+  {#snippet children(args)}
+    <Select {...args} />
+  {/snippet}
+</Story>
+
+<Story
+  name="Async Func Select"
+  args={{ label, description, options, isLoading, onSelectedChange: onSelectedChangeAsync }}
+>
+  {#snippet children(args)}
+    <Select {...args} />
+  {/snippet}
+</Story>
+
+<Story name="Error" args={{ label, description, options, error, onSelectedChange: onSelectedChangeError }}>
   {#snippet children(args)}
     <Select {...args} />
   {/snippet}
