@@ -2,7 +2,6 @@
   import { Select as SelectPrimitive } from 'bits-ui';
   import { scale } from 'svelte/transition';
   import { cn, flyAndScale } from '../../../utils/utils';
-  import LoadingIcon from '../../../design-system/assets/icons/LoadingIcon.svelte';
 
   type $$Props = SelectPrimitive.ContentProps;
   type $$Events = SelectPrimitive.ContentEvents;
