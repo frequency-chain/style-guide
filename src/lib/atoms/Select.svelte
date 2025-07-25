@@ -26,11 +26,6 @@
     onSelectedChange,
     ...rest
   }: Props = $props();
-
-  $inspect(isLoading);
-  $effect(() => {
-    console.log('IS LOADING IN SELECT', isLoading);
-  });
 </script>
 
 <Root {...rest} {onSelectedChange}>

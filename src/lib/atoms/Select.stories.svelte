@@ -19,12 +19,10 @@
 
   let onSelectedChangeAsync = async (x) => {
     isLoading = true;
-    console.log('hello world', isLoading);
     primarySelected = x.value;
 
     setTimeout(() => {
       isLoading = false;
-      console.log('inside', isLoading);
     }, 2000);
   };
 
