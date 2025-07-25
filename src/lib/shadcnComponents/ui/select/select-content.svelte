@@ -38,7 +38,7 @@
   {outTransitionConfig}
   {sideOffset}
   class={cn(
-    'relative z-50 min-w-[8rem] overflow-hidden rounded-md border bg-white text-black shadow-md outline-hidden',
+    'relative z-100 min-w-[8rem] overflow-hidden rounded-md border bg-white text-black shadow-md outline-hidden',
     rest.class
   )}
   on:keydown
