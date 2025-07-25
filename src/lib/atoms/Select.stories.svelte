@@ -26,12 +26,7 @@
     }, 2000);
   };
 
-  let onSelectedChangeError = (x) => {
-    error = 'error!!!';
-    primarySelected = x.value;
-  };
-
-  const { Story } = defineMeta({ title: 'UI Components/Atoms', component: Select });
+  const { Story } = defineMeta({ title: 'UI Components/Atoms/Select', component: Select });
 </script>
 
 <Story name="Default Select" args={{ ...Select.props, label, description, options, onSelectedChange }}>
@@ -44,12 +39,6 @@
   name="Async Func Select"
   args={{ label, description, options, isLoading, onSelectedChange: onSelectedChangeAsync }}
 >
-  {#snippet children(args)}
-    <Select {...args} />
-  {/snippet}
-</Story>
-
-<Story name="Error" args={{ label, description, options, error, onSelectedChange: onSelectedChangeError }}>
   {#snippet children(args)}
     <Select {...args} />
   {/snippet}

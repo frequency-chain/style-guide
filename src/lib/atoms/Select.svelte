@@ -28,7 +28,7 @@
   }: Props = $props();
 </script>
 
-<div>
+<div class="flex flex-col">
   <Root {...rest} {onSelectedChange}>
     <Label {isRequired}>{label}</Label>
     {#if description}
