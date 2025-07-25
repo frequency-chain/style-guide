@@ -29,7 +29,6 @@
   <input
     {...rest}
     class={formItem({ error: !!error, height: 'sm', class: rest.class })}
-    type="text"
     {placeholder}
     {disabled}
     bind:value
