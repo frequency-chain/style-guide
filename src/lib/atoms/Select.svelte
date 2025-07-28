@@ -5,6 +5,7 @@
   import type { Selected } from 'bits-ui';
 
   interface Props extends HTMLAttributes<HTMLSelectElement> {
+    id?: string;
     label: string;
     description?: string | undefined;
     placeholder: string | undefined;
@@ -16,6 +17,7 @@
   }
 
   let {
+    id,
     label,
     description = undefined,
     placeholder,
@@ -34,7 +36,7 @@
     {#if description}
       <span class="form-item-description">{description}</span>
     {/if}
-    <Trigger {error} {isLoading}>
+    <Trigger {error} {isLoading} {id}>
       <Value class="text-nowrap overflow-ellipsis" {placeholder} />
     </Trigger>
     <Content class="border-gray3 border">

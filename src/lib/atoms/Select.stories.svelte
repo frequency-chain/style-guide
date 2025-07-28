@@ -15,7 +15,6 @@
   let onSelectedChange = (x) => (primarySelected = x.value);
 
   let isLoading = $state(false);
-  let error = $state();
 
   let onSelectedChangeAsync = async (x) => {
     isLoading = true;
