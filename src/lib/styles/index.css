@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import 'bitsStyles.css';
 
 @theme {
   /* Colors */

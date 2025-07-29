@@ -12,13 +12,13 @@
 
   let primarySelected = $state('');
 
-  let onSelectedChange = (x) => (primarySelected = x.value);
+  let onValueChange = (value) => (primarySelected = value);
 
   let isLoading = $state(false);
 
-  let onSelectedChangeAsync = async (x) => {
+  let onValueChangeAsync = async (value) => {
     isLoading = true;
-    primarySelected = x.value;
+    primarySelected = value;
 
     setTimeout(() => {
       isLoading = false;
@@ -28,16 +28,13 @@
   const { Story } = defineMeta({ title: 'UI Components/Atoms/Select', component: Select });
 </script>
 
-<Story name="Default Select" args={{ ...Select.props, label, description, options, onSelectedChange }}>
+<Story name="Default Select" args={{ ...Select.props, label, description, options, onValueChange }}>
   {#snippet children(args)}
     <Select {...args} />
   {/snippet}
 </Story>
 
-<Story
-  name="Async Func Select"
-  args={{ label, description, options, isLoading, onSelectedChange: onSelectedChangeAsync }}
->
+<Story name="Async Func Select" args={{ label, description, options, isLoading, onValueChange: onValueChangeAsync }}>
   {#snippet children(args)}
     <Select {...args} />
   {/snippet}

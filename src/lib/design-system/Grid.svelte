@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type { HTMLDivAttributes } from 'bits-ui/dist/internal';
+  import type { HTMLAttributes } from 'svelte/elements';
 
-  interface Props extends HTMLDivAttributes {
+  interface Props extends HTMLAttributes<HTMLDivElement> {
     children?: import('svelte').Snippet;
   }
 

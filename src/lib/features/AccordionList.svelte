@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { Root } from '../shadcnComponents/ui/accordion';
+  import { Accordion } from 'bits-ui';
+
   interface Props {
     children?: import('svelte').Snippet;
   }
@@ -7,6 +8,6 @@
   let { children }: Props = $props();
 </script>
 
-<Root>
+<Accordion.Root class="w-full" type="multiple">
   {@render children?.()}
-</Root>
+</Accordion.Root>
