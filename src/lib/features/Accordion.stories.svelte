@@ -9,7 +9,7 @@
   });
 </script>
 
-<Story name="Default Accordion" args={{ ...Accordion.props, intent: "light", trigger: 'Hello world.', content: 'Hello there.' }}>
+<Story name="Default Accordion" args={{ ...Accordion.props, trigger: 'Hello world.', content: 'Hello there.' }}>
   {#snippet children(args)}
     <Accordion {...args} />
   {/snippet}
