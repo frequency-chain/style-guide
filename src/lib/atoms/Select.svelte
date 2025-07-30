@@ -2,6 +2,7 @@
   import type { HTMLAttributes } from 'svelte/elements';
   import { Root, Trigger, Value, Content, Item, Label } from '../shadcnComponents/ui/select';
   import type { OnChangeFn } from 'bits-ui/dist/internal/types';
+  import type { Selected } from 'bits-ui';
 
   interface Props extends HTMLAttributes<HTMLSelectElement> {
     id?: string;
@@ -12,7 +13,7 @@
     error?: string | undefined;
     isLoading?: boolean;
     options: { optionLabel: string; value: string }[];
-    onValueChange: OnChangeFn<string[]>;
+    onValueChange: OnChangeFn<Selected<unknown> | undefined>;
   }
 
   let {
