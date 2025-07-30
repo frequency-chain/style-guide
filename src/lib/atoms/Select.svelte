@@ -2,7 +2,6 @@
   import type { HTMLAttributes } from 'svelte/elements';
   import { Root, Trigger, Value, Content, Item, Label } from '../shadcnComponents/ui/select';
   import type { OnChangeFn } from 'bits-ui/dist/internal/types';
-  import type { Selected } from 'bits-ui';
 
   interface Props extends HTMLAttributes<HTMLSelectElement> {
     id?: string;
