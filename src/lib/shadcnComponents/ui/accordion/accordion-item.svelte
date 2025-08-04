@@ -5,7 +5,6 @@
   type $$Props = AccordionPrimitive.ItemProps;
 
   interface Props extends $$Props {
-    value: $$Props['value'];
     children?: import('svelte').Snippet;
   }
 
