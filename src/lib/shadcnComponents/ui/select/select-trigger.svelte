@@ -11,8 +11,6 @@
   interface Props extends $$Props {
     error: string | undefined;
     isLoading: boolean;
-    id?: string;
-    class?: $$Props['class'];
     children?: import('svelte').Snippet;
   }
 

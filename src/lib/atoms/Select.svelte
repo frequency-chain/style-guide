@@ -1,20 +1,15 @@
 <script lang="ts">
   import type { HTMLAttributes } from 'svelte/elements';
   import { Root, Trigger, Value, Content, Item, Label } from '../shadcnComponents/ui/select';
-  import type { OnChangeFn } from 'bits-ui/dist/internal/types';
-  import type { Selected } from 'bits-ui';
+  import type { SelectProps } from 'bits-ui';
 
-  interface Props extends HTMLAttributes<HTMLSelectElement> {
-    id?: string;
+  interface Props extends SelectProps<string, false>, HTMLAttributes<HTMLSelectElement> {
     label: string;
     description?: string | undefined;
-    placeholder: string | undefined;
     isRequired?: boolean;
     error?: string | undefined;
     isLoading?: boolean;
     options: { optionLabel: string; value: string }[];
-    onSelectedChange?: OnChangeFn<Selected<unknown> | undefined>;
-    disabled?: boolean;
   }
 
   let {
@@ -39,7 +34,7 @@
       <span class="form-item-description">{description}</span>
     {/if}
     <Trigger {error} {isLoading} {id}>
-      <Value class="text-nowrap overflow-ellipsis" {placeholder} />
+      <Value class="text-nowrap overflow-ellipsis" placeholder={placeholder || undefined} />
     </Trigger>
     <Content class="border-gray3 border">
       {#each options as option (option.value)}
