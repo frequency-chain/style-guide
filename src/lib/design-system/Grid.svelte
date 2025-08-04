@@ -1,7 +1,6 @@
 <script lang="ts">
-  import type { HTMLDivElement } from 'svelte/elements';
-
-  let { children, ...rest }: HTMLDivElement = $props();
+  import type { HTMLAttributes } from 'svelte/elements';
+  let { children, ...rest }: HTMLAttributes<HTMLDivElement> = $props();
 </script>
 
 <div {...rest} class="m-f16 md:m-f32 lg:m-f120 {rest.class}">
