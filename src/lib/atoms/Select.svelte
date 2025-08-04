@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { HTMLAttributes } from 'svelte/elements';
+  import type { HTMLSelectElement } from 'svelte/elements';
   import { Root, Trigger, Value, Content, Item, Label } from '../shadcnComponents/ui/select';
   import type { SelectProps } from 'bits-ui';
 
-  interface Props extends SelectProps<string, false>, HTMLAttributes<HTMLSelectElement> {
+  interface Props extends SelectProps<string, false>, HTMLSelectElement {
     label: string;
     description?: string | undefined;
     isRequired?: boolean;

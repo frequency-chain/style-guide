@@ -1,9 +1,9 @@
 <script lang="ts">
   import FormElement from './FormElement.svelte';
-  import type { HTMLAttributes } from 'svelte/elements';
+  import type { HTMLInputAttributes } from 'svelte/elements';
   import { formItem } from '../styles/formItemStyles';
 
-  interface Props extends HTMLAttributes<HTMLInputElement> {
+  interface Props extends HTMLInputAttributes {
     label?: string;
     isRequired?: boolean;
     description?: string;

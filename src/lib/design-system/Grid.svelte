@@ -1,11 +1,7 @@
 <script lang="ts">
-  import type { HTMLAttributes } from 'svelte/elements';
+  import type { HTMLDivElement } from 'svelte/elements';
 
-  interface Props extends HTMLAttributes<HTMLDivElement> {
-    children?: import('svelte').Snippet;
-  }
-
-  let { children, ...rest }: Props = $props();
+  let { children, ...rest }: HTMLDivElement = $props();
 </script>
 
 <div {...rest} class="m-f16 md:m-f32 lg:m-f120 {rest.class}">
