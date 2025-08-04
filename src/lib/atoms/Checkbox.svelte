@@ -11,7 +11,7 @@
     checked?: boolean;
   }
 
-  let { label, intent = 'dark', checked = $bindable(false), ...rest }: Props = $props();
+  let { label, intent = 'dark', checked = $bindable(false), id: curId, ...rest }: Props = $props();
 
   const labelToId = (label: string): string => {
     return label
@@ -19,7 +19,7 @@
       .replace(/\s+/g, '-')
       .replace(/[^a-z0-9-_]/g, '');
   };
-  let id = $state(rest.id || labelToId(label));
+  let id = $state(curId || labelToId(label));
 </script>
 
 <div {...rest} class={cn('gap-f8 flex items-center', rest.class)}>
