@@ -13,7 +13,8 @@
     error?: string | undefined;
     isLoading?: boolean;
     options: { optionLabel: string; value: string }[];
-    onValueChange: OnChangeFn<Selected<unknown> | undefined>;
+    onSelectedChange?: OnChangeFn<Selected<unknown> | undefined>;
+    disabled?: boolean;
   }
 
   let {
@@ -25,13 +26,14 @@
     error = undefined,
     isLoading = false,
     options,
-    onValueChange,
+    onSelectedChange,
+    disabled,
     ...rest
   }: Props = $props();
 </script>
 
 <div class="flex flex-col">
-  <Root {...rest} {onValueChange}>
+  <Root {...rest} {onSelectedChange} {disabled}>
     <Label {isRequired}>{label}</Label>
     {#if description}
       <span class="form-item-description">{description}</span>
