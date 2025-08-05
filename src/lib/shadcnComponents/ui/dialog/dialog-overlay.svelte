@@ -3,20 +3,13 @@
   import { fade } from 'svelte/transition';
   import { cn } from '../../../utils/utils.js';
 
-  type $$Props = DialogPrimitive.OverlayProps;
-
-  interface Props extends $$Props {
-    transition?: $$Props['transition'];
-    transitionConfig?: $$Props['transitionConfig'];
-  }
-
   let {
     transition = fade,
     transitionConfig = {
       duration: 150,
     },
     ...rest
-  }: Props = $props();
+  }: DialogPrimitive.OverlayProps = $props();
 </script>
 
 <DialogPrimitive.Overlay

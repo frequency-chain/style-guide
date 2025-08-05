@@ -7,6 +7,7 @@ export { default as Copy } from './icons/Copy.svelte';
 export { default as Error } from './icons/Error.svelte';
 export { default as Exit } from './icons/Exit.svelte';
 export { default as HamburgerMenu } from './icons/HamburgerMenu.svelte';
+export { default as LoadingIcon } from './icons/LoadingIcon.svelte';
 export { default as OpenClose } from './icons/OpenClose.svelte';
 export { default as Planet } from './icons/Planet.svelte';
 export { default as UserFilled } from './icons/UserFilled.svelte';

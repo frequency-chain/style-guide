@@ -1,9 +1,9 @@
 <script lang="ts">
   import FormElement from './FormElement.svelte';
-  import type { HTMLAttributes } from 'svelte/elements';
+  import type { HTMLInputAttributes } from 'svelte/elements';
   import { formItem } from '../styles/formItemStyles';
 
-  interface Props extends HTMLAttributes<HTMLInputElement> {
+  interface Props extends HTMLInputAttributes {
     label?: string;
     isRequired?: boolean;
     description?: string;
@@ -29,7 +29,6 @@
   <input
     {...rest}
     class={formItem({ error: !!error, height: 'sm', class: rest.class })}
-    type="text"
     {placeholder}
     {disabled}
     bind:value
