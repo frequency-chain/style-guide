@@ -10,7 +10,7 @@
   let checked = $state(false);
 </script>
 
-<Story name="Default Checkbox" args={{ ...Checkbox.props, label: 'Click Here', intent: 'dark', id: 'test-checkbox' }}>
+<Story name="Default Checkbox" args={{ ...Checkbox.props, label: 'Click Here', intent: 'dark', id: 'check1' }}>
   {#snippet children(args)}
     <Checkbox {...args} bind:checked />
   {/snippet}

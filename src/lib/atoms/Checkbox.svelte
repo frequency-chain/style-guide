@@ -9,6 +9,7 @@
     label: string;
     intent?: Intent;
     checked?: boolean;
+    id?: string;
   }
 
   let { label, intent = 'dark', checked = $bindable(false), id: curId, ...rest }: Props = $props();

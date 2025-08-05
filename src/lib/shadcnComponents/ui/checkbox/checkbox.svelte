@@ -5,7 +5,6 @@
   import type { Intent } from '../../../utils/types.js';
 
   interface Props extends CheckboxPrimitive.Props {
-    checked: boolean;
     intent?: Intent;
   }
 

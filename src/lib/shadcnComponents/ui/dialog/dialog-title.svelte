@@ -5,7 +5,6 @@
   type $$Props = DialogPrimitive.TitleProps;
 
   interface Props extends $$Props {
-    class?: $$Props['class'];
     children?: import('svelte').Snippet;
   }
 

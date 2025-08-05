@@ -1,11 +1,6 @@
 <script lang="ts">
-  import type { HTMLDivAttributes } from 'bits-ui/dist/internal';
-
-  interface Props extends HTMLDivAttributes {
-    children?: import('svelte').Snippet;
-  }
-
-  let { children, ...rest }: Props = $props();
+  import type { HTMLAttributes } from 'svelte/elements';
+  let { children, ...rest }: HTMLAttributes<HTMLDivElement> = $props();
 </script>
 
 <div {...rest} class="m-f16 md:m-f32 lg:m-f120 {rest.class}">
