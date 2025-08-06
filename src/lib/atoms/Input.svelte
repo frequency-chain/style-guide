@@ -25,7 +25,7 @@
   }: Props = $props();
 </script>
 
-<FormElement {label} {isRequired} {description} {error}>
+<FormElement {label} {isRequired} {description} {error} elementId={rest.id}>
   <input
     {...rest}
     class={formItem({ error: !!error, height: 'sm', class: rest.class })}

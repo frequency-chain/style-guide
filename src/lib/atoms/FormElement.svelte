@@ -6,17 +6,18 @@
     isRequired?: boolean;
     description?: string;
     error: string | undefined;
+    elementId?: string | null;
     children?: import('svelte').Snippet;
   }
 
-  let { label = '', isRequired = false, description = '', error, children }: Props = $props();
+  let { label = '', isRequired = false, description = '', error, elementId = '', children }: Props = $props();
 
   const labelNoSpaces = label.split(' ').join('');
   const id = `form-element-${labelNoSpaces}`;
 </script>
 
-<div class="gap-f4 flex flex-col">
-  <label class="form-item-label" for={id}>
+<div class="gap-f4 flex flex-col" {id}>
+  <label class="form-item-label" for={elementId}>
     {label}
     {#if isRequired}
       <span class="text-error">*</span>
