@@ -27,7 +27,7 @@
     <span class="form-item-description">{description}</span>
   {/if}
 
-  <div class="gap-f12 flex items-center" {id}>
+  <div class="gap-f12 flex items-center">
     {@render children?.()}
 
     {#if error}

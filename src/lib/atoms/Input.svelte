@@ -31,6 +31,7 @@
     class={formItem({ error: !!error, height: 'sm', class: rest.class })}
     {placeholder}
     {disabled}
+    id={rest.id}
     bind:value
   />
 </FormElement>
