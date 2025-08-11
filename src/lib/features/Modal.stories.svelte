@@ -20,7 +20,7 @@
   </div>
 {/snippet}
 
-<Story name="Default Modal" args={{ ...Modal.props, title, description, trigger, body }}>
+<Story name="Default Modal" args={{ ...Modal.props, title, description, trigger, body, id: '' }}>
   {#snippet children(args)}
     <Modal {...args} />
   {/snippet}
