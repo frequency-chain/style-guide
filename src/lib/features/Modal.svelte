@@ -1,8 +1,9 @@
 <script lang="ts">
   import type { DialogProps } from 'bits-ui';
   import { Root, Trigger, Content, Header, Title, Description } from '../shadcnComponents/ui/dialog';
+  import type { HTMLAttributes } from 'svelte/elements';
 
-  interface Props extends DialogProps {
+  interface Props extends DialogProps, HTMLAttributes<HTMLElement> {
     title?: string;
     description?: string;
     trigger?: import('svelte').Snippet;
@@ -16,7 +17,7 @@
   <Trigger>
     {@render trigger?.()}
   </Trigger>
-  <Content>
+  <Content id={rest.id}>
     <Header>
       <Title>{title}</Title>
       {#if description}
