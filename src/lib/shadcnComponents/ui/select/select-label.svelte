@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Select as SelectPrimitive } from 'bits-ui';
+  import { Select as SelectPrimitive } from 'bits-ui-old';
   import { cn } from '../../../utils/utils';
   import type { Snippet } from 'svelte';
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Select as SelectPrimitive } from 'bits-ui';
+  import { Select as SelectPrimitive } from 'bits-ui-old';
   import { cn } from '../../../utils/utils';
   import { Error, Chevron } from '../../../design-system/assets/index';
   import { formItem } from '../../../styles/formItemStyles';

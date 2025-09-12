@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { HTMLAttributes } from 'svelte/elements';
   import { Root, Trigger, Value, Content, Item, Label } from '../shadcnComponents/ui/select';
-  import type { SelectProps } from 'bits-ui';
+  import type { SelectProps } from 'bits-ui-old';
 
   interface Props extends SelectProps<string, false>, HTMLAttributes<HTMLSelectElement> {
     label: string;

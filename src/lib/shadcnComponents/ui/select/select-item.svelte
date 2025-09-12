@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Check } from '../../../design-system/assets/index';
-  import { Select as SelectPrimitive } from 'bits-ui';
+  import { Select as SelectPrimitive } from 'bits-ui-old';
   import { cn } from '../../../utils/utils';
 
   type $$Props = SelectPrimitive.ItemProps;
