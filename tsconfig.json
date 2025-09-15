@@ -2,25 +2,16 @@
   "extends": "@tsconfig/svelte/tsconfig.json",
   "types": ["svelte"],
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "$src": [
-        "./src"
-      ],
-      "$src/*": [
-        "./src/*"
-      ],
-      "$lib": [
-        "./src/lib"
-      ],
-      "$lib/*": [
-        "./src/lib/*"
-      ],
-      "$shadcnComponents": [
-        "./src/lib/shadcnComponents"
-      ],
-      "$shadcnComponents/*": [
-        "./src/lib/shadcnComponents/*"
-      ]
+      "$src": ["./src"],
+      "$src/*": ["./src/*"],
+      "$lib": ["./src/lib"],
+      "$lib/*": ["./src/lib/*"],
+      "$shadcnComponents": ["./src/lib/shadcnComponents"],
+      "$shadcnComponents/*": ["./src/lib/shadcnComponents/*"],
+      "@/*": ["src/*"],
+      "@/lib/*": ["src/lib/*"]
     },
     "allowSyntheticDefaultImports": true,
     "module": "ESNext",

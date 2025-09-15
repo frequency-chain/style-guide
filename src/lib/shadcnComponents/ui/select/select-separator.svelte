@@ -1,10 +1,14 @@
 <script lang="ts">
-  import { Select as SelectPrimitive } from 'bits-ui-old';
+  import type { Separator as SeparatorPrimitive } from 'bits-ui';
+  import Separator from '../separator/separator.svelte';
   import { cn } from '../../../utils/utils';
 
-  type $$Props = SelectPrimitive.SeparatorProps;
-
-  let { ...rest }: $$Props = $props();
+  let { ref = $bindable(null), class: className, ...restProps }: SeparatorPrimitive.RootProps = $props();
 </script>
 
-<SelectPrimitive.Separator {...rest} class={cn('bg-muted -mx-1 my-1 h-px', rest.class)} />
+<Separator
+  bind:ref
+  data-slot="select-separator"
+  class={cn('bg-border pointer-events-none -mx-1 my-1 h-px', className)}
+  {...restProps}
+/>

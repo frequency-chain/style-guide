@@ -1,47 +1,38 @@
 <script lang="ts">
-  import { Check } from '../../../design-system/assets/index';
-  import { Select as SelectPrimitive } from 'bits-ui-old';
+  import Check from '../../../design-system/assets/icons/Check.svelte';
   import { cn } from '../../../utils/utils';
+  import { Select as SelectPrimitive, type WithoutChild } from 'bits-ui';
 
-  type $$Props = SelectPrimitive.ItemProps;
-  type $$Events = SelectPrimitive.ItemEvents;
-
-  interface Props extends $$Props {
-    value: $$Props['value'];
-    label?: $$Props['label'];
-    disabled?: $$Props['disabled'];
-    children?: import('svelte').Snippet;
-  }
-
-  let { value, label = undefined, disabled = undefined, children, ...rest }: Props = $props();
+  let {
+    ref = $bindable(null),
+    class: className,
+    value,
+    label,
+    children: childrenProp,
+    ...restProps
+  }: WithoutChild<SelectPrimitive.ItemProps> = $props();
 </script>
 
 <SelectPrimitive.Item
-  {...rest}
+  bind:ref
   {value}
-  {disabled}
-  {label}
+  data-slot="select-item"
   class={cn(
-    'smText data-highlighted:bg-gray3 relative flex w-full cursor-pointer items-center rounded-xs py-2 pr-8 pl-2 outline-hidden transition select-none data-disabled:pointer-events-none data-disabled:opacity-50 data-highlighted:text-black',
-    rest.class
+    "data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground [&_svg:not([class*='text-'])]:text-muted-foreground relative flex w-full cursor-default items-center gap-2 rounded-sm py-1.5 pr-8 pl-2 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
+    className
   )}
-  on:click
-  on:keydown
-  on:focusin
-  on:focusout
-  on:pointerleave
-  on:pointermove
+  {...restProps}
 >
-  <span class="block w-full truncate">
-    {#if children}
-      {@render children()}
+  {#snippet children({ selected, highlighted })}
+    <span class="absolute right-2 flex size-3.5 items-center justify-center">
+      {#if selected}
+        <Check class="h-4 w-4" />
+      {/if}
+    </span>
+    {#if childrenProp}
+      {@render childrenProp({ selected, highlighted })}
     {:else}
       {label || value}
     {/if}
-  </span>
-  <span class="absolute right-2 flex h-3.5 w-3.5 items-center justify-center">
-    <SelectPrimitive.ItemIndicator>
-      <Check class="h-4 w-4" />
-    </SelectPrimitive.ItemIndicator>
-  </span>
+  {/snippet}
 </SelectPrimitive.Item>

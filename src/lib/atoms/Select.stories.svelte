@@ -10,39 +10,11 @@
     { optionLabel: 'Option 3', value: '3' },
   ];
 
-  let primarySelected = $state('');
-
-  let onSelectedChange = (value) => (primarySelected = value);
-
-  let isLoading = $state(false);
-  let disabled = $state(false);
-
-  let onSelectedChangeAsync = async (value) => {
-    isLoading = true;
-    primarySelected = value;
-
-    setTimeout(() => {
-      isLoading = false;
-    }, 2000);
-  };
-
   const { Story } = defineMeta({ title: 'UI Components/Atoms/Select', component: Select });
 </script>
 
-<Story name="Default Select" args={{ ...Select.props, label, description, options, disabled, onSelectedChange }}>
+<Story name="Default Select">
   {#snippet children(args)}
-    <Select {...args} />
+    <Select />
   {/snippet}
 </Story>
-
-<Story
-  name="Async Func Select"
-  args={{ label, description, options, isLoading, disabled, onSelectedChange: onSelectedChangeAsync }}
->
-  {#snippet children(args)}
-    <Select {...args} />
-  {/snippet}
-</Story>
-
-<hr class="m-4" />
-<div>Selected Option: {JSON.stringify(primarySelected)}</div>
