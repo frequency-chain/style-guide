@@ -4,18 +4,17 @@
   import type { HTMLAttributes } from 'svelte/elements';
 
   let {
+    isRequired = false,
     ref = $bindable(null),
     class: className,
     children,
     ...restProps
-  }: WithElementRef<HTMLAttributes<HTMLDivElement>> & {} = $props();
+  }: WithElementRef<HTMLAttributes<HTMLDivElement>> & { isRequired: boolean } = $props();
 </script>
 
-<div
-  bind:this={ref}
-  data-slot="select-label"
-  class={cn('text-muted-foreground px-2 py-1.5 text-xs', className)}
-  {...restProps}
->
+<div bind:this={ref} data-slot="select-label" class={cn('form-item-label', className)} {...restProps}>
   {@render children?.()}
+  {#if isRequired}
+    <span class="text-error">*</span>
+  {/if}
 </div>
