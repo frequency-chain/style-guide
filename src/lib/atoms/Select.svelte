@@ -1,12 +1,51 @@
 <script lang="ts">
+  import type { Component } from 'svelte';
   import { Root, Trigger, Content, Item } from '../shadcnComponents/ui/select';
+  import FormElement from './FormElement.svelte';
+  import type { Selected, SelectRootPropsWithoutHTML } from 'bits-ui';
+  import { cn } from '../utils';
+
+  interface Props extends Component<SelectRootPropsWithoutHTML, {}, 'value' | 'open'> {
+    options: { label: string; value: string }[];
+    value?: string;
+    isRequired?: boolean;
+    label: string;
+    description?: string;
+    placeholder?: string;
+    error?: string;
+    isLoading?: boolean;
+    disabled?: boolean;
+    id?: string;
+  }
+
+  let {
+    options,
+    value = $bindable(),
+    isRequired = false,
+    label,
+    description,
+    placeholder = 'Select an option',
+    error = undefined,
+    isLoading = false,
+    disabled = false,
+    id = undefined,
+    ...rest
+  }: Props = $props();
 </script>
 
-<Root type="single">
-  <Trigger class="w-[180px]">Trigger</Trigger>
-  <Content>
-    <Item value="light">Light</Item>
-    <Item value="dark">Dark</Item>
-    <Item value="system">System</Item>
-  </Content>
-</Root>
+<div class="flex flex-col">
+  <FormElement {label} {isRequired} {description} {error} elementId={id} {...rest}>
+    <div>
+      <Root type="single" {disabled} bind:value>
+        <Trigger {error} {isLoading} {id}>
+          <span class={cn(!value && 'text-gray2')}>{value ? value : placeholder}</span>
+        </Trigger>
+        <Content>
+          {#each options as option (option.value)}
+            <Item value={option.value}>{option.label}</Item>
+          {/each}
+        </Content>
+      </Root>
+    </div>
+  </FormElement>
+</div>

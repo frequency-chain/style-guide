@@ -263,8 +263,8 @@
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
   --color-ring: var(--primary);
-  --color-input: var(--primary);
-  --color-border: var(--primary);
+  --color-input: var(--gray3);
+  --color-border: var(--gray3);
   --color-destructive: var(--primary);
   --color-accent-foreground: var(--primary);
   --color-accent: var(--primary);
