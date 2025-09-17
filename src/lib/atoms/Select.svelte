@@ -1,11 +1,9 @@
 <script lang="ts">
-  import type { Component } from 'svelte';
   import { Root, Trigger, Content, Item } from '../shadcnComponents/ui/select';
   import FormElement from './FormElement.svelte';
-  import type { Selected, SelectRootPropsWithoutHTML } from 'bits-ui';
   import { cn } from '../utils';
 
-  interface Props extends Component<SelectRootPropsWithoutHTML, {}, 'value' | 'open'> {
+  interface Props {
     options: { label: string; value: string }[];
     value?: string;
     isRequired?: boolean;

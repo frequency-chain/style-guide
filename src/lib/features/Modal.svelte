@@ -1,6 +1,6 @@
 <script lang="ts">
+  import * as Dialog from '../shadcnComponents/ui/dialog/index';
   import type { DialogRootProps } from 'bits-ui';
-  import { Root, Trigger, Content, Header, Title, Description } from '../shadcnComponents/ui/dialog';
   import type { HTMLAttributes } from 'svelte/elements';
 
   interface Props extends DialogRootProps, HTMLAttributes<HTMLElement> {
@@ -14,17 +14,17 @@
   let { title = '', description = '', trigger, body, id, ...rest }: Props = $props();
 </script>
 
-<Root {...rest}>
-  <Trigger>
-    {@render trigger?.()}
-  </Trigger>
-  <Content {id}>
-    <Header>
-      <Title>{title}</Title>
+<Dialog.Root {...rest}>
+  <Dialog.Trigger>{@render trigger?.()}</Dialog.Trigger>
+  <Dialog.Content {id}>
+    <Dialog.Header>
+      <Dialog.Title>{title}</Dialog.Title>
       {#if description}
-        <Description>{description}</Description>
+        <Dialog.Description>
+          {description}
+        </Dialog.Description>
       {/if}
-    </Header>
+    </Dialog.Header>
     {@render body?.()}
-  </Content>
-</Root>
+  </Dialog.Content>
+</Dialog.Root>

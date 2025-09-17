@@ -3,9 +3,8 @@
   import Modal from './Modal.svelte';
   import Button from '../atoms/Button.svelte';
 
-  // Modal props
-  export let title = 'Title';
-  export let description = 'This is the description.';
+  const title = 'Title';
+  const description = 'This is the description.';
 
   const { Story } = defineMeta({ title: 'UI Components/Features', component: Modal });
 </script>
