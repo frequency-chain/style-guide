@@ -1,4 +1,5 @@
 <script lang="ts">
+  import LoadingIcon from '../design-system/assets/icons/LoadingIcon.svelte';
   import { Error } from '../design-system/assets/index';
 
   interface Props {
@@ -6,11 +7,20 @@
     isRequired?: boolean;
     description?: string;
     error: string | undefined;
+    isLoading?: boolean;
     elementId?: string | null;
     children?: import('svelte').Snippet;
   }
 
-  let { label = '', isRequired = false, description = '', error, elementId = '', children }: Props = $props();
+  let {
+    label = '',
+    isRequired = false,
+    description = '',
+    error,
+    isLoading = false,
+    elementId = '',
+    children,
+  }: Props = $props();
 
   const labelNoSpaces = label.split(' ').join('');
   const id = `form-element-${labelNoSpaces}`;
@@ -33,6 +43,8 @@
 
     {#if error}
       <Error />
+    {:else if isLoading}
+      <LoadingIcon />
     {/if}
   </div>
 

@@ -28,6 +28,3 @@
     <Select {...args} bind:value={args.value} />
   {/snippet}
 </Story>
-
-<hr class="m-4" />
-<div>{`Selected value: ${value}`}</div>

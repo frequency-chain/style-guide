@@ -8,14 +8,14 @@ export const formItem = cva(
     'bg-white px-3 py-2',
     'disabled:cursor-not-allowed disabled:opacity-50',
     'focus-visible:ring-primary focus-visible:ring-2 focus-visible:outline-none focus-visible:border-none',
-    'aria-[invalid]:border-destructive',
-    '[&>span]:data-placeholder:text-muted-foreground',
+    'aria-[invalid]:border-error',
+    '[&>span]:data-placeholder:text-gray2',
     '[&>span]:line-clamp-1',
   ],
   {
     variants: {
       error: {
-        true: 'border-error',
+        true: 'border-error border-2',
         false: 'border-gray3',
       },
       height: {

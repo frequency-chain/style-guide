@@ -32,10 +32,10 @@
 </script>
 
 <div class="flex flex-col">
-  <FormElement {label} {isRequired} {description} {error} elementId={id} {...rest}>
+  <FormElement {label} {isRequired} {description} {error} {isLoading} elementId={id} {...rest}>
     <div>
       <Root type="single" {disabled} bind:value>
-        <Trigger {error} {isLoading} {id}>
+        <Trigger {error} {id}>
           <span class={cn(!value && 'text-gray2')}>{value ? value : placeholder}</span>
         </Trigger>
         <Content>
