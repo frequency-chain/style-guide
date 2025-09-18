@@ -6,15 +6,16 @@
   interface Props extends DialogRootProps, HTMLAttributes<HTMLElement> {
     title?: string;
     description?: string;
+    open?: boolean;
     trigger?: import('svelte').Snippet;
     body?: import('svelte').Snippet;
     id?: string;
   }
 
-  let { title = '', description = '', trigger, body, id, ...rest }: Props = $props();
+  let { title = '', description = '', open, trigger, body, id, ...rest }: Props = $props();
 </script>
 
-<Dialog.Root {...rest}>
+<Dialog.Root {...rest} {open}>
   <Dialog.Trigger>{@render trigger?.()}</Dialog.Trigger>
   <Dialog.Content {id}>
     <Dialog.Header>

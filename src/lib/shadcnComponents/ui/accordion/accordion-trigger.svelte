@@ -14,13 +14,13 @@
 
 <AccordionPrimitive.Header {level} class="flex">
   <AccordionPrimitive.Trigger
+    {...restProps}
     data-slot="accordion-trigger"
     bind:ref
     class={cn(
       'focus-visible:border-ring focus-visible:ring-ring/50 mdText flex flex-1 cursor-pointer items-center justify-between gap-4 rounded-md py-4 text-left font-bold transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:rotate-360',
       className
     )}
-    {...restProps}
   >
     {@render children?.()}
     <Chevron

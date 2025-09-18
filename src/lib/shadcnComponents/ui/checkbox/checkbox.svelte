@@ -20,6 +20,7 @@
 </script>
 
 <CheckboxPrimitive.Root
+  {...restProps}
   bind:ref
   data-slot="checkbox"
   class={cn(
@@ -31,7 +32,6 @@
   )}
   bind:checked
   bind:indeterminate
-  {...restProps}
 >
   {#snippet children({ checked })}
     <div data-slot="checkbox-indicator" class="flex h-4 w-4 items-center justify-center text-white">

@@ -34,9 +34,11 @@
 <div class="flex flex-col">
   <FormElement {label} {isRequired} {description} {error} {isLoading} elementId={id} {...rest}>
     <div>
-      <Root type="single" {disabled} bind:value>
+      <Root type="single" disabled={isLoading || disabled} bind:value>
         <Trigger {error} {id}>
-          <span class={cn(!value && 'text-gray2')}>{value ? value : placeholder}</span>
+          <span class={cn(!value && 'text-gray2')}
+            >{options.find((o) => o.value === value)?.label ?? placeholder}
+          </span>
         </Trigger>
         <Content>
           {#each options as option (option.value)}

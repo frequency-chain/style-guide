@@ -5,8 +5,8 @@
 </script>
 
 <DialogPrimitive.Title
+  {...restProps}
   bind:ref
   data-slot="dialog-title"
   class={cn('lgText font-bold text-black', className)}
-  {...restProps}
 />

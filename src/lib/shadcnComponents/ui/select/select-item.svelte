@@ -14,14 +14,14 @@
 </script>
 
 <SelectPrimitive.Item
+  {...restProps}
   bind:ref
   {value}
   data-slot="select-item"
   class={cn(
     "smText data-[highlighted]:bg-gray3 relative flex w-full cursor-pointer items-center gap-2 rounded-xs py-2 pr-8 pl-2 text-sm outline-hidden transition select-none data-disabled:opacity-50 data-highlighted:text-black data-[disabled]:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-black *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
-		className
+    className
   )}
-  {...restProps}
 >
   {#snippet children({ selected, highlighted })}
     <span class="block w-full truncate">
