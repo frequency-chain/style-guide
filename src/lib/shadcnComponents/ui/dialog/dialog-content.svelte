@@ -2,7 +2,7 @@
   import { Dialog as DialogPrimitive, type WithoutChildrenOrChild } from 'bits-ui';
   import type { Snippet } from 'svelte';
   import * as Dialog from './index.js';
-  import { cn } from '../../../utils.js';
+  import { cn } from '../../../utils/utils.js';
   import Exit from '../../../design-system/assets/icons/Exit.svelte';
   let {
     ref = $bindable(null),

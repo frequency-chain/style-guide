@@ -33,7 +33,6 @@
   },
   "devDependencies": {
     "@internationalized/date": "^3.9.0",
-    "@lucide/svelte": "^0.515.0",
     "@storybook/addon-docs": "^8.6.4",
     "@storybook/addon-essentials": "^8.6.4",
     "@storybook/addon-interactions": "^8.6.4",
@@ -70,11 +69,9 @@
     "vite": "^5.4.4"
   },
   "dependencies": {
-    "@radix-ui/react-select": "^2.2.6",
     "bits-ui": "^2.9.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.544.0",
     "svelte": "^5.0.0",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7"

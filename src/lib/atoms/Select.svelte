@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Root, Trigger, Content, Item } from '../shadcnComponents/ui/select';
   import FormElement from './FormElement.svelte';
-  import { cn } from '../utils';
+  import { cn } from '../utils/utils';
 
   interface Props {
     options: { label: string; value: string }[];

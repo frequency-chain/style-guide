@@ -9,7 +9,7 @@
   },
   "aliases": {
     "components": "@/lib/shadcnComponents",
-    "utils": "@/lib/utils"
+    "utils": "@/lib/utils/utils"
   },
   "typescript": true
 }
