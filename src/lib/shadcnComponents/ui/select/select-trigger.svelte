@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Select as SelectPrimitive, type WithoutChild } from 'bits-ui';
-  import { Chevron, Error, LoadingIcon } from '../../../design-system/assets/index';
+  import { Chevron } from '../../../design-system/assets/index';
   import { cn } from '../../../utils/utils';
   import { formItem } from '../../../styles/formItemStyles';
 

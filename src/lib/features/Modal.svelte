@@ -26,6 +26,8 @@
         </Dialog.Description>
       {/if}
     </Dialog.Header>
-    {@render body?.()}
+    <div class="max-h-[60vh] overflow-y-scroll">
+      {@render body?.()}
+    </div>
   </Dialog.Content>
 </Dialog.Root>
