@@ -8,7 +8,6 @@ export { default as Select } from './atoms/Select.svelte';
 export { default as Textarea } from './atoms/Textarea.svelte';
 export { default as Typography } from './design-system/Typography.svelte';
 export { default as Accordion } from './features/Accordion.svelte';
-export { default as AccordionList } from './features/AccordionList.svelte';
 export { default as Card } from './features/Card.svelte';
 export { default as Footer } from './features/Footer.svelte';
 export { default as Header } from './features/Header.svelte';

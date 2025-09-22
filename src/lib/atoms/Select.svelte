@@ -1,48 +1,51 @@
 <script lang="ts">
-  import type { HTMLAttributes } from 'svelte/elements';
-  import { Root, Trigger, Value, Content, Item, Label } from '../shadcnComponents/ui/select';
-  import type { SelectProps } from 'bits-ui';
+  import { Root, Trigger, Content, Item } from '../shadcnComponents/ui/select';
+  import FormElement from './FormElement.svelte';
+  import { cn } from '../utils/utils';
 
-  interface Props extends SelectProps<string, false>, HTMLAttributes<HTMLSelectElement> {
-    label: string;
-    description?: string | undefined;
+  interface Props {
+    options: { label: string; value: string }[];
+    value?: string;
     isRequired?: boolean;
-    error?: string | undefined;
+    label: string;
+    description?: string;
+    placeholder?: string;
+    error?: string;
     isLoading?: boolean;
-    options: { optionLabel: string; value: string }[];
+    disabled?: boolean;
+    id?: string;
   }
 
   let {
-    id,
-    label,
-    description = undefined,
-    placeholder,
+    options,
+    value = $bindable(),
     isRequired = false,
+    label,
+    description,
+    placeholder = 'Select an option',
     error = undefined,
     isLoading = false,
-    options,
-    onSelectedChange,
-    disabled,
+    disabled = false,
+    id = undefined,
     ...rest
   }: Props = $props();
 </script>
 
 <div class="flex flex-col">
-  <Root {...rest} {onSelectedChange} {disabled}>
-    <Label {isRequired}>{label}</Label>
-    {#if description}
-      <span class="form-item-description">{description}</span>
-    {/if}
-    <Trigger {error} {isLoading} {id}>
-      <Value class="text-nowrap overflow-ellipsis" placeholder={placeholder || undefined} />
-    </Trigger>
-    <Content class="border-gray3 border">
-      {#each options as option (option.value)}
-        <Item value={option.value}>{option.optionLabel}</Item>
-      {/each}
-    </Content>
-    {#if error}
-      <span class="form-error">{error}</span>
-    {/if}
-  </Root>
+  <FormElement {label} {isRequired} {description} {error} {isLoading} elementId={id} {...rest}>
+    <div>
+      <Root type="single" disabled={isLoading || disabled} bind:value>
+        <Trigger {error} {id}>
+          <span class={cn(!value && 'text-gray2')}
+            >{options.find((o) => o.value === value)?.label ?? placeholder}
+          </span>
+        </Trigger>
+        <Content>
+          {#each options as option (option.value)}
+            <Item value={option.value}>{option.label}</Item>
+          {/each}
+        </Content>
+      </Root>
+    </div>
+  </FormElement>
 </div>

@@ -1,30 +1,56 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:is(.dark *));
+@plugin "tailwindcss-animate";
+
 @theme {
   /* Colors */
   /* NOTE: if updated, also update tailwindColors.ts */
 
   /* Brand Colors */
-  --color-primary: #790e70;
-  --color-purple25: #9a4a94;
-  --color-purple50: #bc86b7;
-  --color-purple75: #ddc3db;
-  --color-darkPurple: #331e49;
-  --color-secondary: #ff9a02;
+  --primary: #790e70;
+
+  --primary: #790e70;
+  --purple25: #9a4a94;
+  --purple50: #bc86b7;
+  --purple75: #ddc3db;
+  --darkPurple: #331e49;
+  --secondary: #ff9a02;
 
   /* State Colors */
-  --color-error: #eb5757;
-  --color-warning: #f99a2a;
-  --color-success: #27ae60;
-  --color-info: #2f80ed;
+  --error: #eb5757;
+  --warning: #f99a2a;
+  --success: #27ae60;
+  --info: #2f80ed;
 
   /* Neutrals */
-  --color-black: #242527;
-  --color-gray1: #717171;
-  --color-gray2: #8b8b8b;
-  --color-gray3: #dbdbdb;
-  --color-white: #ffffff;
-  --color-cream: #fcf3e4;
+  --black: #242527;
+  --gray1: #717171;
+  --gray2: #8b8b8b;
+  --gray3: #dbdbdb;
+  --white: #ffffff;
+  --cream: #fcf3e4;
+
+  --color-primary: var(--primary);
+  --color-purple25: var(--purple25);
+  --color-purple50: var(--purple50);
+  --color-purple75: var(--purple75);
+  --color-darkPurple: var(--darkPurple);
+  --color-secondary: var(--secondary);
+
+  /* State Colors */
+  --color-error: var(--error);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+  --color-info: var(--info);
+
+  /* Neutrals */
+  --color-black: var(--black);
+  --color-gray1: var(--gray1);
+  --color-gray2: var(--gray2);
+  --color-gray3: var(--gray3);
+  --color-white: var(--white);
+  --color-cream: var(--cream);
 
   /* Gradients */
   --gradient-primary: -90deg, #311e48 0%, #790e70 50%, #aa40a1 100%;
@@ -133,7 +159,7 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+    border-color: var(--color-gray2, currentcolor);
   }
 }
 
@@ -230,5 +256,53 @@
   h6,
   .h6 {
     @apply text-h6 leading-h6;
+  }
+}
+
+@theme inline {
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --color-ring: var(--primary);
+  --color-input: var(--gray3);
+  --color-border: var(--gray3);
+  --color-destructive: var(--primary);
+  --color-accent-foreground: var(--primary);
+  --color-accent: var(--primary);
+  --color-muted-foreground: var(--primary);
+  --color-muted: var(--primary);
+  --color-secondary-foreground: var(--secondary);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--primary);
+  --color-popover: var(--primary);
+  --color-foreground: var(--clear);
+  --color-background: var(--clear);
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--bits-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--bits-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

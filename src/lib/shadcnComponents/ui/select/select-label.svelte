@@ -1,21 +1,20 @@
 <script lang="ts">
-  import { Select as SelectPrimitive } from 'bits-ui';
   import { cn } from '../../../utils/utils';
-  import type { Snippet } from 'svelte';
+  import type { WithElementRef } from 'bits-ui';
+  import type { HTMLAttributes } from 'svelte/elements';
 
-  type $$Props = SelectPrimitive.LabelProps;
-
-  interface Props extends $$Props {
-    isRequired: boolean;
-    children?: Snippet;
-  }
-
-  let { isRequired, children, ...rest }: Props = $props();
+  let {
+    isRequired = false,
+    ref = $bindable(null),
+    class: className,
+    children,
+    ...restProps
+  }: WithElementRef<HTMLAttributes<HTMLDivElement>> & { isRequired: boolean } = $props();
 </script>
 
-<SelectPrimitive.Label {...rest} class={cn('form-item-label', rest.class)}>
+<div bind:this={ref} data-slot="select-label" class={cn('form-item-label', className)} {...restProps}>
   {@render children?.()}
   {#if isRequired}
     <span class="text-error">*</span>
   {/if}
-</SelectPrimitive.Label>
+</div>

@@ -1,14 +1,20 @@
 <script lang="ts">
   import type { HTMLAttributes } from 'svelte/elements';
   import { cn } from '../../../utils/utils.js';
-
-  interface Props extends HTMLAttributes<HTMLDivElement> {
-    children?: import('svelte').Snippet;
-  }
-
-  let { children, ...rest }: Props = $props();
+  import type { WithElementRef } from 'bits-ui';
+  let {
+    ref = $bindable(null),
+    class: className,
+    children,
+    ...restProps
+  }: WithElementRef<HTMLAttributes<HTMLDivElement>> = $props();
 </script>
 
-<div {...rest} class={cn('space-y-f4 flex flex-col text-center', rest.class)}>
+<div
+  {...restProps}
+  bind:this={ref}
+  data-slot="dialog-header"
+  class={cn('space-y-f4 flex flex-col text-center', className)}
+>
   {@render children?.()}
 </div>
