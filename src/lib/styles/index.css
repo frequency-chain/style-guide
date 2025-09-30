@@ -75,22 +75,6 @@
   --text-sm: 12px;
   --text-xs: 10px;
 
-  /* --text-default: 16px;
-  --text-display1: 70px;
-  --text-display2: 50px;
-  --text-display3: 30px;
-  --text-heading1: 56px;
-  --text-heading2: 48px;
-  --text-heading3: 40px;
-  --text-heading4: 32px;
-  --text-heading5: 24px;
-  --text-heading6: 20px;
-  --text-bodyLg: 16px;
-  --text-bodyMd: 16px;
-  --text-bodyNormal: 16px;
-  --text-bodySm: 12px;
-  --text-bodyXs: 10px; */
-
   /* Line Heights */
   --spacing-default: 22px;
   --spacing-h0: 70px;
@@ -163,6 +147,7 @@
   }
 }
 
+/* Text Utilities */
 @utility lgText {
   @apply leading-lg text-lg;
 }

@@ -6,6 +6,11 @@
 
 This package is designed to work specifically with **Svelte v5 + Tailwind v4** projects.
 
+## Index
+
+1. [Installation](#installation)
+2. [Development](#development)
+
 ## Installation
 
 When installing this package into your project, follow the steps below.
@@ -26,11 +31,37 @@ npm i @frequency-chain/style-guide
 ```css
 @import '@frequency-chain/style-guide/styles';
 
+/* may need to update path depending on your file structure */
 @source '../../node_modules/@frequency-chain/style-guide/**/*.{svelte,js,ts}';
 ```
 
 You should now be able to access the Frequency Style Guide Tailwind theme and custom css classes in your Svelte
-components! (Make sure you update the path to the `node_modules` if it is different than above.)
+components!
+
+### Best Practices
+
+- Refer to the style guide `lib/index.css` for all branded classes. **Your local project css file, should be close to
+  empty, only importing the style guide and containing project specific styles.** This file defines the following:
+  - colors
+  - gradients
+  - fonts
+  - font sizes
+  - shadows
+  - breakpoints
+  - form element utilities
+  - animations
+- When setting the font size, refer to `Text Utilities` in `lib/index.css`.
+  ```html
+  <div class="lgText">Hello world</div>
+  <div class="xsText">Aside Text</div>
+  ```
+- When setting the size of anything from width to gaps, refer to `Spacing` in `lib/index.css`. The convention is
+  `f{pixels}`.
+  ```html
+  <div class="gap-f12 flex">Hello world</div>
+  <div class="h-f40">Hello world</div>
+  <div class="p-f32">Hello world</div>
+  ```
 
 ---
 
@@ -45,6 +76,20 @@ below.
 npm i
 npm run storybook
 ```
+
+- In the storybook UI, select a component and view the controls tab to checkout available props.
+- The `*/stories.svelte` files are great examples for how to use each component.
+
+### Shadcn Notes
+
+- Some components are difficult to customize from scratch, leading us to use the
+  [Shadcn](https://www.shadcn-svelte.com/) library.
+- You can view these components in `lib/shadcnComponents/ui`.
+
+### Dev Notes
+
+- Anything that should be exported for the package should be in `src/lib`.
+- **Any components that you wish to export must be exported in `index.ts`.**
 
 ### Package Testing
 
@@ -64,9 +109,5 @@ npm pack
 3. Install local package into a new project.
    - Navigate to a new Svelte project.
    - Follow the [installation steps](#installation).
-   - When installing the package, remember to **use the local version you just created**!
-
-### Dev Notes
-
-- Anything that should be exported for the package should be in `src/lib`.
-- Any components that you wish to export must be exported in `index.ts`.
+   - When installing the package, remember to **use the local version you just created** by copying the path to the .tgz
+     file or using npm link.
