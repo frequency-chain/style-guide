@@ -178,7 +178,7 @@
 }
 
 @utility docsBodyText {
-  @apply text-sm leading-sm;
+  @apply leading-sm text-sm;
 }
 
 /* Misc */
