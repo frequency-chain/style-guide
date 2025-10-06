@@ -34,3 +34,9 @@
   <Typography class="xsText">Body Xs</Typography>
   <Typography class="xsText" bold={true}>Body Xs Bold</Typography>
 </Story>
+
+<Story name="Docs">
+  <div class="docsHeaderText">docsHeaderText</div>
+  <div class="docsSubHeaderText" bold={true}>docsSubHeaderText</div>
+  <div class="docsBodyText">docsBodyText</div>
+</Story>
