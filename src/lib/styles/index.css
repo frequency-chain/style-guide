@@ -77,17 +77,17 @@
 
   /* Line Heights */
   --spacing-default: 22px;
-  --spacing-h0: 70px;
+  --spacing-h0: 91px;
   --spacing-h1: 61px;
   --spacing-h2: 52px;
   --spacing-h3: 44px;
   --spacing-h4: 35px;
-  --spacing-h5: 26px;
+  --spacing-h5: 30px;
   --spacing-h6: 22px;
   --spacing-lg: 30px;
   --spacing-md: 25px;
   --spacing-normal: 22px;
-  --spacing-sm: 16px;
+  --spacing-sm: 20px;
   --spacing-xs: 14px;
 
   /* Spacing */
@@ -154,7 +154,6 @@
 
 @utility mdText {
   @apply text-md leading-md;
-  @apply text-md leading-md;
 }
 
 @utility normalText {
@@ -169,6 +168,20 @@
   @apply leading-xs text-xs;
 }
 
+/* Docs Utilities */
+@utility docsHeaderText {
+  @apply text-h5 leading-h5 font-bold;
+}
+
+@utility docsSubHeaderText {
+  @apply text-h6 leading-h6;
+}
+
+@utility docsBodyText {
+  @apply leading-sm text-sm;
+}
+
+/* Misc */
 @utility underline-on-hover {
   /* Underline on hover animation */
   @apply relative block cursor-pointer overflow-hidden px-0 py-1;
